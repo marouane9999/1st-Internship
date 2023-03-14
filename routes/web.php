@@ -16,8 +16,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('layout');
-}); 
+});
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::get('/vol', [\App\Http\Controllers\VolController::class, 'index']);
+
+Route::get('/create', [\App\Http\Controllers\VolController::class, 'create'])->name('vol.create');

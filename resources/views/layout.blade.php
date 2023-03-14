@@ -59,9 +59,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
       </li>
 
       <!-- Messages Dropdown Menu -->
-      
+
       <!-- Notifications Dropdown Menu -->
-     
+
       <li class="nav-item">
         <a class="nav-link" data-widget="fullscreen" href="#" role="button">
           <i class="fas fa-expand-arrows-alt"></i>
@@ -151,7 +151,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="./index.html" class="nav-link">
+                  <a href={{url('/vol')}} class="nav-link">
                     <i class="fas fa-edit nav-icon"></i>
                     <p>Gestion & Affectation</p>
                   </a>
@@ -264,7 +264,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </p>
             </a>
           </li>
-         
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -282,7 +282,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <h1 class="m-0">@yield('header title')</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
-            
+
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
