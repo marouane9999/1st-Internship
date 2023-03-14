@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ParticipantController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -15,14 +16,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layout');
+    return to_route('participants.index');
 });
+
+Route::resource('participants', ParticipantController::class);
 
 Auth::routes();
 
+
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
-Route::get('/vol', [\App\Http\Controllers\VolController::class, 'index']);
-
-Route::get('/create', [\App\Http\Controllers\VolController::class, 'create'])->name('vol.create');
