@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('vols', function (Blueprint $table) {
             $table->id();
+            $table->string('numero_vol');
             $table->boolean('type_vol');
             $table->dateTime('date_vol');
             $table->string('terminal');

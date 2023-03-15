@@ -2,42 +2,35 @@
 @section('content')
 
         <div class="d-grid gap-2 d-md-flex justify-content-md-end mr-3">
-            <a class="btn btn-success me-md-2 rounded-pill " type="button" href="{{route('participants.create')}}">Ajouter Participant</a>
+            <a class="btn btn-success me-md-2 rounded-pill " type="button" href="{{route('participants.create')}}"><i class="fa fa-plus"></i>&nbsp;&nbsp; Ajouter Participant</a>
         </div>
     <div class="d-flex justify-content-center mt-4 w-100">
         <table class="table table-borderless table-bordered table-hover w-100 ">
             <thead>
-            <tr class="text-center">
+            <tr class="text-left">
                 <th scope="col">#</th>
-                <th scope="col">Nom Participant</th>
-                <th scope="col">Prenom Participant</th>
+                <th scope="col">Nom & Prenom</th>
                 <th scope="col">Genre</th>
                 <th scope="col">Discipline</th>
-                <th scope="col">Numero Passport</th>
-                <th scope="col">Numero Accreditation</th>
                 <th scope="col">Pays Delegation</th>
                 <th scope="col">Categorie</th>
                 <th scope="col">Site Competition</th>
-                <th scope="col">Chef de Mission</th>
-                <th scope="col">Action</th>
             </tr>
             </thead>
             <tbody>
-            @foreach($participants as $ptc )
-            <tr class="text-center">
+            @foreach($participants as $ptc)
+            <tr class="text-left">
                     <th scope="row">{{$ptc->id}}</th>
-                    <td>{{$ptc->nom_par}}</td>
-                    <td>{{$ptc->prenom_par}}</td>
-                    <td>{{$ptc->genre}}</td>
-                    <td>{{$ptc->discipline}}</td>
-                    <td>{{$ptc->num_pass}}</td>
-                    <td>{{$ptc->num_acc}}</td>
-                    <td>{{$ptc->pays_delg}}</td>
-                    <td>{{$ptc->cat_particip}}</td>
-                    <td>{{$ptc->site_compet}}}</td>
-                    <td>{{$ptc->chef_mission->nom_chef}}</td>
+                    <td>{{ ucfirst($ptc->nom_par)}} {{ucfirst($ptc->prenom_par)}}</td>
+                    <td>{{{$ptc->genre==1?'H':'F'}}} </td>
+                    <td>{{ ucfirst($ptc->discipline)}}</td>
+                    <td>{{config('custom_arrays.countries.'. $ptc->pays_delg)}}</td>
+                    <td>{{ucfirst($ptc->categorie->des_cat)}}</td>
+                    <td>{{$ptc->site_compet}}</td>
                     <td>
-                        <a class="btn btn-primary rounded-pill btn-xs" href="#" >CONSULTER</a>
+                        <a class="btn btn-outline-primary rounded-6 mr-2" data-toggle="tooltip" data-placement="top" title="Consulter"  href="#" ><i class="fas fa-eye"></i></a>
+                        <a class="btn btn-outline-warning rounded-6 mr-2" data-toggle="tooltip" data-placement="top" title="Modifier"  href="#" ><i class="fas fa-edit"></i></a>
+                        <a class="btn btn-outline-danger rounded-6 mr-2" data-toggle="tooltip" data-placement="top" title="Supprimer"  href="#" ><i class="fas fa-trash"></i></a>
                     </td>
             </tr>
             @endforeach

@@ -11,6 +11,12 @@ use Illuminate\Http\Request;
 
 class ParticipantController extends Controller
 {
+    public function __construct(ChefMission $chefMission ,Participant $participant)
+    {
+        $this->participant = $participant;
+        $this->chefMission = $chefMission;
+
+    }
     /**
      * Display a listing of the resource.
      *
@@ -50,25 +56,23 @@ class ParticipantController extends Controller
     public function store(ParticipantRequest $request)
 
     {
-        $chefM=new ChefMission();
-        $chefM->nom_chef=$request->nom_chef;
-        $chefM->prenom_chef=$request->prenom_chef;
-        $chefM->tel=$request->tel;
-        $chefM->num_passport=$request->num_passport;
-        $chefM->save();
-        $particpant=new Participant();
-        $particpant->nom_par=$request->nom_par;
-        $particpant->prenom_par=$request->prenom_par;
-        $particpant->genre=$request->genre=='true' ? 1 : 0 ;
-        $particpant->discipline=$request->discipline;
-        $particpant->num_pass=$request->num_pass;
-        $particpant->num_acc=$request->num_acc;
-        $particpant->pays_delg=$request->pays_delg;
-        $particpant->cat_id=$request->cat_id;
-        $particpant->site_compet=$request->site_compet;
-        $particpant->chefM_id=$chefM->id;
-        $particpant->save();
-        return redirect()->route('participants.index');
+        \DB::beginTransaction();
+
+        try {
+            $inputs=$request->all();
+            $chefM= $this->chefMission->fill($inputs);
+            $chefM->save();
+            $inputs['chefM_id']=$chefM->id;
+            $particpant=$this->participant->fill($inputs);
+            $particpant->save();
+            \DB::commit();
+            return redirect()->route('participants.index');
+        } catch (\Exception $e) {
+            \DB::rollback();
+            return redirect()->route('participants.index');
+        }
+
+
     }
 
     /**

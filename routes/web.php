@@ -19,7 +19,9 @@ Route::get('/', function () {
     return to_route('participants.index');
 });
 
-Route::resource('participants', ParticipantController::class);
+Route::get('/participants', [App\Http\Controllers\ParticipantController::class, 'index'])->name('participants.index');
+Route::get('/participant/create', [App\Http\Controllers\ParticipantController::class, 'create'])->name('participants.create');
+Route::post('/participants/store', [App\Http\Controllers\ParticipantController::class, 'store'])->name('participants.store');
 
 Auth::routes();
 
