@@ -164,7 +164,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="./index.html" class="nav-link">
+                                <a href="{{route('vol')}}" class="nav-link">
                                     <i class="fas fa-edit nav-icon"></i>
                                     <p>Gestion & Affectation</p>
                                 </a>
@@ -360,6 +360,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 <script src="resources/js/assets2.js"></script>
+<script src="/adminLte/js/assets.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

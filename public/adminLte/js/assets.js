@@ -49,27 +49,6 @@ $(document).on('submit', '#volModal #volModalForm', function (e) {
     });
     return false;
 });
-// delete button click
-$('.btn-delete').click(function(e) {
-    e.preventDefault();
-    let $this = $(this);
 
-        const result = window.confirm('Do you want to delete?');
-        if (result) {
-            $.ajax({
-                method:'get',
-                url: $this.attr('href'),
-                success: function(data) {
-                    if (data.success) {
-                        toastr.success(data.msg);
-                        $this.parent().parent().remove();
-                    }
-                }
-            });
-        }
-        else {
-            console.log('error', 'Vol not found');
-        }
-});
 
 
