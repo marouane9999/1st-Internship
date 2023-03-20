@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('vols', function (Blueprint $table) {
-            $table->id();
-            $table->string('numero_vol');
-            $table->boolean('type_vol');
-            $table->dateTime('date_vol');
-            $table->string('terminal');
+        Schema::create('vols_participants', function (Blueprint $table) {
+            $table->id ();
+            $table->unsignedBigInteger('participant_id');
+            $table->unsignedBigInteger('vol_id');
+            $table->foreign('participant_id ')->references('id')->on('participants');
+            $table->foreign('vol_id')->references('id')->on('vols ');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('vols');
+        Schema::dropIfExists('vols_participants');
     }
 };

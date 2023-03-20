@@ -15,6 +15,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="/adminLte/plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="/adminLte/css/adminlte.min.css">
+{{--    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css" rel="stylesheet">--}}
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -82,7 +83,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <aside class="main-sidebar sidebar-dark-primary elevation ">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <img src="/adminLte/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <img src="/adminLte/img/AdminLTELogo.png" alt="Logo" class="brand-image img-circle elevation-3"  style="opacity: .8 ">
       <span class="brand-text font-weight-light">ALPHA IT</span>
     </a>
 
@@ -142,7 +143,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href={{url('/vol')}} class="nav-link">
+                  <a href={{route('vol')}} class="nav-link">
                     <i class="fas fa-edit nav-icon"></i>
                     <p>Gestion & Affectation</p>
                   </a>
@@ -310,7 +311,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- REQUIRED SCRIPTS -->
 
 <!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<link rel="stylesheet" type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
 <script src="/adminLte/plugins/jquery/jquery.min.js"></script>
+<script src="/adminLte/js/assets.js"></script>
 <!-- Bootstrap 4 -->
 <script src="/adminLte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->

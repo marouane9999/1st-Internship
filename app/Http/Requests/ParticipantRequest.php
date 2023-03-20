@@ -25,7 +25,7 @@ class ParticipantRequest extends FormRequest
     {
         return [
                 'nom_pr'=>['required'|'string'],
-//                'prenom_pr'=>['required'|'string'],
+//               'prenom_pr'=>['required'|'string'],
 
         ];
     }

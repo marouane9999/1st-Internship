@@ -47,7 +47,7 @@ class ParticipantController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ParticipantRequest $request)
+    public function store(Request $request)
 
     {
         $chefM=new ChefMission();
