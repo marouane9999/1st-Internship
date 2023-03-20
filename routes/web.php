@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-<<<<<<<<< Temporary merge branch 1
+
     return to_route('participants.index');
 });
 
@@ -43,8 +43,6 @@ Route::group(['prefix'=>'/participants'], function (){
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-<<<<<<<<< Temporary merge branch 1
-=========
 
 Route::group(['prefix'=>'/vols'],function(){
     Route::get('/', [\App\Http\Controllers\VolController::class, 'index'])->name('vol');
