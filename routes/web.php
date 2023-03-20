@@ -3,7 +3,6 @@
 use App\Http\Controllers\ParticipantController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,11 +18,26 @@ Route::get('/', function () {
     return to_route('participants.index');
 });
 
-Route::get('/participants', [App\Http\Controllers\ParticipantController::class, 'index'])->name('participants.index');
-Route::get('/participant/create', [App\Http\Controllers\ParticipantController::class, 'create'])->name('participants.create');
-Route::post('/participants/store', [App\Http\Controllers\ParticipantController::class, 'store'])->name('participants.store');
-
 Auth::routes();
+
+Route::group(['prefix'=>'/participants'], function (){
+    Route::get('/', [App\Http\Controllers\ParticipantController::class, 'index'])->name('participants.index');
+    Route::get('/create', [App\Http\Controllers\ParticipantController::class, 'create'])->name('participants.create');
+    Route::post('/store', [App\Http\Controllers\ParticipantController::class, 'store'])->name('participants.store');
+    Route::get('/edit/{id}', [App\Http\Controllers\ParticipantController::class, 'edit'])->name('participants.edit');
+    Route::post('/update/{id}', [App\Http\Controllers\ParticipantController::class, 'update'])->name('participants.update');
+    Route::get('/show/{id}', [App\Http\Controllers\ParticipantController::class, 'show'])->name('participants.show');
+    Route::get('/delete/{id}', [App\Http\Controllers\ParticipantController::class, 'destroy'])->name('participants.delete');
+
+//    Route::get('/search', [App\Http\Controllers\ParticipantController::class, 'search'])->name('participants.search');
+
+});
+
+
+
+;
+
+
 
 
 

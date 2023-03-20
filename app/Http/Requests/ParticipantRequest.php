@@ -30,12 +30,11 @@ class ParticipantRequest extends FormRequest
             'nom_par'=>['required','string'],
             'prenom_par'=>['required','string'],
             'discipline'=>['required','string'] ,
-            'num_pass'=>['required','numeric',Rule::unique('participants')],
-//            'num_pass'=>['required','numeric',Rule::unique('participants')->ignore($this->route('id'))],
+            'num_pass'=>['required','numeric',Rule::unique('participants')->ignore($this->route('id'))],
             'num_acc'=>['required', 'numeric'],
             'nom_chef'=>['required','string'],
             'prenom_chef'=>['required','string' ],
-            'num_passport'=>['required','numeric',Rule::unique('chef_missions')],
+            'num_passport'=>['required','numeric',Rule::unique('chef_missions')->ignore($this->route('id'))],
             'tel'=>['required','numeric']
         ];
     }
