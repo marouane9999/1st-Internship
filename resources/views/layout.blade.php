@@ -120,130 +120,124 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </div>
             </div>
 
-            <!-- Sidebar Menu -->
-            <nav class="">
-                <ul class="nav nav-pills nav-sidebar flex-column  " data-widget="treeview" role="menu"
-                    data-accordion="false">
-                    <!-- Add icons to the links using the .nav-icon class
-                         with font-awesome or any other icon font library -->
-                    <br><br>
-                    <li class="nav-item menu-open mb-4">
-                        <a href="#" class="nav-link active">
-                            <i class="nav-icon fas fa-tachometer-alt"></i>
-                            <p>
-                                Dashboard
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item menu-open mb-4 ">
-                        <a href="#" class="nav-link ">
-                            <i class="nav-icon fa fa-users"></i>
-                            <p>
-                                Gestion des Participants
-                                <i class="right fas fa-angle-left"></i>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="{{route('participants.index')}}" class="nav-link">
-                                    <i class="fas fa-edit nav-icon"></i>
-                                    <p>Gestion & Consultation</p>
-
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item menu-open mb-4">
-                        <a href="#" class="nav-link ">
-                            <i class="nav-icon fa fa-plane"></i>
-                            <p>
-                                Gestion des Vols
-                                <i class="right fas fa-angle-left"></i>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="./index.html" class="nav-link">
-                                    <i class="fas fa-edit nav-icon"></i>
-                                    <p>Gestion & Affectation</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="./index2.html" class="nav-link">
-                                    <i class="fas fa-file-alt nav-icon"></i>
-                                    <p>Suivi & Reporting</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="./index3.html" class="nav-link">
-                                    <i class=" fas fa-user-circle    nav-icon"></i>
-                                    <p>Contrôle</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item menu-open mb-4">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fa fa-bed"></i>
-                            <p>
-                                Gestion d'Hebergement
-                            </p>
-                            <i class="right fas fa-angle-left"></i>
-
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="./index.html" class="nav-link">
-                                    <i class="fas fa-edit nav-icon"></i>
-                                    <p>Gestion & Affectation</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="./index2.html" class="nav-link">
-                                    <i class="fas fa-file-alt nav-icon"></i>
-                                    <p>Suivi & Reporting</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="./index3.html" class="nav-link">
-                                    <i class=" fas fa-user-circle    nav-icon"></i>
-                                    <p>Contrôle</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item menu-open mb-4">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-hamburger"></i>
-                            <p>
-                                Gestion de Restauration
-                            </p>
-                            <i class="right fas fa-angle-left"></i>
-
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="./index.html" class="nav-link">
-                                    <i class="fas fa-edit nav-icon"></i>
-                                    <p>Gestion & Affectation</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="./index2.html" class="nav-link">
-                                    <i class="fas fa-file-alt nav-icon"></i>
-                                    <p>Suivi & Reporting</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="./index3.html" class="nav-link">
-                                    <i class=" fas fa-user-circle    nav-icon"></i>
-                                    <p>Contrôle</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
+      <!-- Sidebar Menu -->
+      <nav class="mt-2 ">
+        <ul class="nav nav-pills nav-sidebar flex-column " data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+            <br><br><br><br>
+          <li class="nav-item ">
+            <a href="#" class="nav-link ">
+              <i class="nav-icon fa fa-users"></i>
+              <p>
+                Gestion des Participants
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="./index.html" class="nav-link">
+                    <i class="fas fa-edit nav-icon"></i>
+                    <p>Gestion & Affectation</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./index2.html" class="nav-link">
+                    <i class="fas fa-file-alt nav-icon"></i>
+                    <p>Suivi & Reporting</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./index3.html" class="nav-link">
+                    <i class=" fas fa-user-circle    nav-icon"></i>
+                    <p>Contrôle</p>
+                  </a>
+                </li>
+              </ul>
+          </li><br>
+          <li class="nav-item">
+            <a href="#" class="nav-link ">
+              <i class="nav-icon fa fa-plane"></i>
+              <p>
+                Gestion des Vols
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href={{url('/vol')}} class="nav-link">
+                    <i class="fas fa-edit nav-icon"></i>
+                    <p>Gestion & Affectation</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./index2.html" class="nav-link">
+                    <i class="fas fa-file-alt nav-icon"></i>
+                    <p>Suivi & Reporting</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./index3.html" class="nav-link">
+                    <i class=" fas fa-user-circle    nav-icon"></i>
+                    <p>Contrôle</p>
+                  </a>
+                </li>
+              </ul>
+          </li><br>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-bed"></i>
+              <p>
+                Gestion d'Hebergement
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="./index.html" class="nav-link">
+                    <i class="fas fa-edit nav-icon"></i>
+                    <p>Gestion & Affectation</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./index2.html" class="nav-link">
+                    <i class="fas fa-file-alt nav-icon"></i>
+                    <p>Suivi & Reporting</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./index3.html" class="nav-link">
+                    <i class=" fas fa-user-circle    nav-icon"></i>
+                    <p>Contrôle</p>
+                  </a>
+                </li>
+              </ul>
+          </li><br>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-hamburger"></i>
+              <p>
+                Gestion de Restauration
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="./index.html" class="nav-link">
+                    <i class="fas fa-edit nav-icon"></i>
+                    <p>Gestion & Affectation</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./index2.html" class="nav-link">
+                    <i class="fas fa-file-alt nav-icon"></i>
+                    <p>Suivi & Reporting</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./index3.html" class="nav-link">
+                    <i class=" fas fa-user-circle    nav-icon"></i>
+                    <p>Contrôle</p>
+                  </a>
+                </li>
+              </ul>
+          </li><br>
 
 
                     <li class="nav-item menu-open mb-3">

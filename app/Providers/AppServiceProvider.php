@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // this would probably go in a service provider
+        Schema::defaultStringLength(191);
 
         \Spatie\Flash\Flash::levels([
             'success' => 'alert-success',
