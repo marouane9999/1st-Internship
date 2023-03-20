@@ -46,12 +46,7 @@
                          @endforeach
                 </span>
                  </div>
-                 <div class="font-weight-bolder">
-                     Discipline : <span class="font-weight-normal">{{{ucfirst($ptc->discipline)}}}</span>
-                 </div>
-                 <div class="font-weight-bolder">
-                     Categorie : <span class="font-weight-normal">{{{ucfirst($ptc->categorie->des_cat)}}}</span>
-                 </div>
+
              </div>
          </div>
      </div>
@@ -123,10 +118,10 @@
                 </div>
                 <div class="float-right mb-2 ">
                     <div class="font-weight-bolder">
-                        Numero Passport : <span class="font-weight-normal">{{$ptc->num_pass}}</span>
+                        Numero Passport : <span class="font-weight-normal">{{$ptc->chef_mission->num_passport}}</span>
                     </div>
                     <div class="font-weight-bolder">
-                        Telephone Chef Mission : <span class="font-weight-normal">{{$ptc->num_acc}}</span>
+                        Telephone Chef Mission : <span class="font-weight-normal">{{$ptc->chef_mission->tel}}</span>
                     </div>
                 </div>
 
