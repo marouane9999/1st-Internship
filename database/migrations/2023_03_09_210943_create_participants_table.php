@@ -29,6 +29,7 @@ return new class extends Migration
             $table->foreign('cat_id')->references('id')->on('categories');
             $table->timestamps();
         });
+
     }
     /**
      * Reverse the migrations.

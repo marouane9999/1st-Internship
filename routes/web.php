@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\ParticipantController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 /*
@@ -15,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+<<<<<<<<< Temporary merge branch 1
     return to_route('participants.index');
 });
 
@@ -43,7 +43,17 @@ Route::group(['prefix'=>'/participants'], function (){
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+<<<<<<<<< Temporary merge branch 1
+=========
 
-Route::get('/vol', [\App\Http\Controllers\VolController::class, 'index']);
+Route::group(['prefix'=>'/vols'],function(){
+    Route::get('/', [\App\Http\Controllers\VolController::class, 'index'])->name('vol');
+    Route::get('/create', [\App\Http\Controllers\VolController::class, 'create'])->name('vol.create');
+    Route::post('/store', [\App\Http\Controllers\VolController::class, 'store'])->name('vol.store');
+    Route::get('/edit/{id}', [\App\Http\Controllers\VolController::class, 'edit'])->name('vol.edit');
+    Route::post('/update/{id}', [\App\Http\Controllers\VolController::class, 'update'])->name('vol.update');
+    Route::get('/delete/{id}', [\App\Http\Controllers\VolController::class, 'delete'])->name('vol.delete');
+});
 
-Route::get('/create', [\App\Http\Controllers\VolController::class, 'create'])->name('vol.create');
+
+

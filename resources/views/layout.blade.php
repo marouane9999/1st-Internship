@@ -163,7 +163,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href={{url('/vol')}} class="nav-link">
+                  <a href={{route('vol')}} class="nav-link">
                     <i class="fas fa-edit nav-icon"></i>
                     <p>Gestion & Affectation</p>
                   </a>
@@ -345,7 +345,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- REQUIRED SCRIPTS -->
 
 <!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<link rel="stylesheet" type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
 <script src="/adminLte/plugins/jquery/jquery.min.js"></script>
+<script src="/adminLte/js/assets.js"></script>
 <!-- Bootstrap 4 -->
 <script src="/adminLte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->

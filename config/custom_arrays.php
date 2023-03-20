@@ -278,6 +278,20 @@ return [
             'futsal',
             'marathon',
             'triathlon'
+     ),
+     'aeroport' => array(
+            'Aéroport Mohammed-V de Casablanca',
+            'Aérodrome de Casablanca Tit Mellil',
+            'Aérodrome Errachidia-Moulay Ali Chérif',
+            'Aéroport de Fès-Saïss',
+            'Aéroport de Rabat-Salé',
+            'Aéroport de Tanger-Ibn Battouta',
+            'Aéroport de Tan Tan-Plage Blanche',
+            'Aérodrome de Taza',
+            'Aéroport de Béni Mellal',
+            'Aéroport de Marrakech-Ménara',
+            'Aéroport de Ouarzazate',
      )
+
 ];
 ?>
