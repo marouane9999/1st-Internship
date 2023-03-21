@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id ();
             $table->unsignedBigInteger('participant_id');
             $table->unsignedBigInteger('vol_id');
-            $table->foreign('participant_id ')->references('id')->on('participants');
-            $table->foreign('vol_id')->references('id')->on('vols ');
+            $table->foreign('participant_id')->references('id')->on('participants');
+            $table->foreign('vol_id')->references('id')->on('vols');
             $table->timestamps();
         });
     }
