@@ -74,7 +74,7 @@ class ParticipantController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ParticipantRequest $request)
 
     {
         \DB::beginTransaction();
@@ -87,7 +87,7 @@ class ParticipantController extends Controller
             $particpant = $this->participant->fill($inputs);
             $particpant->save();
             \DB::commit();
-            flash()->success('Participant '.$particpant->id.' est ajouté(e) avec succès');
+            flash()->success('Participant est ajouté(e) avec succès');
             return redirect()->route('participants.index');
         } catch (\Exception $e) {
             \DB::rollback();

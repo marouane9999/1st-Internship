@@ -1,3 +1,5 @@
+import Swal from "sweetalert2";
+
 $(document).on('click', '.create-vol', function (e) {
     e.preventDefault();
     var $this = $(this);
@@ -28,7 +30,7 @@ $(document).on('submit', '#volModal #volModalForm', function (e) {
                     function()
                     {
                         window.location.href = "/vols";
-                    }, 3000);
+                    }, 2000);
 
             } else {
                 toastr.error(response.msg);
@@ -49,6 +51,39 @@ $(document).on('submit', '#volModal #volModalForm', function (e) {
     });
     return false;
 });
+
+
+$(document).on('click','.delete-vol',function (e){
+    e.preventDefault();
+    let $this=$(this);
+    Swal.fire({
+        title: 'Êtes-vous sûr?',
+        text:"Vous ne pourrez pas revenir en arrière !",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Confirmer'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            $.ajax(
+                {
+                    method:'get',
+                    url:$this.attr('href'),
+                    success: function (data) {
+                        if (data.success) {
+                            toastr.success(data.msg);
+                            $this.parent().parent().remove();
+                        } else {
+                            toastr.error(data.msg);
+                        }
+                    },
+                }
+            )
+        }
+    })
+});
+
 
 
 

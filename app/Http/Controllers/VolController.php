@@ -33,7 +33,7 @@ class VolController extends Controller
             'html' => view('vol.form')->with([
                 'vol' => $this->vol,
                 'title' => 'Ajouter un vol',
-                'action' => route('vol.store'),
+                'action' => route('vols.store'),
                 'aeroport' => $aeroport,
             ])->render()
         ]);
@@ -70,7 +70,7 @@ class VolController extends Controller
             'html' => view('vol.form')->with([
                 'vol' => $vol,
                 'title' => 'Modifier un vol',
-                'action' => route('vol.update', $vol->id),
+                'action' => route('vols.update', $vol->id),
                 'aeroport' => $aeroport,
             ])->render()
         ]);

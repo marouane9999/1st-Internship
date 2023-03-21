@@ -10,53 +10,100 @@
         <div class="alert alert-dark shadow-sm" role="alert">
             <i class='fas fa-id-badge'></i><span class="ml-3 font-weight-bold">Participant</span>
         </div>
-        <div class="shadow-lg p-1 mt-3 mb-3 w-100 d-flex justify-content-center">
-         <div class=" d-flex justify-content-sp mt-2">
-
-             <div class="row ml-5 float-left">
-                 <div class="font-weight-bolder">
-                     Nom Participant : <span class="font-weight-normal">{{$ptc->nom_par}}</span>
-                 </div>
-                 <div class="font-weight-bolder">
-                     Prenom Participant : <span class="font-weight-normal">{{$ptc->prenom_par}}</span>
-                 </div>
-                 <div class="font-weight-bolder">
-                     Sexe : <span class="font-weight-normal">{{{$ptc->genre==1?'Homme':'Femme'}}}</span>
-                 </div>
-                 <div class="font-weight-bolder">
-                     Discipline : <span class="font-weight-normal">{{{ucfirst($ptc->discipline)}}}</span>
-                 </div>
-                 <div class="font-weight-bolder">
-                     Categorie : <span class="font-weight-normal">{{{ucfirst($ptc->categorie->des_cat)}}}</span>
-                 </div>
-             </div>
-             <div class="float-right ">
-                 <div class="font-weight-bolder">
-                     Numero Passport : <span class="font-weight-normal">{{$ptc->num_pass}}</span>
-                 </div>
-                 <div class="font-weight-bolder">
-                     Numero Accreditation : <span class="font-weight-normal">{{$ptc->num_acc}}</span>
-                 </div>
-                 <div class="font-weight-bolder">
-                     Pays Delegation : <span class="font-weight-normal">
+        <div class="shadow-lg p-1 mt-3 mb-3 w-100 d-flex ">
+            <div class="row w-100 d-flex justify-content-center ml-5">
+                <div class="col-4">
+                    <div class="font-weight-bolder">
+                        Nom Participant : <span class="font-weight-normal">{{$ptc->nom_par}}</span>
+                    </div>
+                    <div class="font-weight-bolder">
+                        Prenom Participant : <span class="font-weight-normal">{{$ptc->prenom_par}}</span>
+                    </div>
+                    <div class="font-weight-bolder">
+                        Sexe : <span class="font-weight-normal">{{{$ptc->genre==1?'Homme':'Femme'}}}</span>
+                    </div>
+                    <div class="font-weight-bolder">
+                        Discipline : <span class="font-weight-normal">{{{ucfirst($ptc->discipline)}}}</span>
+                    </div>
+                    <div class="font-weight-bolder">
+                        Categorie : <span class="font-weight-normal">{{{ucfirst($ptc->categorie->des_cat)}}}</span>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="font-weight-bolder">
+                        Numero Passport : <span class="font-weight-normal">{{$ptc->num_pass}}</span>
+                    </div>
+                    <div class="font-weight-bolder">
+                        Numero Accreditation : <span class="font-weight-normal">{{$ptc->num_acc}}</span>
+                    </div>
+                    <div class="font-weight-bolder">
+                        Pays Delegation : <span class="font-weight-normal">
                     @foreach($countries as $key => $country)
-                             @if($ptc->pays_delg==$key)
-                                 {{$country}}
-                             @endif
-                         @endforeach
+                                @if($ptc->pays_delg==$key)
+                                    {{$country}}
+                                @endif
+                            @endforeach
                 </span>
-                 </div>
+                    </div>
+                    <div class="font-weight-bolder">
+                        Discipline : <span class="font-weight-normal">{{{ucfirst($ptc->discipline)}}}</span>
+                    </div>
+                    <div class="font-weight-bolder">
+                        Categorie : <span class="font-weight-normal">{{{ucfirst($ptc->categorie->des_cat)}}}</span>
+                    </div>
+                </div>
+            </div>
+{{--         <div class=" d-flex justify-content-center mt-4">--}}
 
-             </div>
-         </div>
-     </div>
+{{--             <div class="ml-5 float-left">--}}
+{{--                 <div class="font-weight-bolder">--}}
+{{--                     Nom Participant : <span class="font-weight-normal">{{$ptc->nom_par}}</span>--}}
+{{--                 </div>--}}
+{{--                 <div class="font-weight-bolder">--}}
+{{--                     Prenom Participant : <span class="font-weight-normal">{{$ptc->prenom_par}}</span>--}}
+{{--                 </div>--}}
+{{--                 <div class="font-weight-bolder">--}}
+{{--                     Sexe : <span class="font-weight-normal">{{{$ptc->genre==1?'Homme':'Femme'}}}</span>--}}
+{{--                 </div>--}}
+{{--                 <div class="font-weight-bolder">--}}
+{{--                     Discipline : <span class="font-weight-normal">{{{ucfirst($ptc->discipline)}}}</span>--}}
+{{--                 </div>--}}
+{{--                 <div class="font-weight-bolder">--}}
+{{--                     Categorie : <span class="font-weight-normal">{{{ucfirst($ptc->categorie->des_cat)}}}</span>--}}
+{{--                 </div>--}}
+{{--             </div>--}}
+{{--             <div class="float-right ">--}}
+{{--                 <div class="font-weight-bolder">--}}
+{{--                     Numero Passport : <span class="font-weight-normal">{{$ptc->num_pass}}</span>--}}
+{{--                 </div>--}}
+{{--                 <div class="font-weight-bolder">--}}
+{{--                     Numero Accreditation : <span class="font-weight-normal">{{$ptc->num_acc}}</span>--}}
+{{--                 </div>--}}
+{{--                 <div class="font-weight-bolder">--}}
+{{--                     Pays Delegation : <span class="font-weight-normal">--}}
+{{--                    @foreach($countries as $key => $country)--}}
+{{--                             @if($ptc->pays_delg==$key)--}}
+{{--                                 {{$country}}--}}
+{{--                             @endif--}}
+{{--                         @endforeach--}}
+{{--                </span>--}}
+{{--                 </div>--}}
+{{--                 <div class="font-weight-bolder">--}}
+{{--                     Discipline : <span class="font-weight-normal">{{{ucfirst($ptc->discipline)}}}</span>--}}
+{{--                 </div>--}}
+{{--                 <div class="font-weight-bolder">--}}
+{{--                     Categorie : <span class="font-weight-normal">{{{ucfirst($ptc->categorie->des_cat)}}}</span>--}}
+{{--                 </div>--}}
+{{--             </div>--}}
+{{--         </div>--}}
+        </div>
             {{--ChefMission--}}
         <div class="alert alert-default-primary shadow-sm " role="alert">
             <i class='fas fa-user-circle'></i><span class="ml-3 font-weight-bold">Chef Mission</span>
         </div>
         <div class="shadow-lg p-1 mt-3 mb-3 w-100 d-flex justify-content-center">
             <div class=" d-flex justify-content-center mt-4">
-                <div class="row ml-5 float-left">
+                <div class=" ml-5 float-left">
                     <div class="font-weight-bolder">
                         Nom Chef mission : <span class="font-weight-normal">{{ucfirst($ptc->chef_mission->nom_chef)}}</span>
                     </div>
@@ -72,8 +119,6 @@
                         Telephone Chef Mission : <span class="font-weight-normal">{{$ptc->num_acc}}</span>
                     </div>
                 </div>
-
-
             </div>
         </div>
             {{--Vol Depart--}}
@@ -118,10 +163,10 @@
                 </div>
                 <div class="float-right mb-2 ">
                     <div class="font-weight-bolder">
-                        Numero Passport : <span class="font-weight-normal">{{$ptc->chef_mission->num_passport}}</span>
+                        Numero Passport : <span class="font-weight-normal">{{$ptc->num_pass}}</span>
                     </div>
                     <div class="font-weight-bolder">
-                        Telephone Chef Mission : <span class="font-weight-normal">{{$ptc->chef_mission->tel}}</span>
+                        Telephone Chef Mission : <span class="font-weight-normal">{{$ptc->num_acc}}</span>
                     </div>
                 </div>
 

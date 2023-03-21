@@ -5,7 +5,7 @@
 {{--        <a class="btn btn-success me-md-2 rounded-pill " type="button" href="{{route('participants.create')}}">Ajouter Participant</a>--}}
 {{--    </div>--}}
     <div class="d-grid gap-2 d-md-flex justify-content-md-end mr-3">
-        <a href="{{route('vol.create')}}"  class="btn btn-success me-md-2 rounded-pill create-vol">
+        <a href="{{route('vols.create')}}"  class="btn btn-success me-md-2 rounded-pill create-vol">
             Ajouter un vol
         </a>
     </div>
@@ -32,8 +32,8 @@
 
                     <td>
                         <a  class="btn btn-outline-primary rounded-6 mr-2" data-toggle="tooltip" data-placement="top" title="Affecter" href="#" ><i class="fas fa-address-card"></i></a>
-                        <a class="btn btn-outline-warning rounded-6 mr-2 create-vol" data-toggle="tooltip" data-placement="top" title="Modifier" href="{{route('vol.edit',$vol->id)}}" ><i class="fas fa-edit"></i></a>
-                        <a  class="btn btn-outline-danger rounded-6 mr-2 btn-delete"  data-toggle="tooltip" data-placement="top" title="Supprimer" href="{{route('vol.delete',$vol->id)}}" ><i class="fas fa-trash"></i></a>
+                        <a class="btn btn-outline-warning rounded-6 mr-2 create-vol" data-toggle="tooltip" data-placement="top" title="Modifier" href="{{route('vols.edit',$vol->id)}}" ><i class="fas fa-edit"></i></a>
+                        <a  class="btn btn-outline-danger rounded-6 mr-2 delete-elm"  data-toggle="tooltip" data-placement="top" title="Supprimer" href="{{route('vols.delete',$vol->id)}}" ><i class="fas fa-trash"></i></a>
 
                 </td>
                 </tr>

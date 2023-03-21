@@ -6,7 +6,7 @@
         </div>
 
     <div class="d-flex justify-content-center m-auto w-75">
-        <table class="table table-borderless table-bordered table-hover w-100 mt-5 shadow-lg p-3 mb-5 bg-white  ">
+        <table class="table table-borderless table-bordered table-hover w-100 mt-5 shadow-lg p-3 mb-5 bg-white rounded ">
             <thead>
             <tr class="text-left" >
                 <th scope="col">#</th>
@@ -32,7 +32,8 @@
                     <td>
                         <a class="btn btn-outline-primary rounded-6 mr-2" data-toggle="tooltip" data-placement="top" title="Consulter"  href="{{route('participants.show',$ptc->id)}}" ><i class="fas fa-eye"></i></a>
                         <a class="btn btn-outline-warning rounded-6 mr-2" data-toggle="tooltip" data-placement="top" title="Modifier"  href="{{route('participants.edit',$ptc->id)}}" ><i class="fas fa-edit"></i></a>
-                        <a class="btn btn-outline-danger rounded-6 mr-2 delete-participant " data-toggle="tooltip" data-placement="top"  title="Supprimer"  href="{{route('participants.delete',$ptc->id)}}" ><i class="fas fa-trash"></i></a>
+                        <a class="btn btn-outline-danger rounded-6 mr-2 delete-elm " data-toggle="tooltip" data-placement="top"  title="Supprimer"  href="{{route('participants.delete',$ptc->id)}}" ><i class="fas fa-trash"></i></a>
+
                     </td>
             </tr>
             @endforeach
@@ -43,7 +44,6 @@
 
     </div>
         <script>
-
             $(function () {
                 $('[data-toggle="tooltip"]').tooltip()
             })

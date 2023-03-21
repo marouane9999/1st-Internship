@@ -1,5 +1,5 @@
 import Swal from 'sweetalert2';
-$(document).on('click','.delete-participant',function (e) {
+$(document).on('click','.delete-elm',function (e){
     e.preventDefault();
     let $this=$(this);
     Swal.fire({
@@ -12,7 +12,7 @@ $(document).on('click','.delete-participant',function (e) {
         confirmButtonText: 'Confirmer'
     }).then((result) => {
         if (result.isConfirmed) {
-            $.ajax(
+        $.ajax(
             {
                 method:'get',
                 url:$this.attr('href'),
@@ -29,6 +29,8 @@ $(document).on('click','.delete-participant',function (e) {
         }
     })
 })
+
+
 
 $(document).on('click', '.create-vol', function (e) {
     e.preventDefault();
@@ -82,6 +84,13 @@ $(document).on('submit', '#volModal #volModalForm', function (e) {
     return false;
 });
 
+console.log('ff');
+
+$(document).on('click', '.close-modal', function (e) {
+    e.preventDefault();
+    console.log('here');
+    $('.modal').modal('hide');
+});
 
 
 

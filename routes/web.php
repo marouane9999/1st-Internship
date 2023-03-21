@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ParticipantController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 /*
@@ -14,7 +15,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-
     return to_route('participants.index');
 });
 
@@ -32,6 +32,19 @@ Route::group(['prefix'=>'/participants'], function (){
 //    Route::get('/search', [App\Http\Controllers\ParticipantController::class, 'search'])->name('participants.search');
 
 });
+Route::group(['prefix'=>'/vols'], function (){
+    Route::get('/', [App\Http\Controllers\VolController::class, 'index'])->name('vols.index');
+    Route::get('/create', [App\Http\Controllers\VolController::class, 'create'])->name('vols.create');
+    Route::post('/store', [App\Http\Controllers\VolController::class, 'store'])->name('vols.store');
+    Route::get('/edit/{id}', [App\Http\Controllers\VolController::class, 'edit'])->name('vols.edit');
+    Route::post('/update/{id}', [App\Http\Controllers\VolController::class, 'update'])->name('vols.update');
+    Route::get('/show/{id}', [App\Http\Controllers\VolController::class, 'show'])->name('vols.show');
+    Route::get('/delete/{id}', [App\Http\Controllers\VolController::class, 'delete'])->name('vols.delete');
+
+//    Route::get('/search', [App\Http\Controllers\ParticipantController::class, 'search'])->name('participants.search');
+
+});
+
 
 
 
@@ -42,16 +55,4 @@ Route::group(['prefix'=>'/participants'], function (){
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
-Route::group(['prefix'=>'/vols'],function(){
-    Route::get('/', [\App\Http\Controllers\VolController::class, 'index'])->name('vol');
-    Route::get('/create', [\App\Http\Controllers\VolController::class, 'create'])->name('vol.create');
-    Route::post('/store', [\App\Http\Controllers\VolController::class, 'store'])->name('vol.store');
-    Route::get('/edit/{id}', [\App\Http\Controllers\VolController::class, 'edit'])->name('vol.edit');
-    Route::post('/update/{id}', [\App\Http\Controllers\VolController::class, 'update'])->name('vol.update');
-    Route::get('/delete/{id}', [\App\Http\Controllers\VolController::class, 'delete'])->name('vol.delete');
-});
-
-
 
