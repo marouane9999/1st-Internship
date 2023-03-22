@@ -86,5 +86,16 @@ class HebergementController extends Controller
             'msg' => 'Hébergement updated avec succès.',
         ]);
     }
+    public function delete($id)
+    {
+        $hebergement = Hebergement::find($id);
+        if ($hebergement) {
+            $hebergement->delete();
+            return response()->json([
+                'success' => true,
+                'msg' => 'Hébergement deleted avec succès.',
+            ]);
+        }
+    }
 
 }
