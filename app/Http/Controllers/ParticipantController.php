@@ -6,6 +6,7 @@ use App\Http\Requests\ParticipantRequest;
 use App\Models\Categorie;
 use App\Models\ChefMission;
 use App\Models\Participant;
+use App\Models\Vol;
 use Barryvdh\DomPDF\PDF;
 use http\Client\Curl\User;
 use Illuminate\Http\Request;
@@ -56,12 +57,14 @@ class ParticipantController extends Controller
         $site_compet = config('custom_arrays.site_compet');
         $discipline = config('custom_arrays.discipline');
         $cat_pr = Categorie::get();
+        $vols = Vol::get();
         return view('participants.form')->with([
             'participant' => $this->participant,
             'countries' => $countries,
             'site_compet' => $site_compet,
             'categories' => $cat_pr,
             'discipline' => $discipline,
+            'vols'=>$vols,
             'action' => route('participants.store'),
         ]);
 
@@ -86,15 +89,15 @@ class ParticipantController extends Controller
             $inputs['chefM_id'] = $chefM->id;
             $particpant = $this->participant->fill($inputs);
             $particpant->save();
+            $particpant->vols()->attach($inputs['vol_dep']);
+            $particpant->vols()->attach($inputs['vol_arr']);
             \DB::commit();
             flash()->success('Participant est ajouté(e) avec succès');
             return redirect()->route('participants.index');
         } catch (\Exception $e) {
             \DB::rollback();
-            return redirect()->route('participants.index');
+            return dd($e);
         }
-
-
     }
 
     /**
@@ -110,7 +113,7 @@ class ParticipantController extends Controller
         $discipline = config('custom_arrays.discipline');
         $cat_pr = Categorie::get();
 
-
+        $vols=Vol::get();
         $participant = Participant::find($id);
 
         if($participant){
@@ -120,6 +123,7 @@ class ParticipantController extends Controller
                 'site_compet' => $site_compet,
                 'categories' => $cat_pr,
                 'discipline' => $discipline,
+                'vols'=>$vols,
                 'action' => route('participants.update',$participant->id)
             ]);
         }
@@ -178,6 +182,7 @@ class ParticipantController extends Controller
         $participant = Participant::find($id);
 
         if($participant){
+            $participant->vols()->detach();
             $participant->delete();
             return response()->json([
                 'success'=>true,
@@ -187,7 +192,7 @@ class ParticipantController extends Controller
         }
         return response()->json([
             'success' => false,
-            'msg' => 'Impossible de retrouver ce Participant.'], 200);
+            'msg' => 'Impossible de retrouver ce Participant.'],200);
     }
 
 }

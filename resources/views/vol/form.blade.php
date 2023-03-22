@@ -26,12 +26,7 @@
                                     </div>
                                     <div class="form-group row">
                                         <label for="inputPassword4"  class="font-weight-bold ">Type de vol:</label>
-                                        <select class="custom-select @error('type_vol') is-invalid @enderror" aria-label="Default select example" name="type_vol" value={{old('type_vol')}}>
-                                            @error('type_vol')
-                                            <div class="is-invalid text-red ml-2" >
-                                                <i class='fas fa-exclamation-circle mr-2'></i>{{$message}}
-                                            </div>
-                                            @enderror
+                                        <select class="custom-select @error('type_vol') is-invalid @enderror" aria-label="Default select example" name="type_vol" value="">
                                             <option value="true">Départ</option>
                                             <option value="false">Arrivée</option>
                                         </select>
