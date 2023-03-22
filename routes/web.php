@@ -28,9 +28,6 @@ Route::group(['prefix'=>'/participants'], function (){
     Route::post('/update/{id}', [App\Http\Controllers\ParticipantController::class, 'update'])->name('participants.update');
     Route::get('/show/{id}', [App\Http\Controllers\ParticipantController::class, 'show'])->name('participants.show');
     Route::get('/delete/{id}', [App\Http\Controllers\ParticipantController::class, 'destroy'])->name('participants.delete');
-
-//    Route::get('/search', [App\Http\Controllers\ParticipantController::class, 'search'])->name('participants.search');
-
 });
 Route::group(['prefix'=>'/vols'], function (){
     Route::get('/', [App\Http\Controllers\VolController::class, 'index'])->name('vols.index');
@@ -40,19 +37,7 @@ Route::group(['prefix'=>'/vols'], function (){
     Route::post('/update/{id}', [App\Http\Controllers\VolController::class, 'update'])->name('vols.update');
     Route::get('/show/{id}', [App\Http\Controllers\VolController::class, 'show'])->name('vols.show');
     Route::get('/delete/{id}', [App\Http\Controllers\VolController::class, 'delete'])->name('vols.delete');
-
-//    Route::get('/search', [App\Http\Controllers\ParticipantController::class, 'search'])->name('participants.search');
-
 });
-
-
-
-
-;
-
-
-
-
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

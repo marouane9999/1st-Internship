@@ -5,8 +5,8 @@ $(document).on('click','.delete-elm',function (e){
     Swal.fire({
         title: 'Êtes-vous sûr?',
         text:"Vous ne pourrez pas revenir en arrière !",
-        icon: 'warning',
-        showCancelButton: true,
+        icon:'warning',
+        showCancelButton:true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
         confirmButtonText: 'Confirmer'
@@ -18,6 +18,7 @@ $(document).on('click','.delete-elm',function (e){
                 url:$this.attr('href'),
                 success: function (data) {
                     if (data.success) {
+                        console.log('2312312')
                         toastr.success(data.msg);
                         $this.parent().parent().remove();
                     } else {
@@ -30,14 +31,12 @@ $(document).on('click','.delete-elm',function (e){
     })
 })
 
-
-
 $(document).on('click', '.create-vol', function (e) {
     e.preventDefault();
-    var $this = $(this);
+    let $this = $(this);
     $.ajax({
+        method: 'GET',
         url: $this.attr('href'),
-        method: 'Get',
         date: {},
         success: function (response) {
             $(response.html).modal('show')
@@ -49,7 +48,6 @@ $(document).on('submit', '#volModal #volModalForm', function (e) {
     e.preventDefault();
     var $this = $(this);
     var $action = $this.attr('action');
-
     $.ajax({
         method: 'POST',
         url: $action,
@@ -84,7 +82,6 @@ $(document).on('submit', '#volModal #volModalForm', function (e) {
     return false;
 });
 
-console.log('ff');
 
 $(document).on('click', '.close-modal', function (e) {
     e.preventDefault();

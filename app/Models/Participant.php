@@ -16,5 +16,8 @@ class Participant extends Model
     public function categorie(){
         return $this->belongsTo(Categorie::class,'cat_id' );
     }
+    public function vols() {
+        return $this->belongsToMany(Vol::class,'vols_participants','participant_id','vol_id');
+    }
 
 }

@@ -70,7 +70,7 @@ class VolController extends Controller
             'html' => view('vol.form')->with([
                 'vol' => $vol,
                 'title' => 'Modifier un vol',
-                'action' => route('vols.update', $vol->id),
+                'action' => route('vols.update', $id),
                 'aeroport' => $aeroport,
             ])->render()
         ]);
@@ -96,10 +96,10 @@ class VolController extends Controller
 
     public function delete($id)
     {
-        $vol = Vol::find($id);
+        $vol=Vol::find($id);
         if ($vol) {
+            $vol->participants()->detach();
             $vol->delete();
-
             return response()->json([
                 'success' => true,
                 'msg' => 'Vol deleted avec succès.',
