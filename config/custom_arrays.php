@@ -291,7 +291,29 @@ return [
             'Aéroport de Béni Mellal',
             'Aéroport de Marrakech-Ménara',
             'Aéroport de Ouarzazate',
-     )
+     ),
+
+     'site_heberg' => array(
+            'Odyssee Boutique Hotel Casablancal',
+            'Atlas Sky Airport',
+            'Pestana CR7 Marrakech',
+            'Savoy Le Grand Hotel',
+            'Riad Elnoujoum',
+            'Relax Airport',
+            'Suite Hotel Casa Diamond',
+            'MAMORA BAY',
+            'Hotel Campanile Casablanca Centre Ville',
+            'Barcelo Tanger',
+            'Fes Marriott Hotel Jnan Palace',
+            'Novotel Marrakech Hivernage',
+            'Les Merinides',
+            'Hilton Tangier Al Houara Resort & Spa',
+            'Riad Mabrouk',
+            'ibis Casablanca City Center',
+            'Royal Mansour Marrakech',
+            'Hotel Farah Marrakech',
+     ),
 
 ];
+
 ?>

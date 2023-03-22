@@ -44,8 +44,15 @@ Route::group(['prefix'=>'/vols'], function (){
 //    Route::get('/search', [App\Http\Controllers\ParticipantController::class, 'search'])->name('participants.search');
 
 });
+Route::group(['prefix'=>'/hebergements'], function (){
+    Route::get('/', [\App\Http\Controllers\HebergementController::class, 'index'])->name('hebergements.index');
+    Route::get('/create', [\App\Http\Controllers\HebergementController::class, 'create'])->name('hebergements.create');
+    Route::post('/store', [App\Http\Controllers\HebergementController::class, 'store'])->name('hebergements.store');
+    Route::get('/edit/{id}', [App\Http\Controllers\HebergementController::class, 'edit'])->name('hebergements.edit');
+    Route::post('/update/{id}', [App\Http\Controllers\HebergementController::class, 'update'])->name('hebergements.update');
 
 
+});
 
 
 ;

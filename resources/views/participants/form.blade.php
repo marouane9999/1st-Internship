@@ -17,7 +17,7 @@
                             @enderror
                         </div>
                         <div class="form-group col-xl-9">
-                            <label for="inputPassword4"  class="font-weight-bold">Prenom Participant*</label>
+                            <label for="prenom_par"  class="font-weight-bold">Prenom Participant*</label>
                             <input type="search" class="form-control @error('prenom_par') is-invalid @enderror" id="inputPassword4" placeholder="Prenom Participant" name="prenom_par" value={{old('nom_par', $participant->prenom_par)}}>
                             @error('prenom_par')
                             <div class="is-invalid text-red ml-2" >

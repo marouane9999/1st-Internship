@@ -5,9 +5,7 @@
 {{--        <a class="btn btn-success me-md-2 rounded-pill " type="button" href="{{route('participants.create')}}">Ajouter Participant</a>--}}
 {{--    </div>--}}
     <div class="d-grid gap-2 d-md-flex justify-content-md-end mr-3">
-        <a href="{{route('vols.create')}}"  class="btn btn-success me-md-2 rounded-pill create-vol">
-            Ajouter un vol
-        </a>
+        <a href="{{route('vols.create')}}"  class="btn btn-success me-md-2 rounded-pill create-vol">Ajouter un vol</a>
     </div>
     <div class="d-flex justify-content-center mt-4 w-100">
         <table class="table table-borderless table-bordered table-hover w-100 ">
