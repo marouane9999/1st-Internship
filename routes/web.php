@@ -45,6 +45,7 @@ Route::group(['prefix'=>'/hebergements'], function (){
     Route::get('/edit/{id}', [App\Http\Controllers\HebergementController::class, 'edit'])->name('hebergements.edit');
     Route::post('/update/{id}', [App\Http\Controllers\HebergementController::class, 'update'])->name('hebergements.update');
     Route::get('/delete/{id}', [App\Http\Controllers\HebergementController::class, 'delete'])->name('hebergements.delete');
+    Route::get('/show/{id}', [App\Http\Controllers\HebergementController::class, 'show'])->name('hebergements.show');
 
 
 });

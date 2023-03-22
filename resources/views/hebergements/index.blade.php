@@ -27,7 +27,7 @@
                     <td>{{$heberg->date_checkin}}</td>
                     <td>{{$heberg->date_checkout}}</td>
                     <td>
-                        <a class="btn btn-outline-primary rounded-6 mr-2" data-toggle="tooltip" data-placement="top" title="Consulter"  href="#" ><i class="fas fa-eye"></i></a>
+                        <a class="btn btn-outline-primary rounded-6 mr-2" data-toggle="tooltip" data-placement="top" title="Consulter"  href="{{route('hebergements.show',$heberg->id)}}" ><i class="fas fa-eye"></i></a>
                         <a class="btn btn-outline-warning rounded-6 mr-2 create-hebergements" data-toggle="tooltip" data-placement="top" title="Modifier"  href="{{route('hebergements.edit',$heberg->id)}}" ><i class="fas fa-edit"></i></a>
                         <a class="btn btn-outline-danger rounded-6 mr-2 delete-elm" data-toggle="tooltip" data-placement="top"  title="Supprimer"  href="{{route('hebergements.delete',$heberg->id)}}" ><i class="fas fa-trash"></i></a>
 

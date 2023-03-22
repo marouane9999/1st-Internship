@@ -97,5 +97,13 @@ class HebergementController extends Controller
             ]);
         }
     }
+    public function show($id)
+    {
+        $hebergement = Hebergement::find($id);
+        $hebergement->get();
+        $site_heberg = config('custom_arrays.site_heberg');
+        $countries = config('custom_arrays.countries');
+        return view('hebergements.show',['heberg'=>$hebergement,'site_heberg'=>$site_heberg,'countries'=>$countries]);
+    }
 
 }

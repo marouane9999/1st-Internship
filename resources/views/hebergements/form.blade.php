@@ -39,11 +39,11 @@
                             <div class="form-column">
                                 <div class="form-group row ">
                                     <label for="date_checkin"  class="font-weight-bold " >Date Check in:</label><br>
-                                    <input type="date" class="custom-select" name="date_checkin" @if($hebergement->date_checkin) value="{{old('date_checkin',$hebergment->date_checkin)}}" @else value="{{date("Y-m-d")}}" @endif >
+                                    <input type="date" class="custom-select" name="date_checkin" @if($hebergement->date_checkin) value={{old('date_checkin',$hebergement->date_checkin)}} @else value="{{date("Y-m-d")}}" @endif >
                                 </div>
                                 <div class="form-group row ">
                                     <label for="date_checkout"  class="font-weight-bold " >Date Check out:</label><br>
-                                    <input type="date" class="custom-select" name="date_checkout" @if($hebergement->date_checkout) value="{{old('date_checkout',$hebergment->date_checkout)}}" @else value="{{date("2025-m-d")}}" @endif>
+                                    <input type="date" class="custom-select" name="date_checkout" @if($hebergement->date_checkout) value={{old('date_checkout',$hebergement->date_checkout)}} @else value="{{date("2025-m-d")}}" @endif>
                                 </div>
                             </div>
                         </div>
