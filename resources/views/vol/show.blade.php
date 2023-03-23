@@ -55,9 +55,6 @@
                         <tbody>
                         @foreach($vol->participants as $ptc)
                             <tr>
-                                @if($ptc==null)
-
-                                @endif
                                 <th scope="row">{{$ptc->id}}</th>
                                 <td>{{ucfirst($ptc->prenom_par)}} {{ucfirst($ptc->prenom_par)}}</td>
                                 <td>{{$ptc->num_pass}}</td>

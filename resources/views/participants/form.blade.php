@@ -48,7 +48,6 @@
                             @enderror
                         </div>
 
-
                         <div class="form-group col-xl-9">
                             <label for="inputPassword4"  class="font-weight-bold">Numero de Passport*</label>
                             <input type="number" class="form-control @error('num_pass') is-invalid @enderror" min="1" id="inputPassword4" placeholder="Numero de Passport" name="num_pass" value={{old('num_pass', $participant->num_pass )}} >
@@ -93,12 +92,13 @@
                                 @endforeach
                             </select>
                         </div>
+
                         <div class="form-group col-xl-9">
                             <label for=""   class="font-weight-bold" >Vol Depart</label><br>
                             <select class="custom-select" name="vol_dep">
                                 @foreach($vols as $vol)
                                     @if($vol->type_vol==1)
-                                    <option value="{{$vol->id}}" {{$vol->id==$participant->vols_depart()->id ? 'selected' : ''}}  >{{ucfirst($vol->numero_vol)}}--{{ucfirst($vol->terminal)}}</option>
+                                    <option value="{{$vol->id}}" @if($participant->vols_depart() && $vol->id == $participant->vols_depart()->id)  selected @endif >{{ucfirst($vol->numero_vol)}}--{{ucfirst($vol->terminal)}}</option>
                                     @endif
                                 @endforeach
                             </select>
@@ -108,7 +108,7 @@
                             <select class="custom-select" name="vol_arr" required>
                                 @foreach($vols as $vol)
                                     @if($vol->type_vol==0)
-                                        <option value="{{$vol->id}}" {{$vol->id==$participant->vols_arrive()->id ? 'selected' : ''}} >{{ucfirst($vol->numero_vol)}}--{{ucfirst($vol->terminal)}}</option>
+                                        <option value="{{$vol->id}}" @if($participant->vols_arrive() && $vol->id == $participant->vols_arrive()->id) selected @endif >{{ucfirst($vol->numero_vol)}}--{{ucfirst($vol->terminal)}}</option>
                                     @endif
                                 @endforeach
                             </select>
