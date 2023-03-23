@@ -29,7 +29,7 @@
                     <td>{{$vol->terminal}}</td>
 
                     <td>
-                        <a  class="btn btn-outline-primary rounded-6 mr-2" data-toggle="tooltip" data-placement="top" title="Affecter" href="#" ><i class="fas fa-address-card"></i></a>
+                        <a  class="btn btn-outline-primary rounded-6 mr-2" data-toggle="tooltip" data-placement="top" title="Consulter" href="{{route('vols.show',$vol->id)}}" ><i class="fas fa-address-card"></i></a>
                         <a  class="btn btn-outline-warning rounded-6 mr-2 create-vol" data-toggle="tooltip" data-placement="top" title="Modifier" href="{{route('vols.edit',$vol->id)}}" ><i class="fas fa-edit"></i></a>
                         <a  class="btn btn-outline-danger rounded-6 mr-2 delete-elm"  data-toggle="tooltip" data-placement="top" title="Supprimer" href="{{route('vols.delete',$vol->id)}}" ><i class="fas fa-trash"></i></a>
 

@@ -95,10 +95,10 @@
                         </div>
                         <div class="form-group col-xl-9">
                             <label for=""   class="font-weight-bold" >Vol Depart</label><br>
-                            <select class="custom-select" name="vol_dep" required>
+                            <select class="custom-select" name="vol_dep">
                                 @foreach($vols as $vol)
                                     @if($vol->type_vol==1)
-                                    <option value="{{$vol->id}}"     >{{ucfirst($vol->numero_vol)}}--{{ucfirst($vol->terminal)}}</option>
+                                    <option value="{{$vol->id}}" {{$vol->id==$participant->vols_depart()->id ? 'selected' : ''}}  >{{ucfirst($vol->numero_vol)}}--{{ucfirst($vol->terminal)}}</option>
                                     @endif
                                 @endforeach
                             </select>
@@ -108,7 +108,7 @@
                             <select class="custom-select" name="vol_arr" required>
                                 @foreach($vols as $vol)
                                     @if($vol->type_vol==0)
-                                        <option value="{{$vol->id}}"   selected  >{{ucfirst($vol->numero_vol)}}--{{ucfirst($vol->terminal)}}</option>
+                                        <option value="{{$vol->id}}" {{$vol->id==$participant->vols_arrive()->id ? 'selected' : ''}} >{{ucfirst($vol->numero_vol)}}--{{ucfirst($vol->terminal)}}</option>
                                     @endif
                                 @endforeach
                             </select>

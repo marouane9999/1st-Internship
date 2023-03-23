@@ -19,5 +19,12 @@ class Participant extends Model
     public function vols() {
         return $this->belongsToMany(Vol::class,'vols_participants','participant_id','vol_id');
     }
+    public function vols_arrive() {
+        return $this->vols()->where('type_vol',0)->first();
+    }
+    public function vols_depart() {
+            return $this->vols()->where('type_vol',1)->first();
+    }
+
 
 }
