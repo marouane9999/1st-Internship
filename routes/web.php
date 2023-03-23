@@ -49,6 +49,13 @@ Route::group(['prefix'=>'/hebergements'], function (){
 
 
 });
+Route::group(['prefix'=>'/restaurations'], function (){
+    Route::get('/', [\App\Http\Controllers\RestaurationController::class, 'index'])->name('restaurations.index');
+    Route::get('/create', [\App\Http\Controllers\RestaurationController::class, 'create'])->name('restaurations.create');
+    Route::post('/store', [App\Http\Controllers\RestaurationController::class, 'store'])->name('restaurations.store');
+
+
+});
 
 
 ;

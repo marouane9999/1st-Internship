@@ -313,6 +313,28 @@ return [
             'Royal Mansour Marrakech',
             'Hotel Farah Marrakech',
      ),
+     'site_restau' => array(
+            'AGORA BEACH',
+            'WORLD OF WAVES',
+            'Prestige Mirador',
+            'LA GRILLARDIERE',
+            'LA ROSE ROUGE ',
+            'PALAIS ALADIN',
+            'SALMA',
+            'ZITOUNA',
+            'NINOTCHKA',
+            'KAI TAI CHINOISE',
+            'PALAIS LA MEDINA',
+            'MAISON BLANCHE',
+            'SIROCCO',
+            'Poza Rica',
+            'Picasso',
+            'Camélia',
+            'Al Mounia',
+            'Al Forno',
+            'Galleto do brazile',
+            'Buena Fourchetta',
+     ),
 
 ];
 

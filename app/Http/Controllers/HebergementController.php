@@ -37,7 +37,6 @@ class HebergementController extends Controller
             ])->render()
         ]);
 
-
     }
     public function store(HebergementRequest $request)
     {

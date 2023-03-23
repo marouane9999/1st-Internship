@@ -1,0 +1,57 @@
+@extends('layout')
+@section('content')
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end mr-auto">
+        <a href="{{route('restaurations.create')}}" class="btn btn-success me-md-2 rounded-pill create-restaurations" >Ajouter Restauration</a>
+    </div>
+
+    <div class="d-flex justify-content-center m-auto w-75">
+        <table class="table table-borderless table-bordered table-hover w-100 mt-5 shadow-lg p-3 mb-5 bg-white rounded">
+            <thead>
+            <tr class="text-left" >
+                <th scope="col">#</th>
+                <th scope="col">Numéro de restauration</th>
+                <th scope="col">Site de restauration</th>
+                <th scope="col">Ville</th>
+                <th scope="col">Prestataire</th>
+                <th scope="col">Catégorie de repas</th>
+                <th scope="col">Participant</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach($restaurations as $restau)
+                <tr class="text-left" id="restauration">
+                    <th scope="row">{{$restau->id}}</th>
+                    <td>{{$restau->numero_rest}}</td>
+                    <td>{{$restau->site_restau}}</td>
+                    <td>{{$restau->ville}}</td>
+                    <td>{{$restau->prestataire}}</td>
+                    <td>{{$restau->repas->des_rep}}</td>
+                    <td>{{$restau->participant->nom_par}}  {{$restau->participant->prenom_par}}</td>
+                    <td>
+                        <a class="btn btn-outline-primary rounded-6 mr-2" data-toggle="tooltip" data-placement="top" title="Consulter"  href="#" ><i class="fas fa-eye"></i></a>
+                        <a class="btn btn-outline-warning rounded-6 mr-2 create-hebergements" data-toggle="tooltip" data-placement="top" title="Modifier"  href="#" ><i class="fas fa-edit"></i></a>
+                        <a class="btn btn-outline-danger rounded-6 mr-2 delete-elm" data-toggle="tooltip" data-placement="top"  title="Supprimer"  href="#" ><i class="fas fa-trash"></i></a>
+
+                    </td>
+                </tr>
+            @endforeach
+
+
+            </tbody>
+        </table>
+
+    </div>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+        $('div.alert').not('.alert-important').delay(1500).fadeOut(350);
+
+    </script>
+
+
+
+@endsection
+
+
