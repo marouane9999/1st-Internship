@@ -112,8 +112,7 @@ class ParticipantController extends Controller
         $site_compet = config('custom_arrays.site_compet');
         $discipline = config('custom_arrays.discipline');
         $cat_pr = Categorie::get();
-
-        $vols=Vol::get();
+        $vols=Vol::all();
         $participant = Participant::find($id);
 
         if($participant){
@@ -165,9 +164,11 @@ class ParticipantController extends Controller
         $inputs=$request->all();
 //        $ptc=$this->participant->fill($inputs);
 //        $chefM=$this->chefMission->fill($inputs);
-        $this->participant->find($id)->update($inputs);
-        $this->chefMission->update($inputs);
-        flash()->warning('Participant est modifié(e) avec succès');
+        $participant = Participant::find($id);
+        $participant->vols()->sync([$inputs['vol_arr'],$inputs['vol_dep']]);
+        $participant->update($inputs);
+        $participant->chef_mission->update($inputs);
+        flash()->success('Participant est modifié(e) avec succès');
         return redirect()->route('participants.index');
     }
 
