@@ -98,7 +98,7 @@
                             <select class="custom-select" name="vol_dep">
                                 @foreach($vols as $vol)
                                     @if($vol->type_vol==1)
-                                    <option value="{{$vol->id}}" {{$vol->id==$participant->vols_depart()->id ? 'selected' : ''}}  >{{ucfirst($vol->numero_vol)}}--{{ucfirst($vol->terminal)}}</option>
+                                    <option value="{{$vol->id}}" @if($participant->vols_depart() && $vol->id==$participant->vols_depart()->id) selected @endif>{{ucfirst($vol->numero_vol)}}--{{ucfirst($vol->terminal)}}</option>
                                     @endif
                                 @endforeach
                             </select>
@@ -108,7 +108,7 @@
                             <select class="custom-select" name="vol_arr" required>
                                 @foreach($vols as $vol)
                                     @if($vol->type_vol==0)
-                                        <option value="{{$vol->id}}" {{$vol->id==$participant->vols_arrive()->id ? 'selected' : ''}} >{{ucfirst($vol->numero_vol)}}--{{ucfirst($vol->terminal)}}</option>
+                                        <option value="{{$vol->id}}" @if($participant->vols_arrive() && $vol->id==$participant->vols_arrive()->id) selected @endif >{{ucfirst($vol->numero_vol)}}--{{ucfirst($vol->terminal)}}</option>
                                     @endif
                                 @endforeach
                             </select>

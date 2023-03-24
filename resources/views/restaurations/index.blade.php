@@ -29,9 +29,9 @@
                     <td>{{$restau->repas->des_rep}}</td>
                     <td>{{$restau->participant->nom_par}}  {{$restau->participant->prenom_par}}</td>
                     <td>
-                        <a class="btn btn-outline-primary rounded-6 mr-2" data-toggle="tooltip" data-placement="top" title="Consulter"  href="#" ><i class="fas fa-eye"></i></a>
-                        <a class="btn btn-outline-warning rounded-6 mr-2 create-hebergements" data-toggle="tooltip" data-placement="top" title="Modifier"  href="#" ><i class="fas fa-edit"></i></a>
-                        <a class="btn btn-outline-danger rounded-6 mr-2 delete-elm" data-toggle="tooltip" data-placement="top"  title="Supprimer"  href="#" ><i class="fas fa-trash"></i></a>
+                        <a class="btn btn-outline-primary rounded-6 mr-2" data-toggle="tooltip" data-placement="top" title="Consulter"  href="{{route('restaurations.show',$restau->id)}}" ><i class="fas fa-eye"></i></a>
+                        <a class="btn btn-outline-warning rounded-6 mr-2 create-restaurations" data-toggle="tooltip" data-placement="top" title="Modifier"  href="{{route('restaurations.edit',$restau->id)}}" ><i class="fas fa-edit"></i></a>
+                        <a class="btn btn-outline-danger rounded-6 mr-2 delete-elm" data-toggle="tooltip" data-placement="top"  title="Supprimer"  href="{{route('restaurations.delete',$restau->id)}}" ><i class="fas fa-trash"></i></a>
 
                     </td>
                 </tr>

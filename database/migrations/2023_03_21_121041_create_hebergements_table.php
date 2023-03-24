@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('hebergements', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('participant_id');
-            $table->foreign('participant_id')->references('id')->on('participants');
+            $table->foreign('participant_id')->references('id')->on('participants')->onDelete('cascade');;
             $table->string('site_heberg');
             $table->boolean('type_cham');
             $table->dateTime('date_checkin');
