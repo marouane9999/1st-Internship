@@ -10,6 +10,6 @@ class Repas extends Model
     use HasFactory;
     protected $fillable=['des_rep','desc_rep'];
     public function restauration(){
-        return $this->hasOne('restauration','cate_id');
+        return $this->hasOne('restauration','rep_id');
     }
 }

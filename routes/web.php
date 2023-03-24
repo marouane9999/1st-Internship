@@ -53,6 +53,14 @@ Route::group(['prefix'=>'/restaurations'], function (){
     Route::get('/', [\App\Http\Controllers\RestaurationController::class, 'index'])->name('restaurations.index');
     Route::get('/create', [\App\Http\Controllers\RestaurationController::class, 'create'])->name('restaurations.create');
     Route::post('/store', [App\Http\Controllers\RestaurationController::class, 'store'])->name('restaurations.store');
+    Route::get('/edit/{id}', [App\Http\Controllers\RestaurationController::class, 'edit'])->name('restaurations.edit');
+    Route::post('/update/{id}', [App\Http\Controllers\RestaurationController::class, 'update'])->name('restaurations.update');
+    Route::get('/delete/{id}', [App\Http\Controllers\RestaurationController::class, 'delete'])->name('restaurations.delete');
+    Route::get('/show/{id}', [App\Http\Controllers\RestaurationController::class, 'show'])->name('restaurations.show');
+
+
+
+
 
 
 });
