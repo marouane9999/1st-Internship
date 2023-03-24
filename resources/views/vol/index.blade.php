@@ -4,10 +4,10 @@
 {{--    <div class="d-grid gap-2 d-md-flex justify-content-md-end mr-3">--}}
 {{--        <a class="btn btn-success me-md-2 rounded-pill " type="button" href="{{route('participants.create')}}">Ajouter Participant</a>--}}
 {{--    </div>--}}
-<div class="d-grid gap-2 d-md-flex justify-content-md-end mr-auto">
-    <a class="btn btn-success me-md-2 rounded-pill bg-gradient-success create-vol" href="{{route('vols.create')}}"><i class="fa fa-plus"></i>&nbsp;&nbsp;Ajouter un Vol</a>
-</div>
-    <div class="d-flex justify-content-center m-auto w-75 p-2">
+<div class="mt-5 m-auto w-75 ">
+    <a class="btn btn-success me-md-2 rounded-pill bg-gradient-success float-right mb-2 create-vol" href="{{route('vols.create')}}"><i class="fa fa-plus"></i>&nbsp;&nbsp;Ajouter un Vol</a>
+
+
         <table class="table table-borderless table-bordered table-hover w-100 mt-2 shadow-lg mb-5 bg-white rounded  ">
             <thead>
             <tr class="text-center">
@@ -40,9 +40,7 @@
 
             </tbody>
         </table>
-
-    </div>
-
+</div>
 
 @endsection
 

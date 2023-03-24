@@ -43,7 +43,7 @@
             @else
                 <div class="collapse show" id="collapseExample">
                 <div class="d-flex justify-content-center">
-                    <table class=" table table-light table-hover w-50 text-center border-7">
+                    <table class=" table table-light table-hover w-50 text-left border-7">
                         <thead>
                         <tr>
                             <th scope="col">#</th>

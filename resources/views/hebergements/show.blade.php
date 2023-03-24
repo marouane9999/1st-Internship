@@ -1,7 +1,7 @@
 @extends('layout')
 @section('content')
 
-    <div class="container shadow-sm p-3 mb-5  rounded">
+    <div class="container shadow-sm p-3 mb-5  rounded w-75 mt-5">
 
     <div class="d-flex justify-content-center m-auto w-75">
             <h1 class="display-3 text-black">Hébergement<span class="display-2 text-blue font-weight-bolder">&nbsp; #{{$heberg->id}}</span> </h1>
@@ -70,12 +70,6 @@
                                 @endif
                             @endforeach
                 </span>
-                    </div>
-                    <div class="font-weight-bolder">
-                        Discipline : <span class="font-weight-normal">{{{ucfirst($heberg->participant->discipline)}}}</span>
-                    </div>
-                    <div class="font-weight-bolder">
-                        Categorie : <span class="font-weight-normal">{{{ucfirst($heberg->participant->categorie->des_cat)}}}</span>
                     </div>
                 </div>
             </div>

@@ -1,12 +1,18 @@
 @extends('layout')
 @section('content')
 
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end mr-auto">
-            <a class="btn btn-success me-md-2 rounded-pill bg-gradient-success "  href="{{route('participants.create')}}"><i class="fa fa-plus"></i>&nbsp;&nbsp;Ajouter Participant</a>
-        </div>
 
-    <div class="d-flex justify-content-center m-auto w-75">
-        <table class="table table-borderless table-bordered table-hover w-100 mt-2 shadow-lg mb-5 bg-white rounded">
+
+    <div class=" mt-5 m-auto w-75 ">
+            <a class="btn btn-success me-md-2 rounded-pill bg-gradient-success float-right mb-2 "  href="{{route('participants.create')}}"><i class="fa fa-plus"></i>&nbsp;&nbsp;Ajouter Participant</a>
+
+            <div>
+                @if($participants->count()==0)
+                    <div class="text-muted text-center font-weight-bolder mt-5  ">
+                        <i class='fas fa-exclamation-triangle'></i> <span>Aucun Participant n'est Enregistré!</span>
+                    </div>
+                @else
+                <table class="table table-borderless table-bordered table-hover w-100 mt-2 shadow-lg mb-5 bg-white rounded">
             <thead>
             <tr class="" >
                 <th scope="col">#</th>
@@ -39,7 +45,10 @@
 
 
             </tbody>
-        </table>
+        </table>@endif
+            </div>
+
+
 
     </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js">

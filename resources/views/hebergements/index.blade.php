@@ -1,10 +1,7 @@
 @extends('layout')
 @section('content')
-    <div class="d-grid gap-2 d-md-flex justify-content-md-end mr-auto">
-        <a href="{{route('hebergements.create')}}" class="btn btn-success me-md-2 rounded-pill create-hebergements" >Ajouter Hébergement</a>
-    </div>
-
-    <div class="d-flex justify-content-center m-auto w-75">
+    <div class="mt-5 m-auto w-75 ">
+        <a href="{{route('hebergements.create')}}" class="btn btn-success me-md-2 rounded-pill bg-gradient-success float-right mb-2 create-hebergements " ><i class="fa fa-plus mr-2"></i>Ajouter Hébergement</a>
         <table class="table table-borderless table-bordered table-hover w-100 mt-5 shadow-lg p-3 mb-5 bg-white rounded">
             <thead>
             <tr class="text-left" >
@@ -38,7 +35,6 @@
 
             </tbody>
         </table>
-
     </div>
     <script>
         $(function () {

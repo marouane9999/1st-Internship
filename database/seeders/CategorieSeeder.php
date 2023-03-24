@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class CategorieSeeder extends Seeder
 {
@@ -19,9 +20,13 @@ class CategorieSeeder extends Seeder
             'desc_cat' => "Responsable sur l'organisation des activites Sporitfs",
         ],
         [
-            'des_cat' => 'Delegation Sportif',
+            'des_cat' => 'delegation Sportif',
             'desc_cat' => "Controlleur des activites sportifs",
-        ]
+        ],
+            [
+                'des_cat' => 'officiel technique',
+                'desc_cat' => "Responsable sur les problemes technique",
+            ]
         );
     }
 }

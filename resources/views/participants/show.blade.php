@@ -77,12 +77,10 @@
         @foreach($ptc->vols as $vol_dep)
         <div class="col-6 {{$vol_dep->type_vol?'pl-0': 'pr-0'}} ">
             <div class="alert alert-default-{{$vol_dep->type_vol ? 'warning':'success'}} shadow-sm mt-3 " role="alert">
-                <i class='fas fa-plane-departure'></i><span class="ml-3 font-weight-bold">{{$vol_dep->type_vol ? 'Vol Depart':'Vol Arrive'}}</span>
+                <i class='fas fa-plane-{{$vol_dep->type_vol ? 'departure':'arrival'}}'></i><span class="ml-3 font-weight-bold">{{$vol_dep->type_vol ? 'Vol Depart':'Vol Arrive'}}</span>
             </div>
             <div class="shadow-lg mt-3 w-100 py-1 px-5">
-
                 <div class="font-weight-bolder mb-2">
-
                     Numero de Vol : <span class="font-weight-normal">{{ucfirst($vol_dep->numero_vol)}}</span>
                 </div>
                 <div class="font-weight-bolder mb-2">
