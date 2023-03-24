@@ -1,6 +1,14 @@
 @extends('layout')
 @section('content')
-    <div class="mt-5 m-auto w-75 ">
+    @if($hebergement->count()==0)
+        <div class="text-muted text-center font-weight-bolder m-auto  ">
+            <div class="row w-25 m-auto mt-5">
+                <i class='fas fa-exclamation-triangle'></i> <span>Aucun Hébergement n'est Enregistré!</span>
+                <a href="{{route('hebergements.create')}}" class="btn btn-success me-md-2 rounded-pill bg-gradient-success float-right mb-2 create-hebergements " ><i class="fa fa-plus mr-2"></i>Ajouter Hébergement</a>
+            </div>
+        </div>
+    @else
+        <div class="mt-5 m-auto w-75 ">
         <a href="{{route('hebergements.create')}}" class="btn btn-success me-md-2 rounded-pill bg-gradient-success float-right mb-2 create-hebergements " ><i class="fa fa-plus mr-2"></i>Ajouter Hébergement</a>
         <table class="table table-borderless table-bordered table-hover w-100 mt-5 shadow-lg p-3 mb-5 bg-white rounded">
             <thead>
@@ -36,6 +44,7 @@
             </tbody>
         </table>
     </div>
+    @endif
     <script>
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()

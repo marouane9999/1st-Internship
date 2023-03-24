@@ -2,16 +2,16 @@
 @section('content')
 
 
-
-    <div class=" mt-5 m-auto w-75 ">
-            <a class="btn btn-success me-md-2 rounded-pill bg-gradient-success float-right mb-2 "  href="{{route('participants.create')}}"><i class="fa fa-plus"></i>&nbsp;&nbsp;Ajouter Participant</a>
-
+    @if($participants->count()==0)
+            <div class="text-muted text-center font-weight-bolder m-auto  ">
+                <div class="row w-25 m-auto mt-5">
+                <i class='fas fa-exclamation-triangle'></i> <span>Aucun Participant n'est Enregistré!</span>
+                <a class="btn btn-success rounded-pill bg-gradient-success float-right mb-2 "  href="{{route('participants.create')}}"><i class="fa fa-plus"></i>&nbsp;&nbsp;Ajouter Participant</a>
+                </div>
+            </div>
+    @else
+            <div class=" mt-5 m-auto w-75 ">
             <div>
-                @if($participants->count()==0)
-                    <div class="text-muted text-center font-weight-bolder mt-5  ">
-                        <i class='fas fa-exclamation-triangle'></i> <span>Aucun Participant n'est Enregistré!</span>
-                    </div>
-                @else
                 <table class="table table-borderless table-bordered table-hover w-100 mt-2 shadow-lg mb-5 bg-white rounded">
             <thead>
             <tr class="" >
@@ -45,12 +45,11 @@
 
 
             </tbody>
-        </table>@endif
+        </table>
             </div>
-
-
-
     </div>
+    @endif
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js">
             $(function () {
                 $('[data-toggle="tooltip"]').tooltip()
