@@ -335,7 +335,31 @@ return [
             'Galleto do brazile',
             'Buena Fourchetta',
      ),
-
+    'roles' => array(
+            'Gérant de restauration',
+            'Gérante de restauration',
+            'Gérant d\'hôtel',
+            'Gérante d\'hôtel',
+            'Gouvernant',
+            'Gouvernante',
+            'Maître d\'hôtel',
+            'Maîtresse d\'hôtel',
+            'Pâtissier',
+            'Pâtissière',
+            'Réceptionniste',
+            'Cuisinier',
+            'Cuisinière',
+            'Directeur d\'hôtel',
+            'Directrice d\'hôtel',
+            'Directeur de restaurant',
+            'Directrice de restaurant',
+            'Barman',
+            'Barmaid',
+            'Garçon de café',
+            'Serveuse',
+            'Femme de chambre',
+            'Valet  de chambre',
+     ),
 ];
 
 ?>

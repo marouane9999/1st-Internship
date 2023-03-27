@@ -35,16 +35,6 @@ class ParticipantController extends Controller
         ]);
     }
 
-//    public function search(Request $request)
-////    {
-////        $ptc = Participant::all()->where('pays_delg',$request->pays_delg);
-////        $countries = config('custom_arrays.countries');
-////        return view('participants.index')->with([
-////            'participants'=>$ptc,
-////            'countries'=>$countries
-////        ]);
-////
-////    }
 
     /**
      * Show the form for creating a new resource.

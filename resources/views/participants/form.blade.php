@@ -118,9 +118,6 @@
                 <div class="col-sm-6">
                     <div class="form-column">
                         <div class="form-group col-xl-9">
-                            {{--                            <div class="alert bg-gradient-dark" role="alert">--}}
-                            {{--                                <h4 ><span class="font-weight-bold">Chef Mission</span></h4>--}}
-                            {{--                            </div>--}}
                             <label for="inputEmail4" class="font-weight-bold">Nom Chef de Mission*</label>
                             <input type="search" class="form-control @error('nom_chef') is-invalid @enderror " id="inputEmail4" placeholder="Nom Chef Mission" name="nom_chef" value={{old('nom_chef',$participant->chef_mission->nom_chef??'')}}>
                             @error('nom_chef')

@@ -15,7 +15,7 @@
             <tr class="text-left" >
                 <th scope="col">#</th>
                 <th scope="col">Participant</th>
-                <th scope="col">Site d' hébergement</th>
+            <th scope="col">Site d' hébergement</th>
                 <th scope="col">Type de chambre</th>
                 <th scope="col">Date Check in</th>
                 <th scope="col">Date Check out</th>

@@ -10,6 +10,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <title>Alpha IT</title>
 
     <!-- Google Font: Source Sans Pro -->
+    <link rel="shortcut icon" href="/adminLte/img/A.png" />
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome Icons -->
@@ -93,9 +94,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <aside class="main-sidebar sidebar-dark-primary elevation ">
         <!-- Brand Logo -->
         <a href="index3.html" class="brand-link">
-            <img src="/adminLte/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+            <img src="/adminLte/img/A.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
                  style="opacity: .8">
-            <span class="brand-text font-weight-light">ALPHA IT</span>
+            <span class="brand-text font-weight-light">LPHA IT</span>
         </a>
 
         <!-- Sidebar -->
