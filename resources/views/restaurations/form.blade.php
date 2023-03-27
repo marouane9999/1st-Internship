@@ -27,7 +27,6 @@
                                 <div class="form-group row">
                                 <label for="ville"  class="font-weight-bold ">Ville:</label>
                                         <input type="search" class="form-control" id="ville" name="ville">
-
                                 </div>
                                 <div class="form-group row">
                                     <label for="prestataire"  class="font-weight-bold ">Prestataire:</label>

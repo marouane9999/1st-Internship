@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('ville');
             $table->string('prestataire');
             $table->unsignedBigInteger('rep_id');
-            $table->unsignedBigInteger('participant_id');
+            $table->unsignedBigInteger('participant_id')->unique();
             $table->foreign('rep_id')->references('id')->on('repas');
             $table->foreign('participant_id')->references('id')->on('participants')->onDelete('cascade');
             $table->timestamps();

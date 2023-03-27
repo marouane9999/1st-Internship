@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ParticipantRequest;
 use App\Models\Categorie;
 use App\Models\ChefMission;
+use App\Models\Hebergement;
 use App\Models\Participant;
+use App\Models\Restauration;
 use App\Models\Vol;
 use Barryvdh\DomPDF\PDF;
 use http\Client\Curl\User;
@@ -28,10 +30,12 @@ class ParticipantController extends Controller
     public function index()
     {
         $ptc = Participant::all();
+
         $countries = config('custom_arrays.countries');
         return view('participants.index')->with([
             'participants'=>$ptc,
-            'countries'=>$countries
+            'countries'=>$countries,
+
         ]);
     }
 
@@ -101,6 +105,8 @@ class ParticipantController extends Controller
         $countries = config('custom_arrays.countries');
         $site_compet = config('custom_arrays.site_compet');
         $discipline = config('custom_arrays.discipline');
+        $restaurations=Restauration::all();
+        $heberement=Restauration::all();
         $cat_pr = Categorie::get();
         $vols=Vol::all();
         $participant = Participant::find($id);
@@ -131,8 +137,17 @@ class ParticipantController extends Controller
     {
         $participant = Participant::find($id);
         $participant->get();
+        $restaurations=Restauration::all();
+        $hebergements=Hebergement::all();
         $countries = config('custom_arrays.countries');
-        return view('participants.show',['ptc'=>$participant,'countries'=>$countries]);
+        return view('participants.show')->with(
+            [
+                'ptc'=>$participant,
+                'countries'=>$countries,
+                'restaurations'=>$restaurations,
+                'hebergements'=>$hebergements
+            ]);
+
     }
 
     /**

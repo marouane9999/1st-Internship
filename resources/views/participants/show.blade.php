@@ -7,7 +7,7 @@
             <h1 class="display-3 text-black">Participant  <span class="display-2 text-blue font-weight-bolder">&nbsp; #{{$ptc->id}}</span> </h1>
     </div>
             {{--Participant--}}
-        <div class="alert alert-dark shadow-sm" role="alert">
+        <div class="alert alert-primary shadow-sm" role="alert">
             <i class='fas fa-id-badge'></i><span class="ml-3 font-weight-bold">Participant</span>
         </div>
         <div class="shadow-lg p-1 mt-3 mb-3 w-100 d-flex ">
@@ -49,7 +49,7 @@
             </div>
         </div>
             {{--ChefMission--}}
-        <div class="alert alert-default-primary shadow-sm " role="alert">
+        <div class="alert alert-dark shadow-sm " role="alert">
             <i class='fas fa-user-circle'></i><span class="ml-3 font-weight-bold">Chef Mission</span>
         </div>
         <div class="shadow-lg p-1 mt-3 mb-3 w-100 d-flex justify-content-center">
@@ -72,27 +72,86 @@
                 </div>
             </div>
         </div>
-            {{--Vol Arrivee--}}
-        <div class="row w-100 d-flex justify-content-center m-0">
-        @foreach($ptc->vols as $vol_dep)
-        <div class="col-6 {{$vol_dep->type_vol?'pl-0': 'pr-0'}} ">
-            <div class="alert alert-default-{{$vol_dep->type_vol ? 'warning':'success'}} shadow-sm mt-3 " role="alert">
-                <i class='fas fa-plane-{{$vol_dep->type_vol ? 'departure':'arrival'}}'></i><span class="ml-3 font-weight-bold">{{$vol_dep->type_vol ? 'Vol Depart':'Vol Arrive'}}</span>
-            </div>
-            <div class="shadow-lg mt-3 w-100 py-1 px-5">
-                <div class="font-weight-bolder mb-2">
-                    Numero de Vol : <span class="font-weight-normal">{{ucfirst($vol_dep->numero_vol)}}</span>
-                </div>
-                <div class="font-weight-bolder mb-2">
-                    Date de vol : <span class="font-weight-normal">{{ucfirst($vol_dep->date_vol)}}</span>
-                </div>
-                <div class="font-weight-bolder mb-2">
-                    Terminal/Aeroport : <span class="font-weight-normal">{{$vol_dep->terminal}}</span>
-                </div>
+            {{--Hebergement--}}
+        <div class="alert alert-secondary shadow-sm" role="alert">
+            <i class='fas fa-bed'></i><span class="ml-3 font-weight-bold">Hebergement</span>
+        </div>
+        <div class="shadow-lg p-1 mt-3 mb-3 w-100 d-flex ">
+            <div class="row w-100 d-flex justify-content-center ml-5">
+                @foreach($hebergements as $hebergement)
+                    @if($hebergement->participant_id==$ptc->id)
+                        <div class="col-4">
+                            <div class="font-weight-bolder mb-2">
+                                Site Hebergement : <span class="font-weight-normal">{{$hebergement->site_heberg}}</span>
+                            </div>
+                            <div class="font-weight-bolder mb-2">
+                                Type Chambre : <span class="font-weight-normal">{{$hebergement->type_cham==1?'Single':'Double'}}</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="font-weight-bolder mb-2">
+                                Date Check Out : <span class="font-weight-normal">{{$hebergement->date_checkin}}</span>
+                            </div>
+                            <div class="font-weight-bolder mb-2">
+                                Date Check In : <span class="font-weight-normal">{{$hebergement->date_checkout}}</span>
+                            </div>
+                        </div>
+                    @endif
+                @endforeach
             </div>
         </div>
-        @endforeach
+            {{--Restauration--}}
+        <div class="alert alert-info shadow-sm" role="alert">
+            <i class="fas fa-hamburger"></i><span class="ml-3 font-weight-bold">Restauration</span>
         </div>
+        <div class="shadow-lg p-1 mt-3 mb-3 w-100 d-flex ">
+            <div class="row w-100 d-flex justify-content-center ml-5">
+                @foreach($restaurations as $restauration)
+                    @if($restauration->participant_id==$ptc->id)
+                        <div class="col-4">
+                            <div class="font-weight-bolder mb-2">
+                                Numero Restauration : <span class="font-weight-normal">{{$restauration->numero_rest}}</span>
+                            </div>
+                            <div class="font-weight-bolder mb-2">
+                                Site Restauration : <span class="font-weight-normal">{{$restauration->site_restau}}</span>
+                            </div>
+                            <div class="font-weight-bolder mb-2">
+                                Ville : <span class="font-weight-normal">{{$restauration->ville}}</span>
+                            </div>
 
+                        </div>
+                        <div class="col-6">
+                            <div class="font-weight-bolder mb-2">
+                               Prestataire : <span class="font-weight-normal">{{$restauration->prestataire}}</span>
+                            </div>
+                            <div class="font-weight-bolder mb-2">
+                                Repas : <span class="font-weight-normal">{{$restauration->repas->des_rep}}</span>
+                            </div>
+                        </div>
+                    @endif
+                @endforeach
+            </div>
+        </div>
+            {{--Vol--}}
+        <div class="row w-100 d-flex justify-content-center m-auto">
+            @foreach($ptc->vols as $vol_dep)
+                <div class="col-6 {{$vol_dep->type_vol?'pl-0': 'pr-5'}} ">
+                    <div class="alert alert-default-{{$vol_dep->type_vol ? 'warning':'success'}} shadow-sm mt-3 " role="alert">
+                        <i class='fas fa-plane-{{$vol_dep->type_vol ? 'departure':'arrival'}}'></i><span class="ml-3 font-weight-bold">{{$vol_dep->type_vol ? 'Vol Depart':'Vol Arrive'}}</span>
+                    </div>
+                    <div class="shadow-lg mt-3 w-100 py-1 px-5">
+                        <div class="font-weight-bolder mb-2">
+                            Numero de Vol : <span class="font-weight-normal">{{ucfirst($vol_dep->numero_vol)}}</span>
+                        </div>
+                        <div class="font-weight-bolder mb-2">
+                            Date de vol : <span class="font-weight-normal">{{ucfirst($vol_dep->date_vol)}}</span>
+                        </div>
+                        <div class="font-weight-bolder mb-2">
+                            Terminal/Aeroport : <span class="font-weight-normal">{{$vol_dep->terminal}}</span>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
     </div>
 @endsection

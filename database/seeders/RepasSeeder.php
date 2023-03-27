@@ -18,16 +18,20 @@ class RepasSeeder extends Seeder
     {
         $repas=[
             [
-                'des_rep' => 'Petit Dejeuner',
+                'des_rep' => 'PDJ',
                 'desc_rep' => "Petit Dejeuner",
             ],
             [
-                'des_rep' => 'Dejeuner',
+                'des_rep' => 'DJ',
                 'desc_rep' => "Dejeuner",
             ],
             [
-                'des_rep' => 'Dinner',
+                'des_rep' => 'D',
                 'desc_rep' => "Dinner",
+            ],
+            [
+                'des_rep' => 'Pack Complet',
+                'desc_rep' => "Dejeuner + Petit Dejeuner + Dinner",
             ]
         ];
         DB::table('repas')->insert($repas);
