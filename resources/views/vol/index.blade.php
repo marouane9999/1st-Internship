@@ -5,7 +5,7 @@
         <div class="text-muted text-center font-weight-bolder m-auto  ">
             <div class="row w-25 m-auto mt-5">
                 <i class='fas fa-exclamation-triangle'></i> <span>Aucun Vol n'est Enregistré!</span>
-                <a class="btn btn-success rounded-pill bg-gradient-success float-right mb-2 "  href="{{route('vols.create')}}"><i class="fa fa-plus"></i>&nbsp;&nbsp;Ajouter Vol</a>
+                <a class="btn btn-success rounded-pill bg-gradient-success float-right mb-2 create-vol "  href="{{route('vols.create')}}"><i class="fa fa-plus"></i>&nbsp;&nbsp;Ajouter Vol</a>
             </div>
         </div>
     @else

@@ -46,7 +46,7 @@
                 </tbody>
             </table>
         </div>
-    @endif
+
 
     <script>
         $(function () {
@@ -55,7 +55,7 @@
         $('div.alert').not('.alert-important').delay(1500).fadeOut(350);
 
     </script>
-
+    @endif
 
 
 @endsection

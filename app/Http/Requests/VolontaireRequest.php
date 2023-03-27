@@ -3,9 +3,9 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Validation\Rule;
+use Sabberworm\CSS\Rule\Rule;
 
-class RestaurationRequest extends FormRequest
+class VolontaireRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,14 +23,17 @@ class RestaurationRequest extends FormRequest
      * @return array<string, mixed>
      */
     public function rules()
+
     {
         return [
-            'numero_rest'=>['required'],
-            'site_restau'=>['required'],
-            'ville'=>['required','string'],
-            'prestataire'=>['required','string'],
-            'rep_id'=>['required'],
-            'participant_id'=>['required',Rule::unique('restaurations')->ignore($this->route('id'))],
+            'ref_cojar' => ['required','numeric',\Illuminate\Validation\Rule::unique('volontaires')->ignore($this->route('id'))],
+            'tel'=>['required','numeric'],
+            'role' => ['required'],
+            'site_aff' => ['required'],
+            'debut_contrat' => ['required'],
+            'fin_contrat' => ['required'],
         ];
+
     }
 }
+

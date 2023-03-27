@@ -260,7 +260,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="./index.html" class="nav-link">
+                                <a href="{{route('volontaires.index')}}" class="nav-link">
                                     <i class="fas fa-edit nav-icon"></i>
                                     <p>Gestion & Affectation</p>
                                 </a>

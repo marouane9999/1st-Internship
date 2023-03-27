@@ -11,7 +11,9 @@
             </div>
     @else
             <div class=" mt-5 m-auto w-75 ">
-            <div>
+                <a class="btn btn-success rounded-pill bg-gradient-success float-right mb-2 "  href="{{route('participants.create')}}"><i class="fa fa-plus"></i>&nbsp;&nbsp;Ajouter Participant</a>
+
+                <div>
                 <table class="table table-borderless table-bordered table-hover w-100 mt-2 shadow-lg mb-5 bg-white rounded">
             <thead>
             <tr class="" >

@@ -336,6 +336,22 @@ return [
             'Buena Fourchetta',
      ),
 
+    'roles' => array(
+        'Gérant(e) de restauration',
+        'Gérant(e) d\'hôtel',
+        'Gouvernant(e)',
+        'Maître(sse) d\'hôtel',
+        'Pâtissier(ere)',
+        'Réceptionniste',
+        'Cuisinier(ere)',
+        'Directeur(isse) d\'hôtel',
+        'Directeur(isse) de restaurant',
+        'Barman(maid)',
+        'Garçon de café',
+        'Serveur(euse)',
+        'Valet/Femme de chambre',
+    ),
+
 ];
 
 ?>

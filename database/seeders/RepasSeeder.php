@@ -28,6 +28,10 @@ class RepasSeeder extends Seeder
             [
                 'des_cat' => 'D',
                 'desc_cat' => "Dinner",
+            ],
+            [
+                'des_cat' => 'Pack Complet',
+                'desc_cat' => "Dejeuner + Petit Dejeuner + Dinner",
             ]
         ];
         DB::table('repas')->insert($repas);
