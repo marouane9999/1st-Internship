@@ -301,11 +301,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </aside>
 
     <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper shadow-lg ">
+    <div class="content-wrapper ">
         <!-- Content Header (Page header) -->
-        <div class="content-header mb-5">
-            <div class="container-fluid">
-                <div class="row mb-2">
+        <div class="content-header mb-5 shadow p-3 mb-5 bg-white rounded pb-1 sticky-top">
+            <div class="container-fluid ">
+                <div class="row mb-2 ">
                     <div class="col-sm-6">
                         <h5 class="m-0 breadcrumb-item active font-italic font"><i class="fas fa-home"></i> /  @yield('header title')</h5>
                     </div><!-- /.col -->
@@ -349,7 +349,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- /.control-sidebar -->
 
     <!-- Main Footer -->
-    <footer class="main-footer fixed-bottom">
+    <footer class="main-footer">
         <!-- To the right -->
         <!-- Default to the left -->
         <strong>Copyright &copy; 2023 <a href="https://adminlte.io">AlphaIT</a>.</strong> All rights reserved.
