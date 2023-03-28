@@ -1,4 +1,5 @@
 @extends('layout')
+@section('header title','Vols')
 @section('content')
 
     @if($vols->count()==0)

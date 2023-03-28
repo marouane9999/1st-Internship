@@ -1,4 +1,5 @@
 @extends('layout')
+@section('header title','Participants')
 @section('content')
 
 

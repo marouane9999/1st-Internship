@@ -1,5 +1,7 @@
 
 @extends('layout')
+@section('header title','Vol / Consulter Vol    #' . $vol->numero_vol)
+
 @section('content')
 
     <div class="container shadow-sm p-3 mb-5  rounded mt-4">

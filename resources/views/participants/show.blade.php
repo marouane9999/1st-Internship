@@ -1,4 +1,6 @@
 @extends('layout')
+@section('header title','Participant / Consulter Participant    #' . $ptc->id)
+
 @section('content')
 
     <div class="container shadow-sm p-3 mb-5  rounded">

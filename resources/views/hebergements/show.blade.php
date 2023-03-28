@@ -1,4 +1,5 @@
 @extends('layout')
+@section('header title','Hébergement / Consulter Hébergement    #' . $heberg->id)
 @section('content')
 
     <div class="container shadow-sm p-3 mb-5  rounded w-75 mt-5">

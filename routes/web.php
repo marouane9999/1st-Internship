@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return to_route('participants.index');
+    return to_route('dashboard.index');
 });
 
 Auth::routes();
@@ -65,6 +65,10 @@ Route::group(['prefix'=>'/volontaires'], function (){
     Route::post('/update/{id}', [App\Http\Controllers\VolontaireController::class, 'update'])->name('volontaires.update');
     Route::get('/delete/{id}', [App\Http\Controllers\VolontaireController::class, 'delete'])->name('volontaires.delete');
     Route::get('/show/{id}', [App\Http\Controllers\VolontaireController::class, 'show'])->name('volontaires.show');
+});
+
+Route::group(['prefix'=>'/dashboard'],function (){
+    Route::get('/', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard.index');
 });
 
 

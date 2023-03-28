@@ -21,6 +21,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="http://t4t5.github.io/sweetalert/dist/sweetalert.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
     <meta name="csrf_token" content="{{csrf_token()}}">
+    <link rel="stylesheet" href="/adminLte/plugins/daterangepicker/daterangepicker.css">
+
 
 
 
@@ -132,7 +134,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                          with font-awesome or any other icon font library -->
                     <br><br>
                     <li class="nav-item menu-open mb-4">
-                        <a href="#" class="nav-link active">
+                        <a href="{{route('dashboard.index')}}" class="nav-link active">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>
                                 Dashboard
@@ -299,16 +301,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </aside>
 
     <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
+    <div class="content-wrapper shadow-lg ">
         <!-- Content Header (Page header) -->
-        <div class="content-header">
+        <div class="content-header mb-5">
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">@yield('header title')</h1>
+                        <h5 class="m-0 breadcrumb-item active font-italic font"><i class="fas fa-home"></i> /  @yield('header title')</h5>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
-
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="{{route('dashboard.index')}}">Accueil</a></li>
+                            <li class="breadcrumb-item active font-italic  "><span>@yield('header title')</span></li>
+                        </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
             </div><!-- /.container-fluid -->
@@ -344,7 +349,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- /.control-sidebar -->
 
     <!-- Main Footer -->
-    <footer class="main-footer">
+    <footer class="main-footer fixed-bottom">
         <!-- To the right -->
         <!-- Default to the left -->
         <strong>Copyright &copy; 2023 <a href="https://adminlte.io">AlphaIT</a>.</strong> All rights reserved.
