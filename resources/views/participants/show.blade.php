@@ -5,8 +5,8 @@
 
     <div class="container shadow-sm p-3 mb-5  rounded">
 
-    <div class="d-flex justify-content-center m-auto w-75">
-            <h1 class="display-3 text-black">Participant  <span class="display-2 text-blue font-weight-bolder">&nbsp; #{{$ptc->id}}</span> </h1>
+    <div class="d-flex justify-content-center m-auto w-75 mb-3 p-2">
+            <h1><span class="shadow-lg p-3 mb-5 bg-gradient-primary rounded font-weight-bolder text-dark">{{$ptc->nom_par}} {{$ptc->prenom_par}}</span></h1>
     </div>
             {{--Participant--}}
         <div class="alert alert-primary shadow-sm" role="alert">

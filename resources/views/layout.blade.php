@@ -16,14 +16,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="/adminLte/plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="/adminLte/css/adminlte.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="http://t4t5.github.io/sweetalert/dist/sweetalert.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
     <meta name="csrf_token" content="{{csrf_token()}}">
     <link rel="stylesheet" href="/adminLte/plugins/daterangepicker/daterangepicker.css">
-
-
-
 
 
 </head>
@@ -175,7 +173,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./index2.html" class="nav-link">
+                                <a href="{{route('vols.reporting')}}" class="nav-link">
                                     <i class="fas fa-file-alt nav-icon"></i>
                                     <p>Suivi & Reporting</p>
                                 </a>
@@ -306,7 +304,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="container-fluid ">
                 <div class="row mb-2 ">
                     <div class="col-sm-6">
-                        <h5 class="m-0 breadcrumb-item active font-italic font"><i class="fas fa-home"></i> /  @yield('header title')</h5>
+                        <h5 class="m-0 breadcrumb-item active font-italic font"><i class="fas fa-home"></i>
+                            / @yield('header title')</h5>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
@@ -351,7 +350,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <footer class="main-footer">
         <!-- To the right -->
         <!-- Default to the left -->
-        <strong>Copyright &copy; 2023 <a href="https://adminlte.io">AlphaIT</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2023 <a href="#">AlphaIT</a>.</strong> All rights reserved.
     </footer>
 </div>
 <!-- ./wrapper -->
@@ -374,9 +373,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script>
 
 
-
 </script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    @vite('resources/js/app.js')
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+@vite('resources/js/app.js')
 </body>
 </html>

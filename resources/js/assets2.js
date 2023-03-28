@@ -1,32 +1,33 @@
 import Swal from 'sweetalert2';
-$(document).on('click','.delete-elm',function (e){
+
+$(document).on('click', '.delete-elm', function (e) {
     e.preventDefault();
-    let $this=$(this);
+    let $this = $(this);
     Swal.fire({
         title: 'Êtes-vous sûr?',
-        text:"Vous ne pourrez pas revenir en arrière !",
-        icon:'warning',
-        showCancelButton:true,
+        text: "Vous ne pourrez pas revenir en arrière !",
+        icon: 'warning',
+        showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
         confirmButtonText: 'Confirmer'
     }).then((result) => {
         if (result.isConfirmed) {
-        $.ajax(
-            {
-                method:'get',
-                url:$this.attr('href'),
-                success: function (data) {
-                    if (data.success) {
-                        console.log('2312312')
-                        toastr.success(data.msg);
-                        $this.parent().parent().remove();
-                    } else {
-                        toastr.error(data.msg);
-                    }
-                },
-            }
-        )
+            $.ajax(
+                {
+                    method: 'get',
+                    url: $this.attr('href'),
+                    success: function (data) {
+                        if (data.success) {
+                            console.log('2312312')
+                            toastr.success(data.msg);
+                            $this.parent().parent().remove();
+                        } else {
+                            toastr.error(data.msg);
+                        }
+                    },
+                }
+            )
         }
     })
 })
@@ -57,8 +58,7 @@ $(document).on('submit', '#volModal #volModalForm', function (e) {
                 toastr.success(response.msg);
                 $('#volModal').modal('hide');
                 setTimeout(
-                    function()
-                    {
+                    function () {
                         window.location.href = "/vols";
                     }, 2000);
 
@@ -116,8 +116,7 @@ $(document).on('submit', '#hebergementModal #hebergementModalForm', function (e)
                 toastr.success(response.msg);
                 $('#hebergementModal').modal('hide');
                 setTimeout(
-                    function()
-                    {
+                    function () {
                         window.location.href = "/hebergements";
                     }, 2000);
 
@@ -140,7 +139,6 @@ $(document).on('submit', '#hebergementModal #hebergementModalForm', function (e)
     });
     return false;
 });
-
 
 
 $(document).on('click', '.create-restaurations', function (e) {
@@ -183,8 +181,7 @@ $(document).on('submit', '#volontaireModal #volontaireModalForm', function (e) {
                 toastr.success(response.msg);
                 $('#volontaireModal').modal('hide');
                 setTimeout(
-                    function()
-                    {
+                    function () {
                         window.location.href = "/volontaires";
                     }, 2000);
 
@@ -223,8 +220,7 @@ $(document).on('submit', '#restaurationModal #restaurationModalForm', function (
                 toastr.success(response.msg);
                 $('#restaurationModal').modal('hide');
                 setTimeout(
-                    function()
-                    {
+                    function () {
                         window.location.href = "/restaurations";
                     }, 2000);
 
