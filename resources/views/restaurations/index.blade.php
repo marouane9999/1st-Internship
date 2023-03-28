@@ -1,4 +1,5 @@
 @extends('layout')
+@section('header title','Restauration')
 @section('content')
     @if($restaurations->count()==0)
         <div class="text-muted text-center font-weight-bolder m-auto  ">

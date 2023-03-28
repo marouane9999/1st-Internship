@@ -1,5 +1,6 @@
 
 @extends('layout')
+@section('header title','Ajouter Participants')
 @section('content')
     <div class="">
         <form class="w-75 text-left m-auto rounded shadow-lg p-3 mb-5 bg-white rounded  " method="POST" action="{{$action}}">

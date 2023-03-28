@@ -1,4 +1,5 @@
 @extends('layout')
+@section('header title','Restauration / Consulter Restauration    #' . $restau->id)
 @section('content')
 
     <div class="container shadow-sm p-3 mb-5  rounded">
