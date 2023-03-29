@@ -19,10 +19,11 @@ class HebergementController extends Controller
         $heberg = Hebergement::all();
         $site_heberg = config('custom_arrays.site_heberg');
         return view('hebergements.index')->with([
-            'hebergement'=>$heberg,
-            'site_heberg'=>$site_heberg
+            'hebergement' => $heberg,
+            'site_heberg' => $site_heberg
         ]);
     }
+
     public function create()
     {
         $site_heberg = config('custom_arrays.site_heberg');
@@ -30,7 +31,7 @@ class HebergementController extends Controller
             'success' => true,
             'html' => view('hebergements.form')->with([
                 'hebergement' => $this->hebergement,
-                'participants'=>Participant::all(),
+                'participants' => Participant::all(),
                 'title' => 'Ajouter Hébergement',
                 'action' => route('hebergements.store'),
                 'site_heberg' => $site_heberg,
@@ -38,6 +39,7 @@ class HebergementController extends Controller
         ]);
 
     }
+
     public function store(HebergementRequest $request)
     {
 
@@ -53,6 +55,7 @@ class HebergementController extends Controller
             'msg' => 'Hébergement créé avec succès.',
         ]);
     }
+
     public function edit($id)
     {
         $hebergement = Hebergement::find($id);
@@ -62,14 +65,15 @@ class HebergementController extends Controller
             'success' => true,
             'html' => view('hebergements.form')->with([
                 'hebergement' => $hebergement,
-                'participants'=>Participant::all(),
+                'participants' => Participant::all(),
                 'title' => 'Modifier un hébergements',
                 'action' => route('hebergements.update', $id),
                 'site_heberg' => $site_heberg,
             ])->render()
         ]);
     }
-    public function update(HebergementRequest $request,$id)
+
+    public function update(HebergementRequest $request, $id)
     {
         {
             $hebergement = Hebergement::find($id);
@@ -85,6 +89,7 @@ class HebergementController extends Controller
             'msg' => 'Hébergement updated avec succès.',
         ]);
     }
+
     public function delete($id)
     {
         $hebergement = Hebergement::find($id);
@@ -96,13 +101,14 @@ class HebergementController extends Controller
             ]);
         }
     }
+
     public function show($id)
     {
         $hebergement = Hebergement::find($id);
         $hebergement->get();
         $site_heberg = config('custom_arrays.site_heberg');
         $countries = config('custom_arrays.countries');
-        return view('hebergements.show',['heberg'=>$hebergement,'site_heberg'=>$site_heberg,'countries'=>$countries]);
+        return view('hebergements.show', ['heberg' => $hebergement, 'site_heberg' => $site_heberg, 'countries' => $countries]);
     }
 
 }

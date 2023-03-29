@@ -3,6 +3,7 @@
 use App\Http\Controllers\ParticipantController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,7 +21,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::group(['prefix'=>'/participants'], function (){
+Route::group(['prefix' => '/participants'], function () {
     Route::get('/', [App\Http\Controllers\ParticipantController::class, 'index'])->name('participants.index');
     Route::get('/create', [App\Http\Controllers\ParticipantController::class, 'create'])->name('participants.create');
     Route::post('/store', [App\Http\Controllers\ParticipantController::class, 'store'])->name('participants.store');
@@ -29,7 +30,7 @@ Route::group(['prefix'=>'/participants'], function (){
     Route::get('/show/{id}', [App\Http\Controllers\ParticipantController::class, 'show'])->name('participants.show');
     Route::get('/delete/{id}', [App\Http\Controllers\ParticipantController::class, 'destroy'])->name('participants.delete');
 });
-Route::group(['prefix'=>'/vols'], function (){
+Route::group(['prefix' => '/vols'], function () {
     Route::get('/', [App\Http\Controllers\VolController::class, 'index'])->name('vols.index');
     Route::get('/create', [App\Http\Controllers\VolController::class, 'create'])->name('vols.create');
     Route::post('/store', [App\Http\Controllers\VolController::class, 'store'])->name('vols.store');
@@ -38,7 +39,7 @@ Route::group(['prefix'=>'/vols'], function (){
     Route::get('/show/{id}', [App\Http\Controllers\VolController::class, 'show'])->name('vols.show');
     Route::get('/delete/{id}', [App\Http\Controllers\VolController::class, 'delete'])->name('vols.delete');
 });
-Route::group(['prefix'=>'/hebergements'], function (){
+Route::group(['prefix' => '/hebergements'], function () {
     Route::get('/', [App\Http\Controllers\HebergementController::class, 'index'])->name('hebergements.index');
     Route::get('/create', [App\Http\Controllers\HebergementController::class, 'create'])->name('hebergements.create');
     Route::post('/store', [App\Http\Controllers\HebergementController::class, 'store'])->name('hebergements.store');
@@ -47,7 +48,7 @@ Route::group(['prefix'=>'/hebergements'], function (){
     Route::get('/show/{id}', [App\Http\Controllers\HebergementController::class, 'show'])->name('hebergements.show');
     Route::get('/delete/{id}', [App\Http\Controllers\HebergementController::class, 'delete'])->name('hebergements.delete');
 });
-Route::group(['prefix'=>'/restaurations'], function (){
+Route::group(['prefix' => '/restaurations'], function () {
     Route::get('/', [App\Http\Controllers\RestaurationController::class, 'index'])->name('restaurations.index');
     Route::get('/create', [App\Http\Controllers\RestaurationController::class, 'create'])->name('restaurations.create');
     Route::post('/store', [App\Http\Controllers\RestaurationController::class, 'store'])->name('restaurations.store');
@@ -57,7 +58,7 @@ Route::group(['prefix'=>'/restaurations'], function (){
     Route::get('/show/{id}', [App\Http\Controllers\RestaurationController::class, 'show'])->name('restaurations.show');
 });
 
-Route::group(['prefix'=>'/volontaires'], function (){
+Route::group(['prefix' => '/volontaires'], function () {
     Route::get('/', [App\Http\Controllers\VolontaireController::class, 'index'])->name('volontaires.index');
     Route::get('/create', [App\Http\Controllers\VolontaireController::class, 'create'])->name('volontaires.create');
     Route::post('/store', [App\Http\Controllers\VolontaireController::class, 'store'])->name('volontaires.store');
@@ -67,10 +68,9 @@ Route::group(['prefix'=>'/volontaires'], function (){
     Route::get('/show/{id}', [App\Http\Controllers\VolontaireController::class, 'show'])->name('volontaires.show');
 });
 
-Route::group(['prefix'=>'/dashboard'],function (){
+Route::group(['prefix' => '/dashboard'], function () {
     Route::get('/', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard.index');
 });
-
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -25,11 +25,11 @@ class HebergementRequest extends FormRequest
     {
         {
             return [
-                'participant_id'=>['required'],
-                'site_heberg'=>['required'],
-                'type_cham'=>['required'],
-                'date_checkin'=>['required'],
-                'date_checkout'=>['required'],
+                'participant_id' => ['required'],
+                'site_heberg' => ['required'],
+                'type_cham' => ['required'],
+                'date_checkin' => ['required'],
+                'date_checkout' => ['required'],
             ];
         }
     }

@@ -33,8 +33,8 @@ class ParticipantController extends Controller
 
         $countries = config('custom_arrays.countries');
         return view('participants.index')->with([
-            'participants'=>$ptc,
-            'countries'=>$countries,
+            'participants' => $ptc,
+            'countries' => $countries,
 
         ]);
     }
@@ -58,7 +58,7 @@ class ParticipantController extends Controller
             'site_compet' => $site_compet,
             'categories' => $cat_pr,
             'discipline' => $discipline,
-            'vols'=>$vols,
+            'vols' => $vols,
             'action' => route('participants.store'),
         ]);
 
@@ -105,21 +105,21 @@ class ParticipantController extends Controller
         $countries = config('custom_arrays.countries');
         $site_compet = config('custom_arrays.site_compet');
         $discipline = config('custom_arrays.discipline');
-        $restaurations=Restauration::all();
-        $heberement=Restauration::all();
+        $restaurations = Restauration::all();
+        $heberement = Restauration::all();
         $cat_pr = Categorie::get();
-        $vols=Vol::all();
+        $vols = Vol::all();
         $participant = Participant::find($id);
 
-        if($participant){
+        if ($participant) {
             return view('participants.form')->with([
                 'participant' => $participant,
                 'countries' => $countries,
                 'site_compet' => $site_compet,
                 'categories' => $cat_pr,
                 'discipline' => $discipline,
-                'vols'=>$vols,
-                'action' => route('participants.update',$participant->id)
+                'vols' => $vols,
+                'action' => route('participants.update', $participant->id)
             ]);
         }
 
@@ -137,15 +137,15 @@ class ParticipantController extends Controller
     {
         $participant = Participant::find($id);
         $participant->get();
-        $restaurations=Restauration::all();
-        $hebergements=Hebergement::all();
+        $restaurations = Restauration::all();
+        $hebergements = Hebergement::all();
         $countries = config('custom_arrays.countries');
         return view('participants.show')->with(
             [
-                'ptc'=>$participant,
-                'countries'=>$countries,
-                'restaurations'=>$restaurations,
-                'hebergements'=>$hebergements
+                'ptc' => $participant,
+                'countries' => $countries,
+                'restaurations' => $restaurations,
+                'hebergements' => $hebergements
             ]);
 
     }
@@ -166,11 +166,11 @@ class ParticipantController extends Controller
      */
     public function update(ParticipantRequest $request, $id)
     {
-        $inputs=$request->all();
+        $inputs = $request->all();
 //        $ptc=$this->participant->fill($inputs);
 //        $chefM=$this->chefMission->fill($inputs);
         $participant = Participant::find($id);
-        $participant->vols()->sync([$inputs['vol_arr'],$inputs['vol_dep']]);
+        $participant->vols()->sync([$inputs['vol_arr'], $inputs['vol_dep']]);
         $participant->update($inputs);
         $participant->chef_mission->update($inputs);
         flash()->success('Participant est modifié(e) avec succès');
@@ -187,18 +187,18 @@ class ParticipantController extends Controller
     {
         $participant = Participant::find($id);
 
-        if($participant){
+        if ($participant) {
             $participant->vols()->detach();
             $participant->delete();
             return response()->json([
-                'success'=>true,
-                'msg'=>'Participant '.$id.' supprimé avec succès'
-            ],200);
+                'success' => true,
+                'msg' => 'Participant ' . $id . ' supprimé avec succès'
+            ], 200);
             redirect()->route('participants.index');
         }
         return response()->json([
             'success' => false,
-            'msg' => 'Impossible de retrouver ce Participant.'],200);
+            'msg' => 'Impossible de retrouver ce Participant.'], 200);
     }
 
 }

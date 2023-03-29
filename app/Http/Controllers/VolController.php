@@ -99,13 +99,13 @@ class VolController extends Controller
         $vol = Vol::find($id);
         $vol->get();
         $aeroports = config('custom_arrays.aeroport');
-        $countries= config('custom_arrays.countries');
-        return view('vol.show',['vol'=>$vol,'aeroports'=>$aeroports,'countries'=>$countries]);
+        $countries = config('custom_arrays.countries');
+        return view('vol.show', ['vol' => $vol, 'aeroports' => $aeroports, 'countries' => $countries]);
     }
 
     public function delete($id)
     {
-        $vol=Vol::find($id);
+        $vol = Vol::find($id);
         if ($vol) {
             $vol->participants()->detach();
             $vol->delete();

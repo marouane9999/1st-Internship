@@ -25,12 +25,12 @@ class RestaurationRequest extends FormRequest
     public function rules()
     {
         return [
-            'numero_rest'=>['required'],
-            'site_restau'=>['required'],
-            'ville'=>['required','string'],
-            'prestataire'=>['required','string'],
-            'rep_id'=>['required'],
-            'participant_id'=>['required',Rule::unique('restaurations')->ignore($this->route('id'))],
+            'numero_rest' => ['required'],
+            'site_restau' => ['required'],
+            'ville' => ['required', 'string'],
+            'prestataire' => ['required', 'string'],
+            'rep_id' => ['required'],
+            'participant_id' => ['required', Rule::unique('restaurations')->ignore($this->route('id'))],
         ];
     }
 }

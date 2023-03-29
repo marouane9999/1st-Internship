@@ -1,49 +1,52 @@
-
 @extends('layout')
 @section('header title','Vol / Consulter Vol    #' . $vol->numero_vol)
 
 @section('content')
 
     <div class="container shadow-sm p-3 mb-5  rounded mt-4">
-            <div class="d-flex justify-content-center m-auto w-75 mb-5 mt-4">
-                <h1 class="display-3 text-black font-weight-normal">Vol<span class="display-5 font-weight-bolder">&nbsp; #{{$vol->numero_vol}}</span> </h1>
-            </div>
-                {{--Vol--}}
-            <div class="alert alert-primary shadow-sm" role="alert">
-                <i class='fas fa-plane'></i><span class="ml-3 font-weight-bold">Vol</span>
-            </div>
-            <div class="shadow-lg p-1 mt-3  mb-3 w-100 d-flex ">
-                <div class="row w-100 d-flex justify-content-center ml-5">
-                    <div class="col-4">
-                        <div class="font-weight-bolder mb-2">
-                            Numero de vol : <span class="font-weight-normal">{{$vol->numero_vol}}</span>
-                        </div>
-                        <div class="font-weight-bolder mb-2">
-                            Terminal/Aeoroport : <span class="font-weight-normal">{{$vol->terminal}}</span>
-                        </div>
+        <div class="d-flex justify-content-center m-auto w-75 mb-5 mt-4">
+            <h1 class="display-3 text-black font-weight-normal">Vol<span
+                    class="display-5 font-weight-bolder">&nbsp; #{{$vol->numero_vol}}</span></h1>
+        </div>
+        {{--Vol--}}
+        <div class="alert alert-primary shadow-sm" role="alert">
+            <i class='fas fa-plane'></i><span class="ml-3 font-weight-bold">Vol</span>
+        </div>
+        <div class="shadow-lg p-1 mt-3  mb-3 w-100 d-flex ">
+            <div class="row w-100 d-flex justify-content-center ml-5">
+                <div class="col-4">
+                    <div class="font-weight-bolder mb-2">
+                        Numero de vol : <span class="font-weight-normal">{{$vol->numero_vol}}</span>
                     </div>
-                    <div class="col-6">
-                        <div class="font-weight-bolder mb-2">
-                            Type Vol : <span class="font-weight-normal">{{$vol->type_vol ? 'Vol Depart':'Vol Arrive'}}</span>
-                        </div>
-                        <div class="font-weight-bolder mb-2">
-                            Date Vol : <span class="font-weight-normal">{{$vol->date_vol}}</span>
-                        </div>
+                    <div class="font-weight-bolder mb-2">
+                        Terminal/Aeoroport : <span class="font-weight-normal">{{$vol->terminal}}</span>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="font-weight-bolder mb-2">
+                        Type Vol : <span
+                            class="font-weight-normal">{{$vol->type_vol ? 'Vol Depart':'Vol Arrive'}}</span>
+                    </div>
+                    <div class="font-weight-bolder mb-2">
+                        Date Vol : <span class="font-weight-normal">{{$vol->date_vol}}</span>
                     </div>
                 </div>
             </div>
-                {{--Participants--}}
+        </div>
+        {{--Participants--}}
 
-            <a  data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="text-decoration-none">
-                    <div class="alert alert-success shadow-sm" role="alert">
-                        <i class='fas fa-users'></i><span class="ml-3 font-weight-bold">Participants</span>
-                    </div></a>
-            @if($vol->participants->count()==0)
+        <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+           aria-controls="collapseExample" class="text-decoration-none">
+            <div class="alert alert-success shadow-sm" role="alert">
+                <i class='fas fa-users'></i><span class="ml-3 font-weight-bold">Participants</span>
+            </div>
+        </a>
+        @if($vol->participants->count()==0)
             <p class="text-muted text-center font-weight-bolder">
                 <i class='fas fa-exclamation-triangle	'></i> Aucun Participant est Affecté à Ce vol !
             </p>
-            @else
-                <div class="collapse show" id="collapseExample">
+        @else
+            <div class="collapse show" id="collapseExample">
                 <div class="d-flex justify-content-center">
                     <table class=" table table-light table-hover w-50 text-left border-7">
                         <thead>
@@ -71,7 +74,7 @@
                     </table>
                 </div>
             </div>
-             @endif
+        @endif
     </div>
 
 @endsection

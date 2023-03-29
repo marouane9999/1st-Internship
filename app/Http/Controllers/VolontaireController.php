@@ -64,20 +64,19 @@ class VolontaireController extends Controller
         $site_heberg = config('custom_arrays.site_heberg');
         $roles = config('custom_arrays.roles');
         $volontaire = Volontaire::find($id);
-        $participants=Participant::all();
+        $participants = Participant::all();
         if ($volontaire) {
 
             return response()->json([
                 'success' => true,
-                'html'=>view('volontaires.form')->with([
-                'volontaire' => $volontaire,
-                'participants'=>$participants,
-                'roles' => $roles,
-                'site_aff' => $site_heberg,
-                'action' => route('volontaires.update', $volontaire->id),
-                'title'=>'Modifier Volontaire'.$volontaire->id,
-            ])->render()
-
+                'html' => view('volontaires.form')->with([
+                    'volontaire' => $volontaire,
+                    'participants' => $participants,
+                    'roles' => $roles,
+                    'site_aff' => $site_heberg,
+                    'action' => route('volontaires.update', $volontaire->id),
+                    'title' => 'Modifier Volontaire' . $volontaire->id,
+                ])->render()
 
 
             ]);
@@ -113,9 +112,9 @@ class VolontaireController extends Controller
     {
         $volontaire = Volontaire::find($id);
         $site_heberg = config('custom_arrays.site_heberg');
-        $countries=config('custom_arrays.countries');
+        $countries = config('custom_arrays.countries');
         $volontaire->get();
-        return view('volontaires.show',['volontaire'=>$volontaire,'site_aff'=>$site_heberg,'countries'=>$countries]);
+        return view('volontaires.show', ['volontaire' => $volontaire, 'site_aff' => $site_heberg, 'countries' => $countries]);
     }
 
 }

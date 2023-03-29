@@ -27,15 +27,15 @@ class ParticipantRequest extends FormRequest
     public function rules()
     {
         return [
-            'nom_par'=>['required','string'],
-            'prenom_par'=>['required','string'],
-            'discipline'=>['required','string'] ,
-            'num_pass'=>['required','numeric',Rule::unique('participants')->ignore($this->route('id'))],
-            'num_acc'=>['required', 'numeric'],
-            'nom_chef'=>['required','string'],
-            'prenom_chef'=>['required','string' ],
-            'num_passport'=>['required','numeric',Rule::unique('chef_missions')->ignore($this->route('id'))],
-            'tel'=>['required','numeric']
+            'nom_par' => ['required', 'string'],
+            'prenom_par' => ['required', 'string'],
+            'discipline' => ['required', 'string'],
+            'num_pass' => ['required', 'numeric', Rule::unique('participants')->ignore($this->route('id'))],
+            'num_acc' => ['required', 'numeric'],
+            'nom_chef' => ['required', 'string'],
+            'prenom_chef' => ['required', 'string'],
+            'num_passport' => ['required', 'numeric', Rule::unique('chef_missions')->ignore($this->route('id'))],
+            'tel' => ['required', 'numeric']
         ];
     }
 
@@ -43,25 +43,25 @@ class ParticipantRequest extends FormRequest
     {
         return [
 
-            'nom_par.required'=> 'Nom Participant est obligatoire ',
-            'prenom_par.required'=>'Prenom Participant est obligatoire ',
-            'nom_par.string'=> 'Nom Participant est un champs text',
-            'prenom_par.string'=>'Prenom Participant est un champs text',
-            'num_pass.required'=>'Numero Passport est un champs obligatoire',
-            'num_pass.numeric'=>'Numero Passport est un champs Numerique',
-            'num_pass.size'=>'Numero Passport est trop long',
-            'num_acc.required'=>'Numero Accreditation est un champs obligatoire',
-            'num_acc.numeric'=>'Numero Accreditation est un champs Numerique',
-            'num_acc.size'=>'Numero Accreditation est trop long',
-            'prenom_chef.required'=>'Prenom Chef est un champs obligatoire ',
-            'nom_chef.required'=> 'Nom Chef est un champs obligatoire',
-            'prenom_chef.string'=>'Prenom Chef est un champs text ',
-            'nom_chef.string'=> 'Nom Chef est un champs text',
-            'num_passport.required'=>'Numero Passport est un champs Obligatoire',
-            'num_passport.numeric'=>'Numero Passport est un champs Numerique',
-            'num_passport.size'=>'Numero Passport est trop long',
-            'tel.required'=>'Telephone est un champs obligatoire',
-            'tel.numeric'=>'Telephone est un champs Numerique',
+            'nom_par.required' => 'Nom Participant est obligatoire ',
+            'prenom_par.required' => 'Prenom Participant est obligatoire ',
+            'nom_par.string' => 'Nom Participant est un champs text',
+            'prenom_par.string' => 'Prenom Participant est un champs text',
+            'num_pass.required' => 'Numero Passport est un champs obligatoire',
+            'num_pass.numeric' => 'Numero Passport est un champs Numerique',
+            'num_pass.size' => 'Numero Passport est trop long',
+            'num_acc.required' => 'Numero Accreditation est un champs obligatoire',
+            'num_acc.numeric' => 'Numero Accreditation est un champs Numerique',
+            'num_acc.size' => 'Numero Accreditation est trop long',
+            'prenom_chef.required' => 'Prenom Chef est un champs obligatoire ',
+            'nom_chef.required' => 'Nom Chef est un champs obligatoire',
+            'prenom_chef.string' => 'Prenom Chef est un champs text ',
+            'nom_chef.string' => 'Nom Chef est un champs text',
+            'num_passport.required' => 'Numero Passport est un champs Obligatoire',
+            'num_passport.numeric' => 'Numero Passport est un champs Numerique',
+            'num_passport.size' => 'Numero Passport est trop long',
+            'tel.required' => 'Telephone est un champs obligatoire',
+            'tel.numeric' => 'Telephone est un champs Numerique',
 
         ];
     }

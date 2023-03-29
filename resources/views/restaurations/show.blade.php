@@ -4,10 +4,11 @@
 
     <div class="container shadow-sm p-3 mb-5  rounded">
 
-    <div class="d-flex justify-content-center m-auto w-75">
-            <h1 class="display-3 text-black">Restauration<span class="display-2 text-blue font-weight-bolder">&nbsp; #{{$restau->id}}</span> </h1>
-    </div>
-{{--        Restauration--}}
+        <div class="d-flex justify-content-center m-auto w-75">
+            <h1 class="display-3 text-black">Restauration<span
+                    class="display-2 text-blue font-weight-bolder">&nbsp; #{{$restau->id}}</span></h1>
+        </div>
+        {{--        Restauration--}}
         <div class="alert alert-default-success shadow-sm mt-3 " role="alert">
             <i class='fas fa-hamburger'></i><span class="ml-3 font-weight-bold">Restauration</span>
         </div>
@@ -36,7 +37,7 @@
 
             </div>
         </div>
-{{--            Participant--}}
+        {{--            Participant--}}
         <div class="alert alert-dark shadow-sm" role="alert">
             <i class='fas fa-id-badge'></i><span class="ml-3 font-weight-bold">Participant</span>
         </div>
@@ -47,16 +48,20 @@
                         Nom Participant : <span class="font-weight-normal">{{$restau->participant->nom_par}}</span>
                     </div>
                     <div class="font-weight-bolder">
-                        Prenom Participant : <span class="font-weight-normal">{{$restau->participant->prenom_par}}</span>
+                        Prenom Participant : <span
+                            class="font-weight-normal">{{$restau->participant->prenom_par}}</span>
                     </div>
                     <div class="font-weight-bolder">
-                        Sexe : <span class="font-weight-normal">{{{$restau->participant->genre==1?'Homme':'Femme'}}}</span>
+                        Sexe : <span
+                            class="font-weight-normal">{{{$restau->participant->genre==1?'Homme':'Femme'}}}</span>
                     </div>
                     <div class="font-weight-bolder">
-                        Discipline : <span class="font-weight-normal">{{{ucfirst($restau->participant->discipline)}}}</span>
+                        Discipline : <span
+                            class="font-weight-normal">{{{ucfirst($restau->participant->discipline)}}}</span>
                     </div>
                     <div class="font-weight-bolder">
-                        Categorie : <span class="font-weight-normal">{{{ucfirst($restau->participant->categorie->des_cat)}}}</span>
+                        Categorie : <span
+                            class="font-weight-normal">{{{ucfirst($restau->participant->categorie->des_cat)}}}</span>
                     </div>
                 </div>
                 <div class="col-6">

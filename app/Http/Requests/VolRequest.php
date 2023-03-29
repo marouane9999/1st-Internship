@@ -27,7 +27,7 @@ class VolRequest extends FormRequest
     public function rules()
     {
         return [
-            'numero_vol' => ['required', 'numeric',Rule::unique('vols')->ignore($this->route('id'))],
+            'numero_vol' => ['required', 'numeric', Rule::unique('vols')->ignore($this->route('id'))],
             'date_vol' => ['required'],
         ];
     }
@@ -37,7 +37,7 @@ class VolRequest extends FormRequest
         return [
             'numero_vol.numeric' => 'Numéro de vol doit être numeric',
             'numero_vol.required' => 'Numéro de vol est obligatoire',
-            'numero_vol.unique'=>'Numéro de Vol déjà utilisé  ',
+            'numero_vol.unique' => 'Numéro de Vol déjà utilisé  ',
             'date_vol.required' => 'La date est obligatoire ',
 
         ];

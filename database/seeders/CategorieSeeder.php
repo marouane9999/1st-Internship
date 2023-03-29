@@ -15,7 +15,7 @@ class CategorieSeeder extends Seeder
      */
     public function run()
     {
-        $categorie=[
+        $categorie = [
             [
                 'des_cat' => 'Volontaire',
                 'desc_cat' => "Responsable sur l'organisation des activites Sporitfs",

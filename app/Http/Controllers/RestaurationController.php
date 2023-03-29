@@ -23,11 +23,12 @@ class RestaurationController extends Controller
         $site_restau = config('custom_arrays.site_restau');
         return view('restaurations.index')->with([
             'restaurations' => $restaurations,
-            'site_restau'=>$site_restau
+            'site_restau' => $site_restau
         ]);
 
 
     }
+
     public function create()
     {
         $site_restau = config('custom_arrays.site_restau');
@@ -36,7 +37,7 @@ class RestaurationController extends Controller
             'success' => true,
             'html' => view('restaurations.form')->with([
                 'restauration' => $this->restauration,
-                'participants'=>Participant::all(),
+                'participants' => Participant::all(),
                 'title' => 'Ajouter Restauration',
                 'repas' => $cat_rp,
                 'action' => route('restaurations.store'),
@@ -44,6 +45,7 @@ class RestaurationController extends Controller
             ])->render()
         ]);
     }
+
     public function store(RestaurationRequest $request)
     {
 
@@ -60,6 +62,7 @@ class RestaurationController extends Controller
             'msg' => 'Restauration créé avec succès.',
         ]);
     }
+
     public function edit($id)
     {
         $restauration = Restauration::find($id);
@@ -69,7 +72,7 @@ class RestaurationController extends Controller
             'success' => true,
             'html' => view('restaurations.form')->with([
                 'restauration' => $restauration,
-                'participants'=>Participant::all(),
+                'participants' => Participant::all(),
                 'title' => 'Modifier Restauration',
                 'repas' => $cat_rp,
                 'action' => route('restaurations.update', $id),
@@ -77,7 +80,8 @@ class RestaurationController extends Controller
             ])->render()
         ]);
     }
-    public function update(RestaurationRequest $request,$id)
+
+    public function update(RestaurationRequest $request, $id)
     {
         {
             $restauration = Restauration::find($id);
@@ -95,6 +99,7 @@ class RestaurationController extends Controller
         ]);
 
     }
+
     public function delete($id)
     {
         $restauration = Restauration::find($id);
@@ -106,12 +111,13 @@ class RestaurationController extends Controller
             ]);
         }
     }
+
     public function show($id)
     {
         $restauration = Restauration::find($id);
         $restauration->get();
         $site_restau = config('custom_arrays.site_restau');
         $countries = config('custom_arrays.countries');
-        return view('restaurations.show',['restau'=>$restauration,'site_restau'=>$site_restau,'countries'=>$countries]);
+        return view('restaurations.show', ['restau' => $restauration, 'site_restau' => $site_restau, 'countries' => $countries]);
     }
 }

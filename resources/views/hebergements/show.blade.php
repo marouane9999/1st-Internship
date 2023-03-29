@@ -4,9 +4,10 @@
 
     <div class="container shadow-sm p-3 mb-5  rounded w-75 mt-5">
 
-    <div class="d-flex justify-content-center m-auto w-75">
-            <h1 class="display-3 text-black">Hébergement<span class="display-2 text-blue font-weight-bolder">&nbsp; #{{$heberg->id}}</span> </h1>
-    </div>
+        <div class="d-flex justify-content-center m-auto w-75">
+            <h1 class="display-3 text-black">Hébergement<span
+                    class="display-2 text-blue font-weight-bolder">&nbsp; #{{$heberg->id}}</span></h1>
+        </div>
         {{--Hebergement--}}
         <div class="alert alert-default-success shadow-sm mt-3 " role="alert">
             <i class='fas fa-bed'></i><span class="ml-3 font-weight-bold">Hébergement</span>
@@ -18,7 +19,8 @@
                         Site d' hébergement: <span class="font-weight-normal">{{$heberg->site_heberg}}</span>
                     </div>
                     <div class="font-weight-bolder">
-                        Type de chambre : <span class="font-weight-normal">{{$heberg->type_cham==1?'Single':'Double'}}</span>
+                        Type de chambre : <span
+                            class="font-weight-normal">{{$heberg->type_cham==1?'Single':'Double'}}</span>
                     </div>
                 </div>
                 <div class="col-6">
@@ -33,7 +35,7 @@
 
             </div>
         </div>
-            {{--Participant--}}
+        {{--Participant--}}
         <div class="alert alert-dark shadow-sm" role="alert">
             <i class='fas fa-id-badge'></i><span class="ml-3 font-weight-bold">Participant</span>
         </div>
@@ -44,16 +46,20 @@
                         Nom Participant : <span class="font-weight-normal">{{$heberg->participant->nom_par}}</span>
                     </div>
                     <div class="font-weight-bolder">
-                        Prenom Participant : <span class="font-weight-normal">{{$heberg->participant->prenom_par}}</span>
+                        Prenom Participant : <span
+                            class="font-weight-normal">{{$heberg->participant->prenom_par}}</span>
                     </div>
                     <div class="font-weight-bolder">
-                        Sexe : <span class="font-weight-normal">{{{$heberg->participant->genre==1?'Homme':'Femme'}}}</span>
+                        Sexe : <span
+                            class="font-weight-normal">{{{$heberg->participant->genre==1?'Homme':'Femme'}}}</span>
                     </div>
                     <div class="font-weight-bolder">
-                        Discipline : <span class="font-weight-normal">{{{ucfirst($heberg->participant->discipline)}}}</span>
+                        Discipline : <span
+                            class="font-weight-normal">{{{ucfirst($heberg->participant->discipline)}}}</span>
                     </div>
                     <div class="font-weight-bolder">
-                        Categorie : <span class="font-weight-normal">{{{ucfirst($heberg->participant->categorie->des_cat)}}}</span>
+                        Categorie : <span
+                            class="font-weight-normal">{{{ucfirst($heberg->participant->categorie->des_cat)}}}</span>
                     </div>
                 </div>
                 <div class="col-6">

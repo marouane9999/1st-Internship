@@ -16,7 +16,7 @@ class RepasSeeder extends Seeder
      */
     public function run()
     {
-        $repas=[
+        $repas = [
             [
                 'des_rep' => 'PDJ',
                 'desc_rep' => "Petit Dejeuner",
