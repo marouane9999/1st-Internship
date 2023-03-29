@@ -10,7 +10,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <title>Alpha IT</title>
 
     <!-- Google Font: Source Sans Pro -->
-    <link rel="shortcut icon" href="/adminLte/img/a1.png"/>
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome Icons -->
@@ -94,9 +93,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <aside class="main-sidebar sidebar-dark-primary elevation ">
         <!-- Brand Logo -->
         <a href="index3.html" class="brand-link">
-            <img src="/adminLte/img/a1.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+            <img src="/adminLte/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
                  style="opacity: .8">
-            <span class="brand-text font-weight-light">LPHA IT</span>
+            <span class="brand-text font-weight-bold">ALPHA IT</span>
         </a>
 
         <!-- Sidebar -->
@@ -104,15 +103,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- Sidebar user panel (optional) -->
             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                 <div class="image">
-                    <img src="/adminLte/img/user1-128x128.jpg" class="img-circle elevation-2" alt="User Image">
+                    <img src="/adminLte/img/user3-128x128.jpg" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
-                    <a href="#" class="d-block">Name family name</a>
+                    {{--          <a href="#" class="d-block">  {{ \Illuminate\Support\Facades\Auth::user()->name }}</a>--}}
                 </div>
             </div>
 
             <!-- SidebarSearch Form -->
-            <div class="form-inline mb-0">
+            <div class="form-inline mb-3">
                 <div class="input-group" data-widget="sidebar-search">
                     <input class="form-control form-control-sidebar" type="search" placeholder="Search"
                            aria-label="Search">
@@ -130,7 +129,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     data-accordion="false">
                     <!-- Add icons to the links using the .nav-icon class
                          with font-awesome or any other icon font library -->
-                    <br><br>
                     <li class="nav-item menu-open mb-4">
                         <a href="{{route('dashboard.index')}}" class="nav-link active">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -141,7 +139,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </li>
                     <li class="nav-item menu-open mb-4 ">
                         <a href="#" class="nav-link ">
-                            <i class="nav-icon fa fa-users"></i>
+                            <i class="nav-icon fa fa-users fa-fade"></i>
                             <p>
                                 Gestion des Participants
                                 <i class="right fas fa-angle-left"></i>
@@ -160,7 +158,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                     <li class="nav-item menu-open mb-4">
                         <a href="#" class="nav-link ">
-                            <i class="nav-icon fa fa-plane"></i>
+                            <i class="nav-icon fa fa-plane fa-fade"></i>
                             <p>
                                 Gestion des Vols
                                 <i class="right fas fa-angle-left"></i>
@@ -189,7 +187,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </li>
                     <li class="nav-item menu-open mb-4">
                         <a href="#" class="nav-link">
-                            <i class="nav-icon fa fa-bed"></i>
+                            <i class="nav-icon fas fa-hotel fa-fade"></i>
                             <p>
                                 Gestion d'Hebergement
                             </p>
@@ -220,7 +218,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                     <li class="nav-item menu-open mb-4">
                         <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-hamburger"></i>
+                            <i class="nav-icon fas fa-utensils fa-fade"></i>
                             <p>
                                 Gestion de Restauration
                             </p>
@@ -252,7 +250,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                     <li class="nav-item menu-open mb-3">
                         <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-user-tag"></i>
+                            <i class="nav-icon fas fa-user-tag fa-fade"></i>
                             <p>
                                 Gestion des Volontaires
                             </p>
@@ -284,7 +282,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-id-card"></i>
+                            <i class="nav-icon fas fa-id-badge fa-fade"></i>
                             <p>
                                 Gestion des Utilisateurs
                             </p>
@@ -305,7 +303,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="container-fluid ">
                 <div class="row mb-2 ">
                     <div class="col-sm-6">
-                        <h5 class="m-0 breadcrumb-item active font-italic font"><i class="fas fa-home"></i>
+                        <h5 class="m-0 breadcrumb-item active font-italic font"><i class="fas fa-home "></i>
                             / @yield('header title')</h5>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
@@ -370,6 +368,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+<script src="https://kit.fontawesome.com/351f99b4d6.js" crossorigin="anonymous"></script>
 
 <script>
 

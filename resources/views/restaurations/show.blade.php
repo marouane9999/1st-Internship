@@ -10,7 +10,7 @@
         </div>
         {{--        Restauration--}}
         <div class="alert alert-default-success shadow-sm mt-3 " role="alert">
-            <i class='fas fa-hamburger'></i><span class="ml-3 font-weight-bold">Restauration</span>
+            <i class='fas fa-utensils '></i><span class="ml-3 font-weight-bold">Restauration</span>
         </div>
         <div class="shadow-lg p-1 mt-3 mb-3 w-100 d-flex ">
             <div class="row w-100 d-flex justify-content-center ml-5">
