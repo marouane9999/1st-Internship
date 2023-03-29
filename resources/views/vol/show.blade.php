@@ -4,9 +4,8 @@
 @section('content')
 
     <div class="container shadow-sm p-3 mb-5  rounded mt-4">
-        <div class="d-flex justify-content-center m-auto w-75 mb-5 mt-4">
-            <h1 class="display-3 text-black font-weight-normal">Vol<span
-                    class="display-5 font-weight-bolder">&nbsp; #{{$vol->numero_vol}}</span></h1>
+        <div class="d-flex justify-content-center m-auto w-75 mb-2 mt-4">
+            <h1 class="shadow-lg p-3 mb-5 bg-gradient-light rounded font-weight-bolder text-dark">Vol  #{{$vol->numero_vol}}</span></h1>
         </div>
         {{--Vol--}}
         <div class="alert alert-primary shadow-sm" role="alert">

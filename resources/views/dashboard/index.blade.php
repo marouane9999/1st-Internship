@@ -11,7 +11,7 @@
                         <p>Total des Participants</p>
                     </div>
                     <div class="icon">
-                        <i class="fas fa-user-alt"></i>
+                        <i class="fas fa-user-alt fa-beat-fade"></i>
                     </div>
                     <a href="{{route('participants.index')}}" class="small-box-footer">Plus d'infotmations <i
                             class="fas fa-arrow-circle-right "></i></a>
@@ -24,7 +24,7 @@
                         <p>Total des Volontaires</p>
                     </div>
                     <div class="icon">
-                        <i class="fas fa-user-tag"></i>
+                        <i class="fas fa-user-tag fa-beat-fade"></i>
                     </div>
                     <a href="{{route('volontaires.index')}}" class="small-box-footer">Plus d'infotmations <i
                             class="fas fa-arrow-circle-right"></i></a>
@@ -37,7 +37,7 @@
                         <p>Total des Chefs Mission</p>
                     </div>
                     <div class="icon">
-                        <i class="fas fa-id-badge"></i>
+                        <i class="fas fa-user-tie fa-beat-fade"></i>
                     </div>
                     <a href="#" class="small-box-footer">Plus d'infotmations <i
                             class="fas fa-arrow-circle-right"></i></a>
@@ -52,7 +52,7 @@
                         <p>Total des Restaurations</p>
                     </div>
                     <div class="icon">
-                        <i class="fas fa-hamburger"></i>
+                        <i class="fas fa-utensils fa-beat-fade"></i>
                     </div>
                     <a href="{{route('restaurations.index')}}" class="small-box-footer">Plus d'infotmations <i
                             class="fas fa-arrow-circle-right"></i></a>
@@ -65,7 +65,7 @@
                         <p>Total des Hebergements</p>
                     </div>
                     <div class="icon">
-                        <i class="fas fa-bed"></i>
+                        <i class="fas fa-hotel fa-beat-fade"></i>
                     </div>
                     <a href="{{route('hebergements.index')}}" class="small-box-footer">Plus d'infotmations<i
                             class="fas fa-arrow-circle-right"></i></a>
@@ -78,7 +78,7 @@
                         <p>Total des vols</p>
                     </div>
                     <div class="icon">
-                        <i class="fas fa-plane"></i>
+                        <i class="fas fa-plane fa-beat-fade"></i>
                     </div>
                     <a href="{{route('vols.index')}}" class="small-box-footer">Plus d'infotmations <i
                             class="fas fa-arrow-circle-right"></i></a>
