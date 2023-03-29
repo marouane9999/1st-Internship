@@ -174,7 +174,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./index2.html" class="nav-link">
+                                <a href="{{route('vols.reporting')}}" class="nav-link">
                                     <i class="fas fa-file-alt nav-icon"></i>
                                     <p>Suivi & Reporting</p>
                                 </a>
@@ -351,7 +351,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <footer class="main-footer">
         <!-- To the right -->
         <!-- Default to the left -->
-        <strong>Copyright &copy; 2023 <a href="https://adminlte.io">AlphaIT</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2023 <a href="#">AlphaIT</a>.</strong> All rights reserved.
     </footer>
 </div>
 <!-- ./wrapper -->

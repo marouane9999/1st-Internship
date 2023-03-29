@@ -38,6 +38,7 @@ Route::group(['prefix' => '/vols'], function () {
     Route::post('/update/{id}', [App\Http\Controllers\VolController::class, 'update'])->name('vols.update');
     Route::get('/show/{id}', [App\Http\Controllers\VolController::class, 'show'])->name('vols.show');
     Route::get('/delete/{id}', [App\Http\Controllers\VolController::class, 'delete'])->name('vols.delete');
+    Route::get('/reporting', [App\Http\Controllers\ReportingVolController::class, 'index'])->name('vols.reporting');
 });
 Route::group(['prefix' => '/hebergements'], function () {
     Route::get('/', [App\Http\Controllers\HebergementController::class, 'index'])->name('hebergements.index');

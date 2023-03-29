@@ -1,5 +1,5 @@
 @extends('layout')
-@section('header title','Vols')
+@section('header title','Vol ')
 @section('content')
 
     @if($vols->count()==0)

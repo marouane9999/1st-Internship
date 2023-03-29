@@ -13,8 +13,8 @@
                     <div class="icon">
                         <i class="fas fa-user-alt"></i>
                     </div>
-                    <a href="{{route('participants.index')}}" class="small-box-footer">Plus d'infotmations<i
-                            class="fas fa-arrow-circle-right ml-1"></i></a>
+                    <a href="{{route('participants.index')}}" class="small-box-footer">Plus d'infotmations <i
+                            class="fas fa-arrow-circle-right "></i></a>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -26,7 +26,7 @@
                     <div class="icon">
                         <i class="fas fa-user-tag"></i>
                     </div>
-                    <a href="{{route('volontaires.index')}}" class="small-box-footer">Plus d'infotmations<i
+                    <a href="{{route('volontaires.index')}}" class="small-box-footer">Plus d'infotmations <i
                             class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
@@ -39,7 +39,7 @@
                     <div class="icon">
                         <i class="fas fa-id-badge"></i>
                     </div>
-                    <a href="#" class="small-box-footer">Plus d'infotmations<i
+                    <a href="#" class="small-box-footer">Plus d'infotmations <i
                             class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
@@ -49,12 +49,12 @@
                 <div class="small-box bg-primary">
                     <div class="inner">
                         <h3>{{$count_rest}}</h3>
-                        <p>Total des restaurations</p>
+                        <p>Total des Restaurations</p>
                     </div>
                     <div class="icon">
                         <i class="fas fa-hamburger"></i>
                     </div>
-                    <a href="{{route('restaurations.index')}}" class="small-box-footer">More info<i
+                    <a href="{{route('restaurations.index')}}" class="small-box-footer">Plus d'infotmations <i
                             class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
@@ -67,7 +67,7 @@
                     <div class="icon">
                         <i class="fas fa-bed"></i>
                     </div>
-                    <a href="{{route('hebergements.index')}}" class="small-box-footer">Plus d'infotmations <i
+                    <a href="{{route('hebergements.index')}}" class="small-box-footer">Plus d'infotmations<i
                             class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
@@ -85,8 +85,6 @@
                 </div>
             </div>
         </div>
-        <div class="row mt-5">
-        </div>
     </div>
-    </div>
+
 @endsection

@@ -5,11 +5,10 @@
 
     <div class="container shadow-sm p-3 mb-5  rounded">
 
-        <div class="d-flex justify-content-center m-auto w-75">
-            <h1 class="display-3 text-black">Participant <span
-                    class="display-2 text-blue font-weight-bolder">&nbsp; #{{$ptc->id}}</span></h1>
-        </div>
-        {{--Participant--}}
+    <div class="d-flex justify-content-center m-auto w-75 mb-3 p-2">
+            <h1><span class="shadow-lg p-3 mb-5 bg-gradient-primary rounded font-weight-bolder text-dark">{{$ptc->nom_par}} {{$ptc->prenom_par}}</span></h1>
+    </div>
+            {{--Participant--}}
         <div class="alert alert-primary shadow-sm" role="alert">
             <i class='fas fa-id-badge'></i><span class="ml-3 font-weight-bold">Participant</span>
         </div>
@@ -51,7 +50,7 @@
                 </div>
             </div>
         </div>
-        {{--ChefMission--}}
+            {{--ChefMission--}}
         <div class="alert alert-dark shadow-sm " role="alert">
             <i class='fas fa-user-circle'></i><span class="ml-3 font-weight-bold">Chef Mission</span>
         </div>
@@ -59,12 +58,10 @@
             <div class="row w-100 d-flex justify-content-center ml-5">
                 <div class="col-4">
                     <div class="font-weight-bolder mb-2">
-                        Nom Chef mission : <span
-                            class="font-weight-normal">{{ucfirst($ptc->chef_mission->nom_chef)}}</span>
+                        Nom Chef mission : <span class="font-weight-normal">{{ucfirst($ptc->chef_mission->nom_chef)}}</span>
                     </div>
                     <div class="font-weight-bolder mb-2">
-                        Prenom Chef mission : <span
-                            class="font-weight-normal">{{ucfirst($ptc->chef_mission->nom_chef)}}</span>
+                        Prenom Chef mission : <span class="font-weight-normal">{{ucfirst($ptc->chef_mission->nom_chef)}}</span>
                     </div>
                 </div>
                 <div class="col-6">
@@ -77,7 +74,7 @@
                 </div>
             </div>
         </div>
-        {{--Hebergement--}}
+            {{--Hebergement--}}
         <div class="alert alert-secondary shadow-sm" role="alert">
             <i class='fas fa-bed'></i><span class="ml-3 font-weight-bold">Hebergement</span>
         </div>
@@ -90,8 +87,7 @@
                                 Site Hebergement : <span class="font-weight-normal">{{$hebergement->site_heberg}}</span>
                             </div>
                             <div class="font-weight-bolder mb-2">
-                                Type Chambre : <span
-                                    class="font-weight-normal">{{$hebergement->type_cham==1?'Single':'Double'}}</span>
+                                Type Chambre : <span class="font-weight-normal">{{$hebergement->type_cham==1?'Single':'Double'}}</span>
                             </div>
                         </div>
                         <div class="col-6">
@@ -106,7 +102,7 @@
                 @endforeach
             </div>
         </div>
-        {{--Restauration--}}
+            {{--Restauration--}}
         <div class="alert alert-info shadow-sm" role="alert">
             <i class="fas fa-hamburger"></i><span class="ml-3 font-weight-bold">Restauration</span>
         </div>
@@ -116,12 +112,10 @@
                     @if($restauration->participant_id==$ptc->id)
                         <div class="col-4">
                             <div class="font-weight-bolder mb-2">
-                                Numero Restauration : <span
-                                    class="font-weight-normal">{{$restauration->numero_rest}}</span>
+                                Numero Restauration : <span class="font-weight-normal">{{$restauration->numero_rest}}</span>
                             </div>
                             <div class="font-weight-bolder mb-2">
-                                Site Restauration : <span
-                                    class="font-weight-normal">{{$restauration->site_restau}}</span>
+                                Site Restauration : <span class="font-weight-normal">{{$restauration->site_restau}}</span>
                             </div>
                             <div class="font-weight-bolder mb-2">
                                 Ville : <span class="font-weight-normal">{{$restauration->ville}}</span>
@@ -130,7 +124,7 @@
                         </div>
                         <div class="col-6">
                             <div class="font-weight-bolder mb-2">
-                                Prestataire : <span class="font-weight-normal">{{$restauration->prestataire}}</span>
+                               Prestataire : <span class="font-weight-normal">{{$restauration->prestataire}}</span>
                             </div>
                             <div class="font-weight-bolder mb-2">
                                 Repas : <span class="font-weight-normal">{{$restauration->repas->des_rep}}</span>
@@ -140,14 +134,12 @@
                 @endforeach
             </div>
         </div>
-        {{--Vol--}}
+            {{--Vol--}}
         <div class="row w-100 d-flex justify-content-center m-auto">
             @foreach($ptc->vols as $vol_dep)
                 <div class="col-6 {{$vol_dep->type_vol?'pl-0': 'pr-5'}} ">
-                    <div class="alert alert-default-{{$vol_dep->type_vol ? 'warning':'success'}} shadow-sm mt-3 "
-                         role="alert">
-                        <i class='fas fa-plane-{{$vol_dep->type_vol ? 'departure':'arrival'}}'></i><span
-                            class="ml-3 font-weight-bold">{{$vol_dep->type_vol ? 'Vol Depart':'Vol Arrive'}}</span>
+                    <div class="alert alert-default-{{$vol_dep->type_vol ? 'warning':'success'}} shadow-sm mt-3 " role="alert">
+                        <i class='fas fa-plane-{{$vol_dep->type_vol ? 'departure':'arrival'}}'></i><span class="ml-3 font-weight-bold">{{$vol_dep->type_vol ? 'Vol Depart':'Vol Arrive'}}</span>
                     </div>
                     <div class="shadow-lg mt-3 w-100 py-1 px-5">
                         <div class="font-weight-bolder mb-2">
