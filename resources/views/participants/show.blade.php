@@ -82,10 +82,11 @@
         <div class="alert alert-secondary shadow-sm" role="alert">
             <i class='fas fa-hotel'></i><span class="ml-3 font-weight-bold">Hebergement</span>
         </div>
+
         <div class="shadow-lg p-1 mt-3 mb-3 w-100 d-flex ">
             <div class="row w-100 d-flex justify-content-center ml-5">
                 @foreach($hebergements as $hebergement)
-                    @if($hebergement->participant_id==$ptc->id)
+                    @if($hebergement->participant_id==$ptc->id && $hebergement==true)
                         <div class="col-4">
                             <div class="font-weight-bolder mb-2">
                                 Site Hebergement : <span class="font-weight-normal">{{$hebergement->site_heberg}}</span>
@@ -103,6 +104,10 @@
                                 Date Check In : <span class="font-weight-normal">{{$hebergement->date_checkout}}</span>
                             </div>
                         </div>
+                    @else
+                        <div class="text-muted text-center font-weight-bolder m-auto p-3  ">
+                            <i class='fas fa-exclamation-triangle fa-flip '></i> <span>Ce Participant n'est affecté à  aucun Hébergement</span>
+                        </div>
                     @endif
                 @endforeach
             </div>
@@ -114,7 +119,7 @@
         <div class="shadow-lg p-1 mt-3 mb-3 w-100 d-flex ">
             <div class="row w-100 d-flex justify-content-center ml-5">
                 @foreach($restaurations as $restauration)
-                    @if($restauration->participant_id==$ptc->id)
+                    @if($restauration->participant_id==$ptc->id && $restauration==true)
                         <div class="col-4">
                             <div class="font-weight-bolder mb-2">
                                 Numero Restauration : <span
@@ -136,6 +141,10 @@
                             <div class="font-weight-bolder mb-2">
                                 Repas : <span class="font-weight-normal">{{$restauration->repas->des_rep}}</span>
                             </div>
+                        </div>
+                    @else
+                        <div class="text-muted text-center font-weight-bolder m-auto p-3  ">
+                            <i class='fas fa-exclamation-triangle fa-flip '></i> <span>Ce Participant n'est affecté à  aucune Restauration</span>
                         </div>
                     @endif
                 @endforeach

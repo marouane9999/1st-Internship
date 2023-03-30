@@ -17,7 +17,7 @@
                href="{{route('vols.create')}}"><i class="fa fa-plus"></i>&nbsp;&nbsp;Ajouter un Vol</a>
             <table
                 class="table table-borderless table-bordered table-hover w-100 mt-2 shadow-lg mb-5 bg-white rounded  ">
-                <thead>
+                <thead class="thead-dark">
                 <tr class="text-center">
                     <th scope="col">#</th>
                     <th scope="col">Numéro de vol</th>

@@ -12,7 +12,7 @@
         <div class="mt-5 m-auto w-75 ">
         <a href="{{route('hebergements.create')}}" class="btn btn-success me-md-2 rounded-pill bg-gradient-success float-right mb-2 create-hebergements " ><i class="fa fa-plus mr-2"></i>Ajouter Hébergement</a>
         <table class="table table-borderless table-bordered table-hover w-100 mt-5 shadow-lg p-3 mb-5 bg-white rounded">
-            <thead>
+            <thead class="thead-dark">
             <tr class="text-left" >
                 <th scope="col">#</th>
                 <th scope="col">Participant</th>
