@@ -311,7 +311,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{route('dashboard.index')}}">Accueil</a></li>
-                            <li class="breadcrumb-item active font-italic  "><span>@yield('header title')</span></li>
+
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
