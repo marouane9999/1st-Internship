@@ -22,7 +22,9 @@ class DashboardController extends Controller
         $count_vol = Vol::all()->count();
         $count_chefm = ChefMission::all()->count();
         $count_volontaire = Volontaire::all()->count();
-        $participants = Participant::all()->where('created_at', '>=', Carbon::today())->all();
+        $participants = Participant::orderBy('created_at', 'desc')->limit(5)->get();
+        $volontaires = Volontaire::orderBy('created_at', 'desc')->limit(5)->get();
+
         return view('dashboard.index')->with([
             'count_ptc' => $count_ptc,
             'count_rest' => $count_rest,
@@ -31,6 +33,7 @@ class DashboardController extends Controller
             'count_chefm' => $count_chefm,
             'count_volontaire' => $count_volontaire,
             'participants' => $participants,
+            'volontaires' => $volontaires,
         ]);
     }
 }

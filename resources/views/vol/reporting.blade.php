@@ -36,7 +36,9 @@
                             @foreach($today_vols as $tv)
                                 <tr class="text-center">
 
-                                    <td class="col-md-1"><a href="{{route('vols.show',$tv->id)}}" class="text-decoration-none  text-dark font-weight-bolder">{{$tv->numero_vol}}</a></td>
+                                    <td class="col-md-1"><a href="{{route('vols.show',$tv->id)}}"
+                                                            class="text-decoration-none  text-dark font-weight-bolder">{{$tv->numero_vol}}</a>
+                                    </td>
                                     <td class="col-md-2">{{$tv->type_vol==1?'Départ':'Arrivée'}}</td>
                                     <td class="col-md-3">{{$tv->terminal}}</td>
                                 </tr>
@@ -53,28 +55,30 @@
                         class="text-dark font-weight-bold">Les 5 Derniers Vols ajoutés</span>
                 </div>
                 <div class="table-responsive">
-                <table class="table table-hover  shadow   bg-white rounded">
+                    <table class="table table-hover  shadow   bg-white rounded">
 
 
-                    <thead class="table-borderless">
-                    <tr>
-                        <th class="col-md-2">Numero Vol</th>
-                        <th class="col-md-2">Type Vol</th>
-                        <th class="col-md-3">Terminal</th>
-                        <th class="col-md-3">Date Ajout</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach($last_vols as $lv)
+                        <thead class="table-borderless">
                         <tr>
-                            <td class=""><a href="{{route('vols.show',$lv->id)}}" class="text-decoration-none  text-dark font-weight-bolder">{{$lv->numero_vol}}</a></td>
-                            <td class="">{{$lv->type_vol==1?'Départ':'Arrivée'}}</td>
-                            <td class="">{{$lv->terminal}}</td>
-                            <td class="">{{$lv->created_at->todatestring()}}</td>
+                            <th class="col-md-2">Numero Vol</th>
+                            <th class="col-md-2">Type Vol</th>
+                            <th class="col-md-3">Terminal</th>
+                            <th class="col-md-3">Date Ajout</th>
                         </tr>
-                    @endforeach
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                        @foreach($last_vols as $lv)
+                            <tr>
+                                <td class=""><a href="{{route('vols.show',$lv->id)}}"
+                                                class="text-decoration-none  text-dark font-weight-bolder">{{$lv->numero_vol}}</a>
+                                </td>
+                                <td class="">{{$lv->type_vol==1?'Départ':'Arrivée'}}</td>
+                                <td class="">{{$lv->terminal}}</td>
+                                <td class="">{{$lv->created_at->todatestring()}}</td>
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
                 </div>
 
             </div>
@@ -104,9 +108,11 @@
                             </td>
                         </tr>
                     @else
-                    @foreach($todaydeparture_vols as $tdv)
+                        @foreach($todaydeparture_vols as $tdv)
                             <tr class="text-center">
-                                <td class=""><a href="{{route('vols.show',$tdv->id)}}" class="text-decoration-none  text-dark font-weight-bolder">{{$tdv->numero_vol}}</a></td>
+                                <td class=""><a href="{{route('vols.show',$tdv->id)}}"
+                                                class="text-decoration-none  text-dark font-weight-bolder">{{$tdv->numero_vol}}</a>
+                                </td>
                                 <td class="">{{$tdv->type_vol==1?'Départ':'Arrivée'}}</td>
                                 <td class="">{{date('H:i',strtotime($tdv->date_vol))}}</td>
                                 <td class="">
@@ -124,7 +130,7 @@
             </div>
             <div class="col-6 mt-3">
                 <div class="alert alert-primary mb-0 p-1" role="alert">
-                    <i class="fas fa-plane-arrival fa-beat-fade "></i> <span class="text-dark font-weight-bold">Les Vols Arrivee Aujourd'hui </span>
+                    <i class="fas fa-plane-arrival fa-beat-fade  "></i> <span class="text-dark font-weight-bold">Les Vols Arrivee Aujourd'hui </span>
                 </div>
                 <table class="table table-hover  shadow   bg-white rounded">
                     <thead>
@@ -148,7 +154,9 @@
                     @else
                         @foreach($todayarrival_vols as $tav)
                             <tr class="text-center">
-                                <td class="col-md-1"><a href="{{route('vols.show',$tav->id)}}" class="text-decoration-none   text-dark font-weight-bold">{{$tav->numero_vol}}</a></td>
+                                <td class="col-md-1"><a href="{{route('vols.show',$tav->id)}}"
+                                                        class="text-decoration-none   text-dark font-weight-bold">{{$tav->numero_vol}}</a>
+                                </td>
                                 <td class="col-md-3">{{$tav->terminal}}</td>
                                 <td class="col-md-2">{{date('H:i',strtotime($tav->date_vol))}}</td>
                                 <td>
@@ -169,8 +177,9 @@
 
     <style>
         .table-responsive {
-            max-height:300px;
+            max-height: 300px;
         }
+
         ::-webkit-scrollbar {
             width: 5px;
             height: 5px;
