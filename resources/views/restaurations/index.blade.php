@@ -17,7 +17,7 @@
                     class="fa fa-plus mr-2"></i>Ajouter Restauration</a>
             <table
                 class="table table-borderless table-bordered table-hover w-100 mt-5 shadow-lg p-3 mb-5 bg-white rounded">
-                <thead>
+                <thead class="thead-dark">
                 <tr class="text-left">
                     <th scope="col">#</th>
                     <th scope="col">Numéro de restauration</th>

@@ -20,6 +20,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="http://t4t5.github.io/sweetalert/dist/sweetalert.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <link rel="stylesheet" href="adminLte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <meta name="csrf_token" content="{{csrf_token()}}">
     <link rel="stylesheet" href="/adminLte/plugins/daterangepicker/daterangepicker.css">
     <link rel="shortcut icon" href="/adminLte/img/AdminLTELogo.png" />
@@ -91,7 +92,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- /.navbar -->
 
     <!-- Main Sidebar Container -->
-    <aside class="main-sidebar sidebar-dark-primary elevation ">
+    <aside class="main-sidebar sidebar-dark-primary elevation-4 ">
         <!-- Brand Logo -->
         <a href="index3.html" class="brand-link">
             <img src="/adminLte/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
@@ -370,6 +371,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
 <script src="https://kit.fontawesome.com/351f99b4d6.js" crossorigin="anonymous"></script>
+<script src="/adminLte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+
 
 <script>
 

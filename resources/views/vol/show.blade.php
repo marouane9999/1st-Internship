@@ -42,13 +42,13 @@
         </a>
         @if($vol->participants->count()==0)
             <p class="text-muted text-center font-weight-bolder">
-                <i class='fas fa-exclamation-triangle	'></i> Aucun Participant est Affecté à Ce vol !
+                <i class='fas fa-exclamation-triangle fa-flip'></i> Aucun Participant est Affecté à Ce vol !
             </p>
         @else
             <div class="collapse show" id="collapseExample">
                 <div class="d-flex justify-content-center">
                     <table class=" table table-light table-hover w-50 text-left border-7">
-                        <thead>
+                        <thead class="thead-dark">
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Nom & Prenom</th>

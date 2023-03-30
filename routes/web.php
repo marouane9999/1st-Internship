@@ -40,6 +40,7 @@ Route::group(['prefix' => '/vols'], function () {
     Route::get('/delete/{id}', [App\Http\Controllers\VolController::class, 'delete'])->name('vols.delete');
     Route::get('/reporting', [App\Http\Controllers\ReportingVolController::class, 'index'])->name('vols.reporting');
 });
+
 Route::group(['prefix' => '/hebergements'], function () {
     Route::get('/', [App\Http\Controllers\HebergementController::class, 'index'])->name('hebergements.index');
     Route::get('/create', [App\Http\Controllers\HebergementController::class, 'create'])->name('hebergements.create');
@@ -48,6 +49,8 @@ Route::group(['prefix' => '/hebergements'], function () {
     Route::post('/update/{id}', [App\Http\Controllers\HebergementController::class, 'update'])->name('hebergements.update');
     Route::get('/show/{id}', [App\Http\Controllers\HebergementController::class, 'show'])->name('hebergements.show');
     Route::get('/delete/{id}', [App\Http\Controllers\HebergementController::class, 'delete'])->name('hebergements.delete');
+    Route::get('/reporting', [App\Http\Controllers\HebergementReportingController::class, 'index'])->name('hebergements.reporting');
+
 });
 Route::group(['prefix' => '/restaurations'], function () {
     Route::get('/', [App\Http\Controllers\RestaurationController::class, 'index'])->name('restaurations.index');

@@ -2,7 +2,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-plane fa-flip"></i>  {{$title}}</h5>
+                <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-plane fa-flip"></i> {{$title}}</h5>
                 <button type="button" class="close close-modal" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -38,7 +38,7 @@
                         <div class="form-column">
                             <div class="form-group row ">
                                 <label for="" class="font-weight-bold ">Date de vol:</label><br>
-                                <input type="date" class="custom-select  @error('date_vol') is-invalid @enderror"
+                                <input type="datetime-local" class="custom-select  @error('date_vol') is-invalid @enderror"
                                        name="date_vol"
                                        @if($vol->date_vol) value={{old('numero_vol',$vol->date_vol)}} @else value={{date("Y-m-d")}} @endif>
                                 @error('date_vol')
