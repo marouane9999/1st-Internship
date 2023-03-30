@@ -22,6 +22,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
     <meta name="csrf_token" content="{{csrf_token()}}">
     <link rel="stylesheet" href="/adminLte/plugins/daterangepicker/daterangepicker.css">
+    <link rel="shortcut icon" href="/adminLte/img/AdminLTELogo.png" />
 
 
 </head>

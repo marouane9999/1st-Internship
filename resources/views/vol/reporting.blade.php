@@ -125,7 +125,7 @@
                             <tr>
                                 <td colspan="3">
                                     <div class="text-muted text-center font-weight-bolder m-auto  ">
-                                        <i class='fas fa-exclamation-triangle'></i> <span>Aucun Vol Arrivee n'est Enregistré Aujourd'hui!</span>
+                                        <i class='fas fa-exclamation-triangle fa-flip'></i> <span>Aucun Vol Arrivee n'est Enregistré Aujourd'hui!</span>
                                     </div>
                                 </td>
 
