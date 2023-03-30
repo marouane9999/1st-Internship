@@ -85,6 +85,63 @@
                 </div>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-6 mt-lg-4 ">
+                <div class="alert alert-warning mb-0 p-1" role="alert">
+                    <i class="fas fa-users fa-fade mr-2 "></i> <span class="text-dark font-weight-bold">Les 5 Derniers Participants </span>
+                </div>
+                <table class="table table-hover  shadow   bg-white rounded">
+                    <thead class="bg-gradient-orange text-light">
+                    <tr class="text-left">
+                        <th class="col-3">Nom & prenom</th>
+                        <th class="">Discipline</th>
+                        <th class="">Pays Delegation</th>
+                    </tr>
+                    </thead>
+                    <tbody class="text-left">
+                    @foreach($participants as $ptc)
+                        <tr class="text-left">
+                            <td class="col-md-2"><a href="{{route('participants.show',$ptc->id)}}"
+                                                    class="text-decoration-none   text-dark font-weight-bold">{{$ptc->nom_par}} {{$ptc->prenom_par}}</a>
+                            </td>
+                            <td class="col-md-2">{{$ptc->discipline}}</td>
+                            <td class="col-md-2">{{config('custom_arrays.countries.'.$ptc->pays_delg)}}</td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-6 mt-lg-4 ">
+                <div class="alert alert-dark mb-0 p-1" role="alert">
+                    <i class="fas fa-user-tag fa-fade mr-2 "></i> <span class="text-dark font-weight-bold">Les 5 Derniers Volontaires </span>
+                </div>
+                <table class="table table-hover  shadow   bg-white rounded">
+                    <thead class="bg-gradient-danger">
+                    <tr class="text-left">
+                        <th class="col-3">Nom & prenom</th>
+                        <th class="">Role</th>
+                        <th class="">Site d'affectation</th>
+                    </tr>
+                    </thead>
+                    <tbody class="text-left">
+                    @foreach($volontaires as $volontaire)
+                        <tr class="text-left">
+                            <td class="col-md-2"><a href="{{route('volontaires.show',$volontaire->id)}}"
+                                                    class="text-decoration-none   text-dark font-weight-bold">{{$volontaire->participant->nom_par}} {{$volontaire->participant->prenom_par}}</a>
+                            </td>
+                            <td class="col-md-2">{{$volontaire->role}}</td>
+                            <td class="col-md-2">{{$volontaire->site_aff}}</td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+
     </div>
 
 @endsection
