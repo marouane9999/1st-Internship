@@ -1,7 +1,7 @@
 <div class="modal fade" id="restaurationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header bg-gradient-olive">
                 <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-utensils fa-flip"></i> {{$title}}</h5>
                 <button type="button" class="close close-modal" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>

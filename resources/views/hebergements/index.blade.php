@@ -30,8 +30,8 @@
                     <td>{{$heberg->participant->nom_par}}</td>
                     <td>{{$heberg->site_heberg}}</td>
                     <td>{{$heberg->type_cham==1?'Single':'Double'}}</td>
-                    <td>{{$heberg->date_checkin}}</td>
-                    <td>{{$heberg->date_checkout}}</td>
+                    <td>{{date('d M Y', strtotime($heberg->date_checkin))}}</td>
+                    <td>{{date('d M Y', strtotime($heberg->date_checkout))}}</td>
                     <td>
                         <a class="btn btn-outline-primary rounded-6 mr-2" data-toggle="tooltip" data-placement="top" title="Consulter"  href="{{route('hebergements.show',$heberg->id)}}" ><i class="fas fa-eye"></i></a>
                         <a class="btn btn-outline-warning rounded-6 mr-2 create-hebergements" data-toggle="tooltip" data-placement="top" title="Modifier"  href="{{route('hebergements.edit',$heberg->id)}}" ><i class="fas fa-edit"></i></a>
