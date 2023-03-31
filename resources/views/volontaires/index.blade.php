@@ -20,12 +20,12 @@
                 class="table table-borderless table-bordered table-hover w-100 mt-2 shadow-lg mb-5 bg-white rounded  ">
                 <thead class="thead-dark">
                 <tr class="text-center">
-                    <th scope="col">Reference Cojar</th>
+                    <th scope="col">Référence Cojar</th>
                     <th scope="col">Nom & prénom</th>
-                    <th scope="col">Date Debut Contrat</th>
+                    <th scope="col">Date Début Contrat</th>
                     <th scope="col">Date Fin Contrat</th>
-                    <th scope="col">Site Affectation</th>
-                    <th scope="col">Role</th>
+                    <th scope="col">Site Afféctation</th>
+                    <th scope="col">Rôle</th>
                     <th scope="col">Action</th>
                 </tr>
                 </thead>

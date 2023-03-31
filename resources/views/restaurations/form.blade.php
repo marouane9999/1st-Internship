@@ -13,12 +13,12 @@
                     <div class="row ">
                         <div class="col-sm-12">
                             <div class="form-group row">
-                                <label for="numero_rest" class="font-weight-bold">Numéro de restauration:</label>
+                                <label for="numero_rest" class="font-weight-bold">Numéro de réstauration:</label>
                                 <input type="number" class="form-control" id="numero_rest"
                                        placeholder="Numéro de restauration" name="numero_rest">
                             </div>
                             <div class="form-group row">
-                                <label for="site_restau" class="font-weight-bold ">Site de restauration:</label>
+                                <label for="site_restau" class="font-weight-bold ">Site de réstauration:</label>
                                 <select class="custom-select" name="site_restau" required>
                                     @foreach($site_restau as $siterestau)
                                         <option value="{{$siterestau}}" @if($siterestau=='AGORA BEACH') selected @endif>
@@ -32,7 +32,7 @@
                                 <input type="search" class="form-control" id="ville" name="ville">
                             </div>
                             <div class="form-group row">
-                                <label for="prestataire" class="font-weight-bold ">Prestataire:</label>
+                                <label for="prestataire" class="font-weight-bold ">Préstataire:</label>
                                 <input type="search" class="form-control" id="prestataire" placeholder="Prestataire"
                                        name="prestataire">
                             </div>
@@ -65,8 +65,8 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary close-modal" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary close-modal" data-dismiss="modal">Fermer</button>
+                    <button type="submit" class="btn btn-primary">Sauvegarder</button>
                 </div>
             </form>
 

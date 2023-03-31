@@ -186,7 +186,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-hotel fa-fade"></i>
                             <p>
-                                Gestion d'Hebergement
+                                Gestion d'Hébergement
                             </p>
                             <i class="right fas fa-angle-left"></i>
 
@@ -195,7 +195,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <li class="nav-item">
                                 <a href="{{route('hebergements.index')}}" class="nav-link">
                                     <i class="fas fa-edit nav-icon"></i>
-                                    <p>Gestion & Affectation</p>
+                                    <p>Gestion & Afféctation</p>
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -217,7 +217,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-utensils fa-fade"></i>
                             <p>
-                                Gestion de Restauration
+                                Gestion de Réstauration
                             </p>
                             <i class="right fas fa-angle-left"></i>
 
@@ -226,7 +226,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <li class="nav-item">
                                 <a href="{{route('restaurations.index')}}" class="nav-link">
                                     <i class="fas fa-edit nav-icon"></i>
-                                    <p>Gestion & Affectation</p>
+                                    <p>Gestion & Afféctation</p>
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -258,7 +258,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <li class="nav-item">
                                 <a href="{{route('volontaires.index')}}" class="nav-link">
                                     <i class="fas fa-edit nav-icon"></i>
-                                    <p>Gestion & Affectation</p>
+                                    <p>Gestion & Afféctation</p>
                                 </a>
                             </li>
                             <li class="nav-item">

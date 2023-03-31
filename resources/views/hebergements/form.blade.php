@@ -24,7 +24,7 @@
                                 </select>
                             </div>
                             <div class="form-group row">
-                                <label for="site_heberg" class="font-weight-bold ">Site d' hébergement:</label>
+                                <label for="site_heberg" class="font-weight-bold ">Site d'hébergement:</label>
                                 <select class="custom-select" name="site_heberg" required>
                                     @foreach($site_heberg as $siteheberg)
                                         <option value="{{$siteheberg}}"
@@ -58,8 +58,8 @@
 
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary close-modal" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary close-modal" data-dismiss="modal">Fermer</button>
+                    <button type="submit" class="btn btn-primary">Sauvegarder</button>
                 </div>
             </form>
 

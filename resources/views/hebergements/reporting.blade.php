@@ -9,7 +9,7 @@
             <div class="col-6 mt-xl-5">
                 <div class="alert alert-warning bg-gradient-lightblue mb-0 p-1" role="alert">
                     <i class="fas fa-building-user fa-lg fa-beat-fade mr-1" style="color: #160a0d"></i> <span
-                        class="text-dark font-weight-bold">Les Affectations Héberegemt d'Aujourd'hui</span>
+                        class="text-dark font-weight-bold">Les Afféctations Hébergement d'Aujourd'hui</span>
                     <span class="text-dark font-italic font-weight-bold">({{date('d M Y')}})</span>
                 </div>
                 <div class="table-responsive">
@@ -61,7 +61,7 @@
                             <th class="col-md-4">Nom & Prénom Participant</th>
                             <th class="col-md-3">Type Chambre</th>
                             <th class="col-md-3">Site Hébergement</th>
-                            <th class="col-md-3">Date Ajout</th>
+                            <th class="col-md-3">Date d'Ajout</th>
                         </tr>
                         </thead>
                         <tbody>

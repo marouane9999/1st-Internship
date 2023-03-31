@@ -16,7 +16,7 @@
             <div class="row w-100 d-flex justify-content-center ml-5">
                 <div class="col-4">
                     <div class="font-weight-bolder">
-                        Site d' hébergement: <span class="font-weight-normal">{{$heberg->site_heberg}}</span>
+                        Site d'hébergement: <span class="font-weight-normal">{{$heberg->site_heberg}}</span>
                     </div>
                     <div class="font-weight-bolder">
                         Type de chambre : <span
@@ -50,7 +50,7 @@
                             class="font-weight-normal">{{$heberg->participant->prenom_par}}</span>
                     </div>
                     <div class="font-weight-bolder">
-                        Sexe : <span
+                        Genre : <span
                             class="font-weight-normal">{{{$heberg->participant->genre==1?'Homme':'Femme'}}}</span>
                     </div>
                     <div class="font-weight-bolder">
@@ -58,19 +58,19 @@
                             class="font-weight-normal">{{{ucfirst($heberg->participant->discipline)}}}</span>
                     </div>
                     <div class="font-weight-bolder">
-                        Categorie : <span
+                        Catégorie : <span
                             class="font-weight-normal">{{{ucfirst($heberg->participant->categorie->des_cat)}}}</span>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="font-weight-bolder">
-                        Numero Passport : <span class="font-weight-normal">{{$heberg->participant->num_pass}}</span>
+                        Numéro Passport : <span class="font-weight-normal">{{$heberg->participant->num_pass}}</span>
                     </div>
                     <div class="font-weight-bolder">
-                        Numero Accreditation : <span class="font-weight-normal">{{$heberg->participant->num_acc}}</span>
+                        Numéro Accréditation : <span class="font-weight-normal">{{$heberg->participant->num_acc}}</span>
                     </div>
                     <div class="font-weight-bolder">
-                        Pays Delegation : <span class="font-weight-normal">
+                        Pays Délégation : <span class="font-weight-normal">
                     @foreach($countries as $key => $country)
                                 @if($heberg->participant->pays_delg==$key)
                                     {{$country}}

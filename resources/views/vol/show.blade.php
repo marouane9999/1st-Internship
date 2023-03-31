@@ -16,10 +16,10 @@
             <div class="row w-100 d-flex justify-content-center ml-5">
                 <div class="col-4">
                     <div class="font-weight-bolder mb-2">
-                        Numero de vol : <span class="font-weight-normal">{{$vol->numero_vol}}</span>
+                        Numéro de vol : <span class="font-weight-normal">{{$vol->numero_vol}}</span>
                     </div>
                     <div class="font-weight-bolder mb-2">
-                        Terminal/Aeoroport : <span class="font-weight-normal">{{$vol->terminal}}</span>
+                        Terminal/Aéoroport : <span class="font-weight-normal">{{$vol->terminal}}</span>
                     </div>
                 </div>
                 <div class="col-6">
@@ -53,8 +53,8 @@
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Nom & Prénom</th>
-                            <th scope="col">Numero Passport</th>
-                            <th scope="col">Pays Delegation</th>
+                            <th scope="col">Numéro Passport</th>
+                            <th scope="col">Pays Délégation</th>
                         </tr>
                         </thead>
                         <tbody>

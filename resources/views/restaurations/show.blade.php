@@ -52,7 +52,7 @@
                             class="font-weight-normal">{{$restau->participant->prenom_par}}</span>
                     </div>
                     <div class="font-weight-bolder">
-                        Sexe : <span
+                        Genre : <span
                             class="font-weight-normal">{{{$restau->participant->genre==1?'Homme':'Femme'}}}</span>
                     </div>
                     <div class="font-weight-bolder">
@@ -60,19 +60,19 @@
                             class="font-weight-normal">{{{ucfirst($restau->participant->discipline)}}}</span>
                     </div>
                     <div class="font-weight-bolder">
-                        Categorie : <span
+                        Catégorie : <span
                             class="font-weight-normal">{{{ucfirst($restau->participant->categorie->des_cat)}}}</span>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="font-weight-bolder">
-                        Numero Passport : <span class="font-weight-normal">{{$restau->participant->num_pass}}</span>
+                        Numéro Passport : <span class="font-weight-normal">{{$restau->participant->num_pass}}</span>
                     </div>
                     <div class="font-weight-bolder">
-                        Numero Accreditation : <span class="font-weight-normal">{{$restau->participant->num_acc}}</span>
+                        Numéro Accréditation : <span class="font-weight-normal">{{$restau->participant->num_acc}}</span>
                     </div>
                     <div class="font-weight-bolder">
-                        Pays Delegation : <span class="font-weight-normal">
+                        Pays Délégation : <span class="font-weight-normal">
                     @foreach($countries as $key => $country)
                                 @if($restau->participant->pays_delg==$key)
                                     {{$country}}

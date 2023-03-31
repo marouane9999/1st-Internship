@@ -24,24 +24,24 @@
                         Prénom Participant : <span class="font-weight-normal">{{$ptc->prenom_par}}</span>
                     </div>
                     <div class="font-weight-bolder mb-2">
-                        Sexe : <span class="font-weight-normal">{{{$ptc->genre==1?'Homme':'Femme'}}}</span>
+                        Genre : <span class="font-weight-normal">{{{$ptc->genre==1?'Homme':'Femme'}}}</span>
                     </div>
                     <div class="font-weight-bolder mb-2">
                         Discipline : <span class="font-weight-normal">{{{ucfirst($ptc->discipline)}}}</span>
                     </div>
                     <div class="font-weight-bolder mb-2">
-                        Categorie : <span class="font-weight-normal">{{{ucfirst($ptc->categorie->des_cat)}}}</span>
+                        Catégorie : <span class="font-weight-normal">{{{ucfirst($ptc->categorie->des_cat)}}}</span>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="font-weight-bolder mb-2">
-                        Numero Passport : <span class="font-weight-normal">{{$ptc->num_pass}}</span>
+                        Numéro Passport : <span class="font-weight-normal">{{$ptc->num_pass}}</span>
                     </div>
                     <div class="font-weight-bolder mb-2">
-                        Numero Accreditation : <span class="font-weight-normal">{{$ptc->num_acc}}</span>
+                        Numéro Accréditation : <span class="font-weight-normal">{{$ptc->num_acc}}</span>
                     </div>
                     <div class="font-weight-bolder mb-2">
-                        Pays Delegation : <span class="font-weight-normal">
+                        Pays Délégation : <span class="font-weight-normal">
                     @foreach($countries as $key => $country)
                                 @if($ptc->pays_delg==$key)
                                     {{$country}}
@@ -70,10 +70,10 @@
                 </div>
                 <div class="col-6">
                     <div class="font-weight-bolder mb-2">
-                        Numero Passport : <span class="font-weight-normal">{{$ptc->num_pass}}</span>
+                        Numéro Passport : <span class="font-weight-normal">{{$ptc->num_pass}}</span>
                     </div>
                     <div class="font-weight-bolder mb-2">
-                        Telephone Chef Mission : <span class="font-weight-normal">{{$ptc->num_acc}}</span>
+                        Téléphone Chef Mission : <span class="font-weight-normal">{{$ptc->num_acc}}</span>
                     </div>
                 </div>
             </div>
@@ -89,7 +89,7 @@
                     @if($hebergement->participant_id==$ptc->id && $hebergement==true)
                         <div class="col-4">
                             <div class="font-weight-bolder mb-2">
-                                Site Hebergement : <span class="font-weight-normal">{{$hebergement->site_heberg}}</span>
+                                Site Hébergement : <span class="font-weight-normal">{{$hebergement->site_heberg}}</span>
                             </div>
                             <div class="font-weight-bolder mb-2">
                                 Type Chambre : <span
@@ -115,19 +115,22 @@
         </div>
         {{--Restauration--}}
         <div class="alert alert-info shadow-sm" role="alert">
-            <i class="fas fa-utensils"></i><span class="ml-3 font-weight-bold">Restauration</span>
+            <i class="fas fa-utensils"></i><span class="ml-3 font-weight-bold">Réstauration</span>
         </div>
         <div class="shadow-lg p-1 mt-3 mb-3 w-100 d-flex ">
             <div class="row w-100 d-flex justify-content-center ml-5">
                 @foreach($restaurations as $restauration)
                     @if($restauration->participant_id==$ptc->id && $restauration==true)
+                        <div class="text-muted text-center font-weight-bolder m-auto p-3  ">
+                            <i class='fas fa-exclamation-triangle fa-flip '></i> <span>Ce Participant n'est affecté à  aucune Réstauration</span>
+                        </div>
                         <div class="col-4">
                             <div class="font-weight-bolder mb-2">
-                                Numero Restauration : <span
+                                Numéro Restauration : <span
                                     class="font-weight-normal">{{$restauration->numero_rest}}</span>
                             </div>
                             <div class="font-weight-bolder mb-2">
-                                Site Restauration : <span
+                                Site Réstauration : <span
                                     class="font-weight-normal">{{$restauration->site_restau}}</span>
                             </div>
                             <div class="font-weight-bolder mb-2">
@@ -137,7 +140,7 @@
                         </div>
                         <div class="col-6">
                             <div class="font-weight-bolder mb-2">
-                                Prestataire : <span class="font-weight-normal">{{$restauration->prestataire}}</span>
+                                Préstataire : <span class="font-weight-normal">{{$restauration->prestataire}}</span>
                             </div>
                             <div class="font-weight-bolder mb-2">
                                 Repas : <span class="font-weight-normal">{{$restauration->repas->des_rep}}</span>
@@ -145,8 +148,9 @@
                         </div>
                     @else
                         <div class="text-muted text-center font-weight-bolder m-auto p-3  ">
-                            <i class='fas fa-exclamation-triangle fa-flip '></i> <span>Ce Participant n'est affecté à  aucune Restauration</span>
+                            <i class='fas fa-exclamation-triangle fa-flip '></i> <span>Ce Participant n'est affecté à  aucune Réstauration</span>
                         </div>
+                        @break
                     @endif
                 @endforeach
             </div>
@@ -162,13 +166,13 @@
                     </div>
                     <div class="shadow-lg mt-3 w-100 py-1 px-5">
                         <div class="font-weight-bolder mb-2">
-                            Numero de Vol : <span class="font-weight-normal">{{ucfirst($vol_dep->numero_vol)}}</span>
+                            Numéro de Vol : <span class="font-weight-normal">{{ucfirst($vol_dep->numero_vol)}}</span>
                         </div>
                         <div class="font-weight-bolder mb-2">
                             Date de vol : <span class="font-weight-normal">{{ucfirst($vol_dep->date_vol)}}</span>
                         </div>
                         <div class="font-weight-bolder mb-2">
-                            Terminal/Aeroport : <span class="font-weight-normal">{{$vol_dep->terminal}}</span>
+                            Terminal/Aéroport : <span class="font-weight-normal">{{$vol_dep->terminal}}</span>
                         </div>
                     </div>
                 </div>

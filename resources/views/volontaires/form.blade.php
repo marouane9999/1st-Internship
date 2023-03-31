@@ -13,7 +13,7 @@
                     <div class="row ">
                         <div class="col-sm-12">
                             <div class="form-group row">
-                                <label for="participant_id" class="font-weight-bold ">Reference COJAR:</label>
+                                <label for="participant_id" class="font-weight-bold ">Référence COJAR:</label>
                                 <input type="number" class="custom-select" name="ref_cojar"
                                        @if($volontaire->ref_cojar) value={{old('ref_cojar',$volontaire->ref_cojar)}}  @endif>
                             </div>
@@ -37,7 +37,7 @@
                                 </select>
                             </div>
                             <div class="form-group row">
-                                <label for="site_heberg" class="font-weight-bold ">Site d' Affectation:</label>
+                                <label for="site_heberg" class="font-weight-bold ">Site d' Afféctation:</label>
                                 <select class="custom-select" name="site_aff" required>
                                     @foreach($site_aff as $siteaff)
                                         <option value="{{$siteaff}}"
@@ -47,7 +47,7 @@
                                 </select>
                             </div>
                             <div class="form-group row">
-                                <label for="type_cham" class="font-weight-bold ">Role:</label>
+                                <label for="type_cham" class="font-weight-bold ">Rôle:</label>
                                 <select class="custom-select" aria-label="Default select example" name="role">
                                     @foreach($roles as $role)
                                         <option value="{{$role}}">{{$role}}</option>
@@ -57,7 +57,7 @@
                         </div>
                         <div class="form-column">
                             <div class="form-group row ">
-                                <label for="date_checkin" class="font-weight-bold ">Debut Contrat:</label><br>
+                                <label for="date_checkin" class="font-weight-bold ">Début Contrat:</label><br>
                                 <input type="date" class="custom-select" name="debut_contrat"
                                        @if($volontaire->debut_contrat) value={{old('debut_contrat',$volontaire->debut_contrat)}} @else value="{{date("Y-m-d")}}" @endif >
                             </div>
@@ -72,8 +72,8 @@
 
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary close-modal" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary close-modal" data-dismiss="modal">Fermer</button>
+                    <button type="submit" class="btn btn-primary">Sauvegarder</button>
                 </div>
             </form>
 

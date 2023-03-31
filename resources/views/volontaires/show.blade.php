@@ -23,21 +23,21 @@
                         Ref COJAR : <span class="font-weight-normal">{{$volontaire->ref_cojar}}</span>
                     </div>
                     <div class="font-weight-bolder">
-                        Telephone : <span class="font-weight-normal">{{$volontaire->tel}}</span>
+                        Téléphone : <span class="font-weight-normal">{{$volontaire->tel}}</span>
                     </div>
                     <div class="font-weight-bolder">
-                        Site Affectation : <span class="font-weight-normal">{{$volontaire->site_aff}}</span>
+                        Site Afféctation : <span class="font-weight-normal">{{$volontaire->site_aff}}</span>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="font-weight-bolder">
-                        Date Debut Contrat : <span class="font-weight-normal">{{$volontaire->debut_contrat}}</span>
+                        Date Début Contrat : <span class="font-weight-normal">{{$volontaire->debut_contrat}}</span>
                     </div>
                     <div class="font-weight-bolder">
                         Date Fin contrat : <span class="font-weight-normal">{{$volontaire->fin_contrat}}</span>
                     </div>
                     <div class="font-weight-bolder">
-                        Role : <span class="font-weight-normal">{{$volontaire->role}}</span>
+                        Rôle : <span class="font-weight-normal">{{$volontaire->role}}</span>
                     </div>
                     <div class="font-weight-bolder">
                         Pays Delegation : <span class="font-weight-normal">
@@ -73,11 +73,11 @@
                 </div>
                 <div class="col-6">
                     <div class="font-weight-bolder">
-                        Telephone : <span
+                        Téléphone : <span
                             class="font-weight-normal">{{$volontaire->participant->chef_mission->tel}}</span>
                     </div>
                     <div class="font-weight-bolder">
-                        Numero Passport : <span
+                        Numéro Passport : <span
                             class="font-weight-normal">{{$volontaire->participant->chef_mission->num_passport}}</span>
                     </div>
                 </div>

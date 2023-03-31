@@ -10,7 +10,7 @@
             <div class="col-6 mt-xl-5  ">
                 <div class="alert alert-default-success mb-0 p-1" role="alert">
                     <i class="fas fa-user-tag fa-beat-fade "></i> <span
-                        class="text-dark font-weight-bold">Les Volontaires Ajouté  Aujourd'hui</span>
+                        class="text-dark font-weight-bold">Les Volontaires Ajoutés  Aujourd'hui</span>
                     <span class="text-dark font-italic font-weight-bold">({{date('d M Y')}})</span>
                 </div>
                 <div class="table-responsive">
@@ -18,8 +18,8 @@
                         <thead class="table-borderless bg-gradient-green">
                         <tr class="text-center">
                             <th class="">Nom & prénom</th>
-                            <th class="">Site Affectation</th>
-                            <th class="">Role</th>
+                            <th class="">Site Afféctation</th>
+                            <th class="">Rôle</th>
                         </tr>
                         </thead>
                         <tbody class="">
@@ -61,9 +61,9 @@
                         <thead class="table-borderless bg-gradient-blue">
                         <tr>
                             <th class="col-md-3">Nom & prénom</th>
-                            <th class="col-md-3">Site Affectation</th>
-                            <th class="col-md-3">Role</th>
-                            <th class="col-md-3">Date Ajout</th>
+                            <th class="col-md-3">Site Afféctation</th>
+                            <th class="col-md-3">Rôle</th>
+                            <th class="col-md-3">Date d'ajout</th>
                         </tr>
                         </thead>
                         <tbody>

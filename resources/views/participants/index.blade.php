@@ -22,12 +22,12 @@
                     <thead class="thead-dark">
                     <tr class="">
                         <th scope="col">#</th>
-                        <th scope="col">Nom & Prenom</th>
+                        <th scope="col">Nom & Prénom</th>
                         <th scope="col">Sexe</th>
                         <th scope="col">Discipline</th>
-                        <th scope="col">Pays Delegation</th>
-                        <th scope="col">Categorie</th>
-                        <th scope="col">Site Competition</th>
+                        <th scope="col">Pays Délégation</th>
+                        <th scope="col">Catégorie</th>
+                        <th scope="col">Site De Compétition</th>
                         <th></th>
                     </tr>
                     </thead>

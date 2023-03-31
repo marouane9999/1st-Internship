@@ -13,12 +13,12 @@
                     <div class="icon">
                         <i class="fas fa-user-alt fa-beat-fade"></i>
                     </div>
-                    <a href="{{route('participants.index')}}" class="small-box-footer">Plus d'infotmations <i
+                    <a href="{{route('participants.index')}}" class="small-box-footer">Plus d'informations <i
                             class="fas fa-arrow-circle-right "></i></a>
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="small-box bg-warning">
+                <div class="small-box bg-danger">
                     <div class="inner">
                         <h3>{{$count_volontaire}}</h3>
                         <p>Total des Volontaires</p>
@@ -26,7 +26,7 @@
                     <div class="icon">
                         <i class="fas fa-user-tag fa-beat-fade"></i>
                     </div>
-                    <a href="{{route('volontaires.index')}}" class="small-box-footer">Plus d'infotmations <i
+                    <a href="{{route('volontaires.index')}}" class="small-box-footer">Plus d'informations <i
                             class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
@@ -39,7 +39,7 @@
                     <div class="icon">
                         <i class="fas fa-user-tie fa-beat-fade"></i>
                     </div>
-                    <a href="#" class="small-box-footer">Plus d'infotmations <i
+                    <a href="#" class="small-box-footer">Plus d'informations <i
                             class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
@@ -49,12 +49,12 @@
                 <div class="small-box bg-primary">
                     <div class="inner">
                         <h3>{{$count_rest}}</h3>
-                        <p>Total des Restaurations</p>
+                        <p>Total des Réstaurations</p>
                     </div>
                     <div class="icon">
                         <i class="fas fa-utensils fa-beat-fade"></i>
                     </div>
-                    <a href="{{route('restaurations.index')}}" class="small-box-footer">Plus d'infotmations <i
+                    <a href="{{route('restaurations.index')}}" class="small-box-footer">Plus d'informations <i
                             class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
@@ -62,12 +62,12 @@
                 <div class="small-box bg-cyan">
                     <div class="inner">
                         <h3>{{$count_hbg}}</h3>
-                        <p>Total des Hebergements</p>
+                        <p>Total des Hébergements</p>
                     </div>
                     <div class="icon">
                         <i class="fas fa-hotel fa-beat-fade"></i>
                     </div>
-                    <a href="{{route('hebergements.index')}}" class="small-box-footer">Plus d'infotmations<i
+                    <a href="{{route('hebergements.index')}}" class="small-box-footer">Plus d'informations <i
                             class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
@@ -80,7 +80,7 @@
                     <div class="icon">
                         <i class="fas fa-plane fa-beat-fade"></i>
                     </div>
-                    <a href="{{route('vols.index')}}" class="small-box-footer">Plus d'infotmations <i
+                    <a href="{{route('vols.index')}}" class="small-box-footer">Plus d'informations <i
                             class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
@@ -89,14 +89,14 @@
         <div class="row">
             <div class="col-6 mt-lg-5 ">
                 <div class="alert alert-warning mb-0 p-1" role="alert">
-                    <i class="fas fa-users fa-fade mr-2 "></i> <span class="text-dark font-weight-bold">Les 5 Derniers Participants </span>
+                    <i class="fas fa-users fa-fade mr-2 "></i> <span class="text-dark font-weight-bold">Les 5 Dernièrs Participants </span>
                 </div>
                 <table class="table table-hover  shadow   bg-white rounded">
                     <thead class="bg-gradient-orange text-light">
                     <tr class="text-left">
                         <th class="col-3">Nom & prénom</th>
                         <th class="">Discipline</th>
-                        <th class="">Pays Delegation</th>
+                        <th class="">Pays Délégation</th>
                     </tr>
                     </thead>
                     <tbody class="text-left">
@@ -114,14 +114,14 @@
             </div>
             <div class="col-6 mt-lg-5 ">
                 <div class="alert alert-danger mb-0 p-1" role="alert">
-                    <i class="fas fa-user-tag fa-fade mr-2 "></i> <span class="text-dark font-weight-bold">Les 5 Derniers Volontaires </span>
+                    <i class="fas fa-user-tag fa-fade mr-2 "></i> <span class="text-dark font-weight-bold">Les 5 Dernièrs Volontaires </span>
                 </div>
                 <table class="table table-hover  shadow   bg-white rounded">
                     <thead class="bg-gradient-danger">
                     <tr class="text-left">
                         <th class="col-3">Nom & prénom</th>
-                        <th class="">Role</th>
-                        <th class="">Site d'affectation</th>
+                        <th class="">Rôle</th>
+                        <th class="">Site d'afféctation</th>
                     </tr>
                     </thead>
                     <tbody class="text-left">
