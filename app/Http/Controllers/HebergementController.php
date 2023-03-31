@@ -35,7 +35,7 @@ class HebergementController extends Controller
                 'title' => 'Ajouter Hébergement',
                 'action' => route('hebergements.store'),
                 'site_heberg' => $site_heberg,
-                'hebergements'=>Hebergement::all(),
+                'hebergements' => Hebergement::all(),
             ])->render()
         ]);
 

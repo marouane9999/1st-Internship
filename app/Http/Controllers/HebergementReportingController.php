@@ -21,9 +21,9 @@ class HebergementReportingController extends Controller
 //        $todaydeparture_vols = Vol::whereRaw('DATE(date_vol) = ?', $today)->where('type_vol', '=', 1)->get();
         return view('hebergements.reporting')->with([
             'today_hbgs' => $today_hbgs,
-            'last_hbgs'=>$last_hbgs,
-            'todaycheckin_hbgs'=>$todaycheckin_hbgs,
-            'todaycheckout_hbgs'=>$todaycheckout_hbgs,
+            'last_hbgs' => $last_hbgs,
+            'todaycheckin_hbgs' => $todaycheckin_hbgs,
+            'todaycheckout_hbgs' => $todaycheckout_hbgs,
         ]);
     }
 }

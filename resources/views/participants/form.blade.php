@@ -20,7 +20,7 @@
                             @enderror
                         </div>
                         <div class="form-group col-xl-9">
-                            <label for="prenom_par" class="font-weight-bold">Prenom Participant*</label>
+                            <label for="prenom_par" class="font-weight-bold">Prénom Participant*</label>
                             <input type="search" class="form-control @error('prenom_par') is-invalid @enderror"
                                    id="inputPassword4" placeholder="Prenom Participant" name="prenom_par"
                                    value={{old('nom_par', $participant->prenom_par)}}>
@@ -157,7 +157,7 @@
 
                         <br>
                         <div class="form-group col-xl-9">
-                            <label for="inputPassword4" class="font-weight-bold">Prenom Chef de Mission*</label>
+                            <label for="inputPassword4" class="font-weight-bold">Prénom Chef de Mission*</label>
                             <input type="search" class="form-control @error('prenom_chef') is-invalid @enderror "
                                    id="inputPassword4" placeholder="Prenom Chef Mission" name="prenom_chef"
                                    value={{old('prenom_chef',$participant->chef_mission->prenom_chef??'')}}>

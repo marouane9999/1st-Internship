@@ -10,12 +10,12 @@
             <div class="col-6 mt-xl-5  ">
                 <div class="alert alert-warning mb-0 p-1" role="alert">
                     <i class="fas fa-plane-circle-exclamation fa-beat-fade "></i> <span
-                        class="text-dark font-weight-bold">Les Vols Ajouté  Aujourd'hui</span>
+                        class="text-dark font-weight-bold">Les Vols Ajoutés  Aujourd'hui</span>
                     <span class="text-dark font-italic font-weight-bold">({{date('d M Y')}})</span>
                 </div>
                 <div class="table-responsive">
                     <table class="table table-hover  shadow   bg-white rounded ">
-                        <thead class="table-borderless bg-gradient-lime">
+                        <thead class="table-borderless bg-gradient-orange">
                         <tr class="text-center">
                             <th class="">Numero Vol</th>
                             <th class="">Type Vol</th>
@@ -87,7 +87,7 @@
         <div class="row mt-3 ">
             <div class="col-6 mt-3">
                 <div class="alert alert-success mb-0 p-1" role="alert">
-                    <i class="fas fa-plane-departure fa-beat-fade "></i> <span class="text-dark font-weight-bold">Les Vols Depart Aujourd'hui</span>
+                    <i class="fas fa-plane-departure fa-beat-fade "></i> <span class="text-dark font-weight-bold">Les Vols Départs Aujourd'hui</span>
                 </div>
                 <table class="table table-hover  shadow   bg-white rounded">
                     <thead class="bg-gradient-success">
@@ -113,7 +113,7 @@
                                 <td class=""><a href="{{route('vols.show',$tdv->id)}}"
                                                 class="text-decoration-none  text-dark font-weight-bolder">{{$tdv->numero_vol}}</a>
                                 </td>
-                                <td class="">{{$tdv->type_vol==1?'Départ':'Arrivée'}}</td>
+                                <td class="">{{$tdv->terminal}}</td>
                                 <td class="">{{date('H:i',strtotime($tdv->date_vol))}}</td>
                                 <td class="">
                                     @if(date('H:i',strtotime($tdv->date_vol))>date('H:i'))
@@ -130,13 +130,13 @@
             </div>
             <div class="col-6 mt-3">
                 <div class="alert alert-primary mb-0 p-1" role="alert">
-                    <i class="fas fa-plane-arrival fa-beat-fade  "></i> <span class="text-dark font-weight-bold">Les Vols Arrivee Aujourd'hui </span>
+                    <i class="fas fa-plane-arrival fa-beat-fade  "></i> <span class="text-dark font-weight-bold">Les Vols Arrivés Aujourd'hui </span>
                 </div>
                 <table class="table table-hover  shadow   bg-white rounded">
                     <thead class="bg-gradient-primary">
                     <tr class="text-center">
-                        <th class="">Numero Vol</th>
-                        <th class="">Terminal</th>
+                        <th class="col-3">Numero Vol</th>
+                        <th class="col-4">Terminal</th>
                         <th class="">Date Vol</th>
                         <th>Statut</th>
                     </tr>
@@ -146,7 +146,7 @@
                         <tr>
                             <td colspan="3">
                                 <div class="text-muted text-center font-weight-bolder m-auto  ">
-                                    <i class='fas fa-exclamation-triangle fa-flip'></i> <span>Aucun Vol Arrivee n'est Effectué Aujourd'hui!</span>
+                                    <i class='fas fa-exclamation-triangle fa-flip'></i> <span>Aucun Vol Arrivée n'est Effectué Aujourd'hui!</span>
                                 </div>
                             </td>
 

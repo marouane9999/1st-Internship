@@ -46,7 +46,7 @@
                         Nom Participant : <span class="font-weight-normal">{{$heberg->participant->nom_par}}</span>
                     </div>
                     <div class="font-weight-bolder">
-                        Prenom Participant : <span
+                        Prénom Participant : <span
                             class="font-weight-normal">{{$heberg->participant->prenom_par}}</span>
                     </div>
                     <div class="font-weight-bolder">

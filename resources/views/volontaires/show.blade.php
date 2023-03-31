@@ -16,7 +16,7 @@
             <div class="row w-100 d-flex justify-content-center ml-5">
                 <div class="col-4">
                     <div class="font-weight-bolder">
-                        Nom & Prenom: <span
+                        Nom & Prénom: <span
                             class="font-weight-normal">{{$volontaire->participant->nom_par}} {{$volontaire->participant->prenom_par}}</span>
                     </div>
                     <div class="font-weight-bolder">
@@ -66,7 +66,7 @@
                             class="font-weight-normal">{{$volontaire->participant->chef_mission->nom_chef}}</span>
                     </div>
                     <div class="font-weight-bolder">
-                        Prenom : <span
+                        Prénom : <span
                             class="font-weight-normal">{{$volontaire->participant->chef_mission->prenom_chef}}</span>
                     </div>
 

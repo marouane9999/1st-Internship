@@ -38,7 +38,8 @@
                         <div class="form-column">
                             <div class="form-group row ">
                                 <label for="" class="font-weight-bold ">Date de vol:</label><br>
-                                <input type="datetime-local" class="custom-select  @error('date_vol') is-invalid @enderror"
+                                <input type="datetime-local"
+                                       class="custom-select  @error('date_vol') is-invalid @enderror"
                                        name="date_vol"
                                        @if($vol->date_vol==true) value={{old('date_vol',$vol->date_vol)}} @else value={{date("Y-m-d H:i")}} @endif>
                                 @error('date_vol')

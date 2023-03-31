@@ -8,15 +8,15 @@
         <div class="row">
             <div class="col-6 mt-xl-5">
                 <div class="alert alert-warning bg-gradient-lightblue mb-0 p-1" role="alert">
-                    <i class="fas fa-building-user fa-lg fa-beat-fade mr-1" style="color: #160a0d" ></i> <span
+                    <i class="fas fa-building-user fa-lg fa-beat-fade mr-1" style="color: #160a0d"></i> <span
                         class="text-dark font-weight-bold">Les Affectations Héberegemt d'Aujourd'hui</span>
                     <span class="text-dark font-italic font-weight-bold">({{date('d M Y')}})</span>
                 </div>
                 <div class="table-responsive">
-                    <table class="table table-hover  shadow   bg-white rounded ">
+                    <table class="table table-hover  shadow   bg-white rounded">
                         <thead class="table-borderless">
-                        <tr class="text-left">
-                            <th class="col-md-5">Nom & Prenom Participant</th>
+                        <tr class="text-left alert alert-primary">
+                            <th class="col-md-5">Nom & Prénom Participant</th>
                             <th class="">Type Chambre</th>
                             <th class="">Site Hébergement</th>
                         </tr>
@@ -48,7 +48,7 @@
                 </div>
             </div>
             <div class="col-6 mt-xl-5">
-                <div class="alert alert-danger bg-gradient-lime mb-0 p-1" role="alert">
+                <div class="alert alert-danger bg-gradient-green mb-0 p-1" role="alert">
                     <i class="fas fa-building-circle-exclamation fa-lg fa-beat-fade" style="color: #160a0d"></i> <span
                         class="text-dark font-weight-bold">Les 5 Derniers Hébergement Ajoutés</span>
                 </div>
@@ -57,8 +57,8 @@
 
 
                         <thead class="table-borderless">
-                        <tr>
-                            <th class="col-md-4">Nom & Prenom Participant</th>
+                        <tr class="alert alert-success">
+                            <th class="col-md-4">Nom & Prénom Participant</th>
                             <th class="col-md-3">Type Chambre</th>
                             <th class="col-md-3">Site Hébergement</th>
                             <th class="col-md-3">Date Ajout</th>
@@ -84,12 +84,13 @@
         <div class="row mt-3 ">
             <div class="col-6 mt-3">
                 <div class="alert alert-success bg-gradient-teal mb-0 p-1" role="alert">
-                    <i class="fas fa-building-circle-check fa-lg fa-beat-fade" style="color: #160a0d" ></i> <span class="text-dark font-weight-bold">Les Check In d'Aujourd'hui</span>
+                    <i class="fas fa-building-circle-check fa-lg fa-beat-fade" style="color: #160a0d"></i> <span
+                        class="text-dark font-weight-bold">Les Check In d'Aujourd'hui</span>
                 </div>
                 <table class="table table-hover  shadow   bg-white rounded">
-                    <thead>
+                    <thead class="alert alert-default-success">
                     <tr class="">
-                        <th class="col-md-4">Nom & Prenom Participant</th>
+                        <th class="col-md-4">Nom & Prénom Participant</th>
                         <th class="col-md-3">Type Chambre</th>
                         <th class="col-md-3">Site Hébergement</th>
                     </tr>
@@ -119,13 +120,14 @@
                 </table>
             </div>
             <div class="col-6 mt-3">
-                <div class="alert alert-danger mb-0 p-1" role="alert">
-                    <i class="fas fa-building-circle-xmark fa-lg fa-beat-fade "></i> <span class="text-dark font-weight-bold">Les Check Out d'Aujourd'hui</span>
+                <div class="alert alert-danger bg-gradient-red " role="alert">
+                    <i class="fas fa-building-circle-xmark fa-lg fa-beat-fade "></i> <span
+                        class="text-dark font-weight-bold">Les Check Out d'Aujourd'hui</span>
                 </div>
                 <table class="table table-hover  shadow   bg-white rounded">
                     <thead>
-                    <tr class="">
-                        <th class="col-md-4">Nom & Prenom Participant</th>
+                    <tr class="alert alert-danger ">
+                        <th class="col-md-4">Nom & Prénom Participant</th>
                         <th class="col-md-3">Type Chambre</th>
                         <th class="col-md-3">Site Hébergement</th>
                     </tr>

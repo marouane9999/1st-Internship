@@ -23,7 +23,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="adminLte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <meta name="csrf_token" content="{{csrf_token()}}">
     <link rel="stylesheet" href="/adminLte/plugins/daterangepicker/daterangepicker.css">
-    <link rel="shortcut icon" href="/adminLte/img/AdminLTELogo.png" />
+    <link rel="shortcut icon" href="/adminLte/img/AdminLTELogo.png"/>
 
 
 </head>
@@ -267,7 +267,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./index2.html" class="nav-link">
+                                <a href="{{route('volontaires.reporting')}}" class="nav-link">
                                     <i class="fas fa-file-alt nav-icon"></i>
                                     <p>Suivi & Reporting</p>
                                 </a>

@@ -94,7 +94,7 @@
                 <table class="table table-hover  shadow   bg-white rounded">
                     <thead class="bg-gradient-orange text-light">
                     <tr class="text-left">
-                        <th class="col-3">Nom & prenom</th>
+                        <th class="col-3">Nom & prénom</th>
                         <th class="">Discipline</th>
                         <th class="">Pays Delegation</th>
                     </tr>
@@ -113,13 +113,13 @@
                 </table>
             </div>
             <div class="col-6 mt-lg-5 ">
-                <div class="alert alert-dark mb-0 p-1" role="alert">
+                <div class="alert alert-danger mb-0 p-1" role="alert">
                     <i class="fas fa-user-tag fa-fade mr-2 "></i> <span class="text-dark font-weight-bold">Les 5 Derniers Volontaires </span>
                 </div>
                 <table class="table table-hover  shadow   bg-white rounded">
                     <thead class="bg-gradient-danger">
                     <tr class="text-left">
-                        <th class="col-3">Nom & prenom</th>
+                        <th class="col-3">Nom & prénom</th>
                         <th class="">Role</th>
                         <th class="">Site d'affectation</th>
                     </tr>

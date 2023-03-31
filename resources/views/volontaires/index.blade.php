@@ -21,7 +21,7 @@
                 <thead class="thead-dark">
                 <tr class="text-center">
                     <th scope="col">Reference Cojar</th>
-                    <th scope="col">Nom & prenom</th>
+                    <th scope="col">Nom & prénom</th>
                     <th scope="col">Date Debut Contrat</th>
                     <th scope="col">Date Fin Contrat</th>
                     <th scope="col">Site Affectation</th>

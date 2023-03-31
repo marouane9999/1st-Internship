@@ -70,6 +70,8 @@ Route::group(['prefix' => '/volontaires'], function () {
     Route::post('/update/{id}', [App\Http\Controllers\VolontaireController::class, 'update'])->name('volontaires.update');
     Route::get('/delete/{id}', [App\Http\Controllers\VolontaireController::class, 'delete'])->name('volontaires.delete');
     Route::get('/show/{id}', [App\Http\Controllers\VolontaireController::class, 'show'])->name('volontaires.show');
+    Route::get('/reporting', [App\Http\Controllers\VolontaireReportingController::class, 'index'])->name('volontaires.reporting');
+
 });
 
 Route::group(['prefix' => '/dashboard'], function () {

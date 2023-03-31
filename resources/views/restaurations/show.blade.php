@@ -48,7 +48,7 @@
                         Nom Participant : <span class="font-weight-normal">{{$restau->participant->nom_par}}</span>
                     </div>
                     <div class="font-weight-bolder">
-                        Prenom Participant : <span
+                        Prénom Participant : <span
                             class="font-weight-normal">{{$restau->participant->prenom_par}}</span>
                     </div>
                     <div class="font-weight-bolder">

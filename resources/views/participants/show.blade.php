@@ -21,7 +21,7 @@
                         Nom Participant : <span class="font-weight-normal">{{$ptc->nom_par}}</span>
                     </div>
                     <div class="font-weight-bolder mb-2">
-                        Prenom Participant : <span class="font-weight-normal">{{$ptc->prenom_par}}</span>
+                        Prénom Participant : <span class="font-weight-normal">{{$ptc->prenom_par}}</span>
                     </div>
                     <div class="font-weight-bolder mb-2">
                         Sexe : <span class="font-weight-normal">{{{$ptc->genre==1?'Homme':'Femme'}}}</span>
@@ -64,7 +64,7 @@
                             class="font-weight-normal">{{ucfirst($ptc->chef_mission->nom_chef)}}</span>
                     </div>
                     <div class="font-weight-bolder mb-2">
-                        Prenom Chef mission : <span
+                        Prénom Chef mission : <span
                             class="font-weight-normal">{{ucfirst($ptc->chef_mission->nom_chef)}}</span>
                     </div>
                 </div>
@@ -108,7 +108,7 @@
                         <div class="text-muted text-center font-weight-bolder m-auto p-3  ">
                             <i class='fas fa-exclamation-triangle fa-flip '></i> <span>Ce Participant n'est affecté à  aucun Hébergement</span>
                         </div>
-                    @break
+                        @break
                     @endif
                 @endforeach
             </div>
