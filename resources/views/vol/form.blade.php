@@ -1,10 +1,10 @@
 <div class="modal fade" id="volModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header bg-gradient-gray-dark">
                 <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-plane fa-flip"></i> {{$title}}</h5>
                 <button type="button" class="close close-modal" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
+                    <span aria-hidden="true" class="text-light">&times;</span>
                 </button>
             </div>
             <form class="text-left" id="volModalForm" method="POST" action="{{$action}}">
@@ -40,7 +40,7 @@
                                 <label for="" class="font-weight-bold ">Date de vol:</label><br>
                                 <input type="datetime-local" class="custom-select  @error('date_vol') is-invalid @enderror"
                                        name="date_vol"
-                                       @if($vol->date_vol) value={{old('numero_vol',$vol->date_vol)}} @else value={{date("Y-m-d")}} @endif>
+                                       @if($vol->date_vol==true) value={{old('date_vol',$vol->date_vol)}} @else value={{date("Y-m-d H:i")}} @endif>
                                 @error('date_vol')
                                 <div class="is-invalid text-red ml-2">
                                     <i class='fas fa-exclamation-circle mr-2'></i>{{$message}}

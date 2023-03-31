@@ -15,7 +15,7 @@
                 </div>
                 <div class="table-responsive">
                     <table class="table table-hover  shadow   bg-white rounded ">
-                        <thead class="table-borderless">
+                        <thead class="table-borderless bg-gradient-lime">
                         <tr class="text-center">
                             <th class="">Numero Vol</th>
                             <th class="">Type Vol</th>
@@ -58,7 +58,7 @@
                     <table class="table table-hover  shadow   bg-white rounded">
 
 
-                        <thead class="table-borderless">
+                        <thead class="table-borderless bg-gradient-danger">
                         <tr>
                             <th class="col-md-2">Numero Vol</th>
                             <th class="col-md-2">Type Vol</th>
@@ -90,8 +90,8 @@
                     <i class="fas fa-plane-departure fa-beat-fade "></i> <span class="text-dark font-weight-bold">Les Vols Depart Aujourd'hui</span>
                 </div>
                 <table class="table table-hover  shadow   bg-white rounded">
-                    <thead>
-                    <tr class="text-center">
+                    <thead class="bg-gradient-success">
+                    <tr class="text-center text-dark">
                         <th class="">Numero Vol</th>
                         <th class="">Terminal</th>
                         <th class="">Date Vol</th>
@@ -133,7 +133,7 @@
                     <i class="fas fa-plane-arrival fa-beat-fade  "></i> <span class="text-dark font-weight-bold">Les Vols Arrivee Aujourd'hui </span>
                 </div>
                 <table class="table table-hover  shadow   bg-white rounded">
-                    <thead>
+                    <thead class="bg-gradient-primary">
                     <tr class="text-center">
                         <th class="">Numero Vol</th>
                         <th class="">Terminal</th>
@@ -181,7 +181,7 @@
         }
 
         ::-webkit-scrollbar {
-            width: 5px;
+            width: 10px;
             height: 5px;
         }
 
@@ -194,7 +194,7 @@
         ::-webkit-scrollbar-thumb {
             -webkit-border-radius: 10px;
             border-radius: 10px;
-            background: rgba(255, 255, 255, 0.3);
+            background-color: #1d455b;
             -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
         }
 

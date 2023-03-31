@@ -87,7 +87,7 @@
         </div>
 
         <div class="row">
-            <div class="col-6 mt-lg-4 ">
+            <div class="col-6 mt-lg-5 ">
                 <div class="alert alert-warning mb-0 p-1" role="alert">
                     <i class="fas fa-users fa-fade mr-2 "></i> <span class="text-dark font-weight-bold">Les 5 Derniers Participants </span>
                 </div>
@@ -112,7 +112,7 @@
                     </tbody>
                 </table>
             </div>
-            <div class="col-6 mt-lg-4 ">
+            <div class="col-6 mt-lg-5 ">
                 <div class="alert alert-dark mb-0 p-1" role="alert">
                     <i class="fas fa-user-tag fa-fade mr-2 "></i> <span class="text-dark font-weight-bold">Les 5 Derniers Volontaires </span>
                 </div>

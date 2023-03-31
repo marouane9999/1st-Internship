@@ -23,10 +23,10 @@
                 </div>
                 <div class="col-6">
                     <div class="font-weight-bolder">
-                        Date Check in : <span class="font-weight-normal">{{$heberg->date_checkin}}</span>
+                        Date Check in : <span class="font-weight-normal">{{date('d M Y', strtotime($heberg->date_checkin))}}</span>
                     </div>
                     <div class="font-weight-bolder">
-                        Date Check out : <span class="font-weight-normal">{{$heberg->date_checkout}}</span>
+                        Date Check out : <span class="font-weight-normal">{{date('d M Y', strtotime($heberg->date_checkout))}}</span>
                     </div>
                 </div>
 

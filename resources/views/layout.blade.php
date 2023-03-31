@@ -203,7 +203,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./index2.html" class="nav-link">
+                                <a href="{{route('hebergements.reporting')}}" class="nav-link">
                                     <i class="fas fa-file-alt nav-icon"></i>
                                     <p>Suivi & Reporting</p>
                                 </a>

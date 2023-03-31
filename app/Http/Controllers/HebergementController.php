@@ -34,6 +34,7 @@ class HebergementController extends Controller
                 'title' => 'Ajouter Hébergement',
                 'action' => route('hebergements.store'),
                 'site_heberg' => $site_heberg,
+                'hebergements'=>Hebergement::all(),
             ])->render()
         ]);
 
@@ -56,7 +57,6 @@ class HebergementController extends Controller
     public function edit($id)
     {
         $hebergement = Hebergement::find($id);
-
         $site_heberg = config('custom_arrays.site_heberg');
         return response()->json([
             'success' => true,
