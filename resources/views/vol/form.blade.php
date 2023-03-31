@@ -14,9 +14,9 @@
                         <div class="col-sm-12">
                             <div class="form-column">
                                 <div class="form-group row">
-                                    <label for="inputEmail4" class="font-weight-bold ">Numéro de vol:</label>
-                                    <input type="text" class="form-control @error('numero_vol') is-invalid @enderror"
-                                           id="inputEmail4" placeholder="Ajouter un numéro" name="numero_vol"
+                                    <label for="numero_vol" class="font-weight-bold ">Numéro de vol:</label>
+                                    <input type="number" class="form-control @error('numero_vol') is-invalid @enderror"
+                                           id="numero_vol" placeholder="Ajouter un numéro" name="numero_vol"
                                            value={{old('numero_vol',$vol->numero_vol)}}>
                                     @error('numero_vol')
                                     <div class="is-invalid text-red ml-2">
@@ -27,7 +27,7 @@
 
                             </div>
                             <div class="form-group row">
-                                <label for="inputPassword4" class="font-weight-bold ">Type de vol:</label>
+                                <label for="type_vol" class="font-weight-bold ">Type de vol:</label>
                                 <select class="custom-select @error('type_vol') is-invalid @enderror"
                                         aria-label="Default select example" name="type_vol" value="">
                                     <option value="true">Départ</option>
@@ -37,7 +37,7 @@
                         </div>
                         <div class="form-column">
                             <div class="form-group row ">
-                                <label for="" class="font-weight-bold ">Date de vol:</label><br>
+                                <label for="date_vol" class="font-weight-bold ">Date de vol:</label><br>
                                 <input type="datetime-local"
                                        class="custom-select  @error('date_vol') is-invalid @enderror"
                                        name="date_vol"
@@ -50,7 +50,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="inputPassword4" class="font-weight-bold ">Aéroport:</label>
+                            <label for="terminal" class="font-weight-bold ">Aéroport:</label>
                             <select class="custom-select" name="terminal" required>
                                 @foreach($aeroport as $aero)
                                     <option value="{{$aero}}" @if($aero=='Aéroport de Ouarzazate') selected @endif>

@@ -133,6 +133,7 @@
                             <td class="col-md-2">{{$volontaire->role}}</td>
                             <td class="col-md-2">{{$volontaire->site_aff}}</td>
                         </tr>
+
                     @endforeach
                     </tbody>
                 </table>
