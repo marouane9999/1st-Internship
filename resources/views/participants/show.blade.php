@@ -104,11 +104,13 @@
                                 Date Check In : <span class="font-weight-normal">{{$hebergement->date_checkout}}</span>
                             </div>
                         </div>
-                    @else
+                    @elseif(!$hebergement)
+                        <div class="col-6">
                         <div class="text-muted text-center font-weight-bolder m-auto p-3  ">
                             <i class='fas fa-exclamation-triangle fa-flip '></i> <span>Ce Participant n'est affecté à  aucun Hébergement</span>
                         </div>
-                    @break
+
+                        </div>
                     @endif
                 @endforeach
             </div>
@@ -143,7 +145,7 @@
                                 Repas : <span class="font-weight-normal">{{$restauration->repas->des_rep}}</span>
                             </div>
                         </div>
-                    @else
+                    @elseif(!$restauration)
                         <div class="text-muted text-center font-weight-bolder m-auto p-3  ">
                             <i class='fas fa-exclamation-triangle fa-flip '></i> <span>Ce Participant n'est affecté à  aucune Restauration</span>
                         </div>

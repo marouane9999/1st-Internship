@@ -60,6 +60,7 @@ Route::group(['prefix' => '/restaurations'], function () {
     Route::post('/update/{id}', [App\Http\Controllers\RestaurationController::class, 'update'])->name('restaurations.update');
     Route::get('/delete/{id}', [App\Http\Controllers\RestaurationController::class, 'delete'])->name('restaurations.delete');
     Route::get('/show/{id}', [App\Http\Controllers\RestaurationController::class, 'show'])->name('restaurations.show');
+    Route::get('/reporting', [App\Http\Controllers\RestaurationReportingController::class, 'index'])->name('restaurations.reporting');
 });
 
 Route::group(['prefix' => '/volontaires'], function () {
