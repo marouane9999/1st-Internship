@@ -35,7 +35,7 @@
                 </div>
                 <div class="col-6">
                     <div class="font-weight-bolder mb-2">
-                        Numéro Passport : <span class="font-weight-normal">{{$ptc->num_pass}}</span>
+                        Numero Passport : <span class="font-weight-normal">{{$ptc->num_pass}}</span>
                     </div>
                     <div class="font-weight-bolder mb-2">
                         Numéro Accréditation : <span class="font-weight-normal">{{$ptc->num_acc}}</span>
@@ -104,11 +104,14 @@
                                 Date Check In : <span class="font-weight-normal">{{$hebergement->date_checkout}}</span>
                             </div>
                         </div>
-                    @else
+                    @elseif(!$hebergement)
+                        <div class="col-6">
                         <div class="text-muted text-center font-weight-bolder m-auto p-3  ">
                             <i class='fas fa-exclamation-triangle fa-flip '></i> <span>Ce Participant n'est affecté à  aucun Hébergement</span>
                         </div>
                         @break
+
+                        </div>
                     @endif
                 @endforeach
             </div>
@@ -121,9 +124,6 @@
             <div class="row w-100 d-flex justify-content-center ml-5">
                 @foreach($restaurations as $restauration)
                     @if($restauration->participant_id==$ptc->id && $restauration==true)
-                        <div class="text-muted text-center font-weight-bolder m-auto p-3  ">
-                            <i class='fas fa-exclamation-triangle fa-flip '></i> <span>Ce Participant n'est affecté à  aucune Réstauration</span>
-                        </div>
                         <div class="col-4">
                             <div class="font-weight-bolder mb-2">
                                 Numéro Réstauration : <span
@@ -146,7 +146,7 @@
                                 Repas : <span class="font-weight-normal">{{$restauration->repas->des_rep}}</span>
                             </div>
                         </div>
-                    @else
+                    @elseif(!$restauration)
                         <div class="text-muted text-center font-weight-bolder m-auto p-3  ">
                             <i class='fas fa-exclamation-triangle fa-flip '></i> <span>Ce Participant n'est affecté à  aucune Réstauration</span>
                         </div>

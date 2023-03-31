@@ -24,7 +24,7 @@
                                 </select>
                             </div>
                             <div class="form-group row">
-                                <label for="site_heberg" class="font-weight-bold ">Site d'hébergement:</label>
+                                <label for="site_heberg" class="font-weight-bold ">Site d' hébergement:</label>
                                 <select class="custom-select" name="site_heberg" required>
                                     @foreach($site_heberg as $siteheberg)
                                         <option value="{{$siteheberg}}"

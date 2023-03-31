@@ -1,9 +1,7 @@
 @extends('layout')
 @section('header title','Hébergements / Suivi & Reporting ')
 @section('content')
-
     <div class="container">
-
         {{--1st row of tables--}}
         <div class="row">
             <div class="col-6 mt-xl-5">

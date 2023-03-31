@@ -94,7 +94,7 @@
                     <tr class="text-center text-dark">
                         <th class="">Numero Vol</th>
                         <th class="">Terminal</th>
-                        <th class="">Date Vol</th>
+                        <th class="">Horraire Vol</th>
                         <th class="">Statut</th>
                     </tr>
                     </thead>
@@ -119,7 +119,7 @@
                                     @if(date('H:i',strtotime($tdv->date_vol))>date('H:i'))
                                         <i class="fas fa-spinner fa-spin fa-lg fa-spin-reverse text-orange "></i>
                                     @else
-                                        <i class="fas fa-check fa-lg text-green"></i>
+                                        <i class="fas fa-check fa-lg text-green mr-2"></i><span class="font-weight-bold font-italic">Effectué</span>
                                     @endif
                                 </td>
                             </tr>
@@ -135,9 +135,9 @@
                 <table class="table table-hover  shadow   bg-white rounded">
                     <thead class="bg-gradient-primary">
                     <tr class="text-center">
-                        <th class="col-3">Numero Vol</th>
-                        <th class="col-4">Terminal</th>
-                        <th class="">Date Vol</th>
+                        <th class="col-md-3">Numero Vol</th>
+                        <th class="">Terminal</th>
+                        <th class="">Horraire Vol</th>
                         <th>Statut</th>
                     </tr>
                     </thead>
@@ -161,7 +161,7 @@
                                 <td class="col-md-2">{{date('H:i',strtotime($tav->date_vol))}}</td>
                                 <td>
                                     @if(date('H:i',strtotime($tav->date_vol))>date('H:i'))
-                                        <i class="fas fa-spinner fa-spin fa-lg fa-spin-reverse text-orange "></i>
+                                        <i class="fas fa-spinner fa-spin fa-lg fa-spin-reverse text-orange mr-2 "></i> <span class="font-weight-bold font-italic">Pendant</span>
                                     @else
                                         <i class="fas fa-check fa-lg text-green"></i>
                                     @endif
