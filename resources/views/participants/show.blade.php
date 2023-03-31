@@ -126,7 +126,7 @@
                         </div>
                         <div class="col-4">
                             <div class="font-weight-bolder mb-2">
-                                Numéro Restauration : <span
+                                Numéro Réstauration : <span
                                     class="font-weight-normal">{{$restauration->numero_rest}}</span>
                             </div>
                             <div class="font-weight-bolder mb-2">
