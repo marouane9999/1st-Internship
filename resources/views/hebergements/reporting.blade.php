@@ -120,7 +120,7 @@
                 </table>
             </div>
             <div class="col-6 mt-3">
-                <div class="alert alert-danger bg-gradient-red " role="alert">
+                <div class="alert alert-danger bg-gradient-red mb-0 p-1" role="alert">
                     <i class="fas fa-building-circle-xmark fa-lg fa-beat-fade "></i> <span
                         class="text-dark font-weight-bold">Les Check Out d'Aujourd'hui</span>
                 </div>
