@@ -67,7 +67,7 @@
                                 </td>
                                 <td class="">{{$lr->repas->des_rep}}</td>
                                 <td class="">{{$lr->site_restau}}</td>
-                                <td class="">{{date('d M Y', strtotime($lr->created_at))}}</td>
+                                <td class="">{{date('d M Y',strtotime($lr->created_at))}}</td>
                             </tr>
                         @endforeach
                         </tbody>
@@ -123,8 +123,7 @@
                     <tbody>
                         @foreach($today_repas as $tr)
                             <tr class="text-left">
-                                <td class=""><a href="#"
-                                                class="text-decoration-none  text-dark font-weight-bolder">{{$tr->site_restau}}</a>
+                                <td class=""><a href="#" class="text-decoration-none  text-dark font-weight-bolder">{{$tr->site_restau}}</a>
                                 </td>
                                 <td class="">{{$tr->Repas}}</td>
                             </tr>
@@ -135,6 +134,4 @@
 
         </div>
     </div>
-
-
 @endsection
