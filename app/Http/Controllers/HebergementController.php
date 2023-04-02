@@ -27,11 +27,17 @@ class HebergementController extends Controller
     public function create()
     {
         $site_heberg = config('custom_arrays.site_heberg');
+
+        $participants =Participant::select('*')->whereNotIn('id',function($query) {
+            $query->select('participant_id')->from('hebergements');
+        })->get();
+
         return response()->json([
             'success' => true,
             'html' => view('hebergements.form')->with([
                 'hebergement' => $this->hebergement,
                 'participants' => Participant::all(),
+                'participants'=>$participants,
                 'title' => 'Ajouter Hébergement',
                 'action' => route('hebergements.store'),
                 'site_heberg' => $site_heberg,

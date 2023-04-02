@@ -104,7 +104,7 @@
                                 Date Check In : <span class="font-weight-normal">{{$hebergement->date_checkout}}</span>
                             </div>
                         </div>
-                    @elseif(!$hebergement)
+                    @else
                         <div class="col-6">
                         <div class="text-muted text-center font-weight-bolder m-auto p-3  ">
                             <i class='fas fa-exclamation-triangle fa-flip '></i> <span>Ce Participant n'est affecté à  aucun Hébergement</span>

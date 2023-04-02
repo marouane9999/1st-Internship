@@ -16,6 +16,7 @@
                                 <label for="participant_id" class="font-weight-bold ">Participant:</label>
                                 <select class="custom-select" name="participant_id" required>
                                     @foreach($participants as $participant)
+
                                         <option value="{{$participant->id}}"
                                                 @if($participant->id == $hebergement->participant_id) selected @endif>
                                             {{$participant->nom_par.' '.$participant->prenom_par}}

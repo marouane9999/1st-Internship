@@ -119,9 +119,9 @@
                 <table class="table table-hover  shadow   bg-white rounded">
                     <thead class="bg-gradient-danger">
                     <tr class="text-left">
-                        <th class="col-3">Nom & prénom</th>
-                        <th class="">Rôle</th>
-                        <th class="">Site d'afféctation</th>
+                        <th class="col-3">Nom & Prenom</th>
+                        <th class="">Role</th>
+                        <th class="">Site d'affectation</th>
                     </tr>
                     </thead>
                     <tbody class="text-left">

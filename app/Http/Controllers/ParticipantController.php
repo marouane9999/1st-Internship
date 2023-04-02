@@ -30,12 +30,10 @@ class ParticipantController extends Controller
     public function index()
     {
         $ptc = Participant::all();
-
         $countries = config('custom_arrays.countries');
         return view('participants.index')->with([
             'participants' => $ptc,
             'countries' => $countries,
-
         ]);
     }
 
