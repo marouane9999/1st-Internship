@@ -101,7 +101,7 @@
                     <tbody>
                     @if($todaydeparture_vols->count()==0)
                         <tr>
-                            <td colspan="3">
+                            <td colspan="4">
                                 <div class="text-muted text-center font-weight-bolder m-auto  ">
                                     <i class='fas fa-exclamation-triangle fa-flip '></i> <span>Aucun Vol Depart n'est Effectué Aujourd'hui!</span>
                                 </div>
@@ -144,7 +144,7 @@
                     <tbody>
                     @if($todayarrival_vols->count()==0)
                         <tr>
-                            <td colspan="3">
+                            <td colspan="4">
                                 <div class="text-muted text-center font-weight-bolder m-auto  ">
                                     <i class='fas fa-exclamation-triangle fa-flip'></i> <span>Aucun Vol Arrivee n'est Effectué Aujourd'hui!</span>
                                 </div>

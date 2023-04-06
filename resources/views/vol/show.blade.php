@@ -50,7 +50,6 @@
                     <table class=" table table-light table-hover w-50 text-left border-7">
                         <thead class="thead-dark">
                         <tr>
-                            <th scope="col">#</th>
                             <th scope="col">Nom & Prenom</th>
                             <th scope="col">Numero Passport</th>
                             <th scope="col">Pays Delegation</th>
@@ -59,8 +58,8 @@
                         <tbody>
                         @foreach($vol->participants as $ptc)
                             <tr>
-                                <th scope="row">{{$ptc->id}}</th>
-                                <td>{{ucfirst($ptc->prenom_par)}} {{ucfirst($ptc->prenom_par)}}</td>
+                                <td><a href="{{route('participants.show',$ptc->id)}}"
+                                       class="text-decoration-none   text-dark font-weight-bold">{{ucfirst($ptc->nom_par)}} {{ucfirst($ptc->prenom_par)}}</a></td>
                                 <td>{{$ptc->num_pass}}</td>
                                 @foreach($countries as $key => $country)
                                     @if($ptc->pays_delg == $key )

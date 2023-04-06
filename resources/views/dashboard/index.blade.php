@@ -103,9 +103,9 @@
                     @foreach($participants as $ptc)
                         <tr class="text-left">
                             <td class="col-md-2"><a href="{{route('participants.show',$ptc->id)}}"
-                                                    class="text-decoration-none   text-dark font-weight-bold">{{$ptc->nom_par}} {{$ptc->prenom_par}}</a>
+                                                    class="text-decoration-none   text-dark font-weight-bold">{{ucfirst($ptc->nom_par)}} {{ucfirst($ptc->prenom_par)}}</a>
                             </td>
-                            <td class="col-md-2">{{$ptc->discipline}}</td>
+                            <td class="col-md-2">{{ucfirst($ptc->discipline)}}</td>
                             <td class="col-md-2">{{config('custom_arrays.countries.'.$ptc->pays_delg)}}</td>
                         </tr>
                     @endforeach

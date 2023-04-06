@@ -32,11 +32,14 @@ class RestaurationController extends Controller
     {
         $site_restau = config('custom_arrays.site_restau');
         $cat_rp = Repas::get();
+        $participants =Participant::select('*')->whereNotIn('id',function($query) {
+            $query->select('participant_id')->from('restaurations');
+        })->get();
         return response()->json([
             'success' => true,
             'html' => view('restaurations.form')->with([
                 'restauration' => $this->restauration,
-                'participants'=>Participant::all(),
+                'participants'=>$participants,
                 'title' => 'Ajouter Restauration',
                 'repas' => $cat_rp,
                 'action' => route('restaurations.store'),
@@ -55,6 +58,7 @@ class RestaurationController extends Controller
         $restauration->rep_id = $request->rep_id;
         $restauration->participant_id = $request->participant_id;
         $restauration->save();
+
         return response()->json([
             'success' => true,
             'msg' => 'Restauration créé avec succès.',
