@@ -5,8 +5,7 @@
 
     <div class="container shadow-sm p-3 mb-5  rounded mt-4">
         <div class="d-flex justify-content-center m-auto w-75 mb-2 mt-4">
-            <h1 class="shadow-lg p-3 mb-5 bg-gradient-light rounded font-weight-bolder text-dark">Vol
-                #{{$vol->numero_vol}}</span></h1>
+            <h1 class="shadow-lg p-3 mb-5 bg-gradient-light rounded font-weight-bolder text-dark">Vol  #{{$vol->numero_vol}}</span></h1>
         </div>
         {{--Vol--}}
         <div class="alert alert-primary shadow-sm" role="alert">
@@ -16,10 +15,10 @@
             <div class="row w-100 d-flex justify-content-center ml-5">
                 <div class="col-4">
                     <div class="font-weight-bolder mb-2">
-                        Numéro de vol : <span class="font-weight-normal">{{$vol->numero_vol}}</span>
+                        Numero de vol : <span class="font-weight-normal">{{$vol->numero_vol}}</span>
                     </div>
                     <div class="font-weight-bolder mb-2">
-                        Terminal/Aéoroport : <span class="font-weight-normal">{{$vol->terminal}}</span>
+                        Terminal/Aeoroport : <span class="font-weight-normal">{{$vol->terminal}}</span>
                     </div>
                 </div>
                 <div class="col-6">
@@ -51,17 +50,16 @@
                     <table class=" table table-light table-hover w-50 text-left border-7">
                         <thead class="thead-dark">
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Nom & Prénom</th>
-                            <th scope="col">Numéro Passport</th>
-                            <th scope="col">Pays Délégation</th>
+                            <th scope="col">Nom & Prenom</th>
+                            <th scope="col">Numero Passport</th>
+                            <th scope="col">Pays Delegation</th>
                         </tr>
                         </thead>
                         <tbody>
                         @foreach($vol->participants as $ptc)
                             <tr>
-                                <th scope="row">{{$ptc->id}}</th>
-                                <td>{{ucfirst($ptc->prenom_par)}} {{ucfirst($ptc->prenom_par)}}</td>
+                                <td><a href="{{route('participants.show',$ptc->id)}}"
+                                       class="text-decoration-none   text-dark font-weight-bold">{{ucfirst($ptc->nom_par)}} {{ucfirst($ptc->prenom_par)}}</a></td>
                                 <td>{{$ptc->num_pass}}</td>
                                 @foreach($countries as $key => $country)
                                     @if($ptc->pays_delg == $key )

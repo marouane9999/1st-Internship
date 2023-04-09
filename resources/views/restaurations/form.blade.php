@@ -15,7 +15,8 @@
                             <div class="form-group row">
                                 <label for="numero_rest" class="font-weight-bold">Numéro de réstauration:</label>
                                 <input type="number" class="form-control" id="numero_rest"
-                                       placeholder="Numéro de restauration" name="numero_rest">
+                                       placeholder="Numéro de restauration" name="numero_rest"
+                                       @if($restauration->numero_rest) value={{old('numero_rest',$restauration->numero_rest)}}  @endif >
                             </div>
                             <div class="form-group row">
                                 <label for="site_restau" class="font-weight-bold ">Site de réstauration:</label>
@@ -29,12 +30,13 @@
                             </div>
                             <div class="form-group row">
                                 <label for="ville" class="font-weight-bold ">Ville:</label>
-                                <input type="search" class="form-control" id="ville" name="ville">
+                                <input type="search" class="form-control" id="ville" name="ville"
+                                       value={{old('ville',$restauration->ville)}} >
                             </div>
                             <div class="form-group row">
                                 <label for="prestataire" class="font-weight-bold ">Préstataire:</label>
                                 <input type="search" class="form-control" id="prestataire" placeholder="Prestataire"
-                                       name="prestataire">
+                                       name="prestataire" value={{old('prestataire',$restauration->prestataire)}}>
                             </div>
                             <div class=" form-group row">
                                 <label for="rep_id" class="font-weight-bold" name="rep_id">Catégorie de

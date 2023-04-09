@@ -111,13 +111,13 @@
             </div>
             <div class="col-6 mt-3">
                 <div class="alert alert-warning mb-0 p-1" role="alert">
-                    <i class="fas fa-utensils fa-lg fa-beat-fade "></i> <span class="text-dark font-weight-bold">Le Nombre de Repas Servis Aujourd'hui </span>
+                    <i class="fas fa-utensils fa-lg fa-beat-fade "></i> <span class="text-dark font-weight-bold">Le Nombre de Repas Servis Aujourd'hui <span class="text-dark font-italic font-weight-bold">({{date('d M Y')}})</span> </span>
                 </div>
                 <table class="table table-hover  shadow   bg-white rounded">
                     <thead class="">
                     <tr class="text-left text-dark">
                         <th class="">Site Restauration</th>
-                        <th class="">Total De Personnels</th>
+                        <th class="">Total Des Repas</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -125,7 +125,7 @@
                             <tr class="text-left">
                                 <td class=""><a href="#" class="text-decoration-none  text-dark font-weight-bolder">{{$tr->site_restau}}</a>
                                 </td>
-                                <td class="">{{$tr->Repas}}</td>
+                                <td class="">{{$tr->repas}}</td>
                             </tr>
                         @endforeach
                     </tbody>

@@ -1,35 +1,34 @@
 @extends('layout')
 @section('header title','Restauration')
 @section('content')
-    @if($restaurations->count()==0)
-        <div class="text-muted text-center font-weight-bolder m-auto  ">
-            <div class="row w-25 m-auto mt-5">
-                <i class='fas fa-exclamation-triangle'></i> <span>Aucune Réstauartion n'est Enregistré!</span>
-                <a href="{{route('restaurations.create')}}"
-                   class="btn btn-success me-md-2 rounded-pill bg-gradient-success float-right mb-2 create-restaurations"><i
-                        class="fa fa-plus mr-2"></i>Ajouter Réstauration</a>
-            </div>
-        </div>
-    @else
         <div class="mt-5 m-auto w-75">
             <a href="{{route('restaurations.create')}}"
                class="btn btn-success me-md-2 rounded-pill bg-gradient-success float-right mb-2 create-restaurations"><i
-                    class="fa fa-plus mr-2"></i>Ajouter Réstauration</a>
+                    class="fa fa-plus mr-2"></i>Ajouter Restauration</a>
             <table
                 class="table table-borderless table-bordered table-hover w-100 mt-5 shadow-lg p-3 mb-5 bg-white rounded">
                 <thead class="thead-dark">
                 <tr class="text-left">
                     <th scope="col">#</th>
-                    <th scope="col">Numéro de réstauration</th>
-                    <th scope="col">Site de réstauration</th>
+                    <th scope="col">Numéro de restauration</th>
+                    <th scope="col">Site de restauration</th>
                     <th scope="col">Ville</th>
-                    <th scope="col">Préstataire</th>
+                    <th scope="col">Prestataire</th>
                     <th scope="col">Catégorie de repas</th>
                     <th scope="col">Participant</th>
                     <th></th>
                 </tr>
                 </thead>
                 <tbody>
+                @if($restaurations->count()==0)
+                    <tr>
+                        <td colspan="7" class="text-center">
+                            <div class="alert alert-warning  mb-0 p-2" role="alert">
+                                <i class='fas fa-exclamation-triangle fa-beat-fade mr-2'></i> <span>Aucune Restauration n'est Enregistré!</span>
+                            </div>
+                        </td>
+                    </tr>
+                @endif
                 @foreach($restaurations as $restau)
                     <tr class="text-left" id="restauration">
                         <th scope="row">{{$restau->id}}</th>
@@ -67,7 +66,6 @@
             $('div.alert').not('.alert-important').delay(1500).fadeOut(350);
 
         </script>
-    @endif
 
 
 @endsection

@@ -146,7 +146,7 @@
                                 Repas : <span class="font-weight-normal">{{$restauration->repas->des_rep}}</span>
                             </div>
                         </div>
-                    @elseif(!$restauration)
+                    @else
                         <div class="text-muted text-center font-weight-bolder m-auto p-3  ">
                             <i class='fas fa-exclamation-triangle fa-flip '></i> <span>Ce Participant n'est affecté à  aucune Réstauration</span>
                         </div>

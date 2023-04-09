@@ -16,12 +16,13 @@ class RestaurationReportingController extends Controller
         $today = Carbon::today()->format('Y-m-d');
         $today_restaurations = Restauration::whereRaw('DATE(created_at) = ?', $today)->orderBy('created_at', 'desc')->get();
         $last_restaurations = Restauration::orderBy('created_at', 'desc')->limit(5)->get();
-        $total_repas=Restauration::select(DB::raw('count(rep_id) as repas,site_restau'))->groupBy('site_restau')->get();
-        $today_repas=Restauration::select(DB::raw('count(rep_id) as repas,site_restau'))->groupBy('site_restau')->get();
+        $total_repas = Restauration::select(DB::raw('count(rep_id) as repas,site_restau'))->groupBy('site_restau')->get();
+        $today_repas = Restauration::select(DB::raw('DATE(created_at) as date,count(rep_id) as repas,site_restau'))->groupBy('date')->groupBy('site_restau')->having('date', '=', $today)->get();
         return view('restaurations.reporting')->with([
             'today_restaurations' => $today_restaurations,
             'last_restaurations' => $last_restaurations,
-            'total_repas'=>$total_repas,
+            'total_repas' => $total_repas,
+            'today_repas' => $today_repas
         ]);
     }
 }
