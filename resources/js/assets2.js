@@ -31,7 +31,6 @@ $(document).on('click', '.delete-elm', function (e) {
         }
     })
 })
-
 $(document).on('click', '.create-vol', function (e) {
     e.preventDefault();
     let $this = $(this);
@@ -44,7 +43,6 @@ $(document).on('click', '.create-vol', function (e) {
         }
     })
 });
-
 $(document).on('submit', '#volModal #volModalForm', function (e) {
     e.preventDefault();
     var $this = $(this);
@@ -81,14 +79,11 @@ $(document).on('submit', '#volModal #volModalForm', function (e) {
     });
     return false;
 });
-
-
 $(document).on('click', '.close-modal', function (e) {
     e.preventDefault();
     console.log('here');
     $('.modal').modal('hide');
 });
-
 $(document).on('click', '.create-hebergements', function (e) {
     e.preventDefault();
     var $this = $(this);
@@ -101,7 +96,6 @@ $(document).on('click', '.create-hebergements', function (e) {
         }
     })
 });
-
 $(document).on('submit', '#hebergementModal #hebergementModalForm', function (e) {
     e.preventDefault();
     var $this = $(this);
@@ -139,8 +133,6 @@ $(document).on('submit', '#hebergementModal #hebergementModalForm', function (e)
     });
     return false;
 });
-
-
 $(document).on('click', '.create-restaurations', function (e) {
     e.preventDefault();
     var $this = $(this);
@@ -153,7 +145,6 @@ $(document).on('click', '.create-restaurations', function (e) {
         }
     })
 });
-
 $(document).on('click', '.create-volontaire', function (e) {
     e.preventDefault();
     var $this = $(this);
@@ -166,8 +157,6 @@ $(document).on('click', '.create-volontaire', function (e) {
         }
     })
 });
-
-
 $(document).on('submit', '#volontaireModal #volontaireModalForm', function (e) {
     e.preventDefault();
     var $this = $(this);
@@ -204,8 +193,6 @@ $(document).on('submit', '#volontaireModal #volontaireModalForm', function (e) {
     });
     return false;
 });
-
-
 $(document).on('submit', '#restaurationModal #restaurationModalForm', function (e) {
     e.preventDefault();
     var $this = $(this);
@@ -243,6 +230,46 @@ $(document).on('submit', '#restaurationModal #restaurationModalForm', function (
     });
     return false;
 });
+$(document).on('submit', '#utilisateurModal #utilisateurModalForm', function (e) {
+    e.preventDefault();
+    var $this = $(this);
+    var $action = $this.attr('action');
+
+    $.ajax({
+        method: 'POST',
+        url: $action,
+        data: $this.serialize(),
+        success: function (response) {
+            if (response.success) {
+                toastr.success(response.msg);
+                $('#utilisateurModal').modal('hide');
+                setTimeout(
+                    function () {
+                        window.location.href = "/utilisateurs";
+                    }, 2000);
+
+            } else {
+                toastr.error(response.msg);
+            }
+        },
+        error: function (response) {
+            if (response.status === 422) {
+                var obj = jQuery.parseJSON(response.responseText);
+                $.each(obj.errors, function (index, error) {
+                    toastr.error(error);
+                    return;
+                });
+            } else {
+                toastr.error('Une erreur est survenue lors du traitement de votre demande.');
+            }
+
+        }
+    });
+    return false;
+});
+
+
+
 
 
 

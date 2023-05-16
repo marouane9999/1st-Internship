@@ -19,11 +19,13 @@ class RestaurationController extends Controller
     public function index()
 
     {
-        $restaurations = Restauration::all();
+        $restaurations = Restauration::paginate(7);
+        $repas = Repas::limit(4)->get();
         $site_restau = config('custom_arrays.site_restau');
         return view('restaurations.index')->with([
             'restaurations' => $restaurations,
-            'site_restau'=>$site_restau
+            'site_restau'=>$site_restau,
+            'repas'=>$repas
         ]);
 
 
@@ -31,7 +33,7 @@ class RestaurationController extends Controller
     public function create()
     {
         $site_restau = config('custom_arrays.site_restau');
-        $cat_rp = Repas::get();
+        $cat_rp = Repas::limit(4)->get();
         $participants =Participant::select('*')->whereNotIn('id',function($query) {
             $query->select('participant_id')->from('restaurations');
         })->get();
@@ -118,4 +120,29 @@ class RestaurationController extends Controller
         $countries = config('custom_arrays.countries');
         return view('restaurations.show',['restau'=>$restauration,'site_restau'=>$site_restau,'countries'=>$countries]);
     }
+
+    public function search(Request $request)
+    {
+        $site_restau = config('custom_arrays.site_restau');
+        if($request->site_restau){
+        $restaurations = Restauration::where('site_restau','=',$request->site_restau)->paginate(7);
+        return view('restaurations.index')->with([
+            'restaurations' => $restaurations,
+            'site_restau'=>$site_restau
+        ]);
+        }
+
+        if($request->repas){
+        $restaurations = Restauration::where('rep_id','=',$request->repas)->paginate(7);
+        $repas = Repas::limit(4)->get();
+            return view('restaurations.index')->with([
+            'restaurations' => $restaurations,
+            'site_restau'=>$site_restau,
+            'repas'=>$repas
+        ]);
+
+        }
+    }
+
+
 }

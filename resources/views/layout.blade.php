@@ -7,6 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Alpha IT</title>
 
     <!-- Google Font: Source Sans Pro -->
@@ -23,6 +24,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="adminLte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <meta name="csrf_token" content="{{csrf_token()}}">
     <link rel="stylesheet" href="/adminLte/plugins/daterangepicker/daterangepicker.css">
+
+
 
 
 </head>
@@ -107,7 +110,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <img src="/adminLte/img/user3-128x128.jpg" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
-                    {{--          <a href="#" class="d-block">  {{ \Illuminate\Support\Facades\Auth::user()->name }}</a>--}}
+                              <span class="fw-bold fst-italic text-light">  {{ \Illuminate\Support\Facades\Auth::user()->name }}</span>
                 </div>
             </div>
 
@@ -151,12 +154,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <a href="{{route('participants.index')}}" class="nav-link">
                                     <i class="fas fa-edit nav-icon"></i>
                                     <p>Gestion & Consultation</p>
-
                                 </a>
                             </li>
                         </ul>
                     </li>
-
                     <li class="nav-item menu-open mb-4">
                         <a href="#" class="nav-link ">
                             <i class="nav-icon fa fa-plane fa-fade"></i>
@@ -178,12 +179,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     <p>Suivi & Reporting</p>
                                 </a>
                             </li>
+
+                            @if(\Illuminate\Support\Facades\Auth::user()->hasRole(['controlleur','admin']))
                             <li class="nav-item">
-                                <a href="./index3.html" class="nav-link">
-                                    <i class=" fas fa-user-circle    nav-icon"></i>
+                                <a href="{{route('vols.controle')}}" class="nav-link">
+                                    <i class=" fas fa-user-circle nav-icon"></i>
                                     <p>Contrôle</p>
                                 </a>
                             </li>
+                            @endif
                         </ul>
                     </li>
                     <li class="nav-item menu-open mb-4">
@@ -208,12 +212,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     <p>Suivi & Reporting</p>
                                 </a>
                             </li>
+                            @if(\Illuminate\Support\Facades\Auth::user()->hasRole(['controlleur','admin']))
                             <li class="nav-item">
-                                <a href="./index3.html" class="nav-link">
+                                <a href="{{route('hebergements.controle')}}" class="nav-link">
                                     <i class=" fas fa-user-circle    nav-icon"></i>
                                     <p>Contrôle</p>
                                 </a>
                             </li>
+                            @endif
                         </ul>
                     </li>
 
@@ -239,16 +245,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     <p>Suivi & Reporting</p>
                                 </a>
                             </li>
+                            @if(\Illuminate\Support\Facades\Auth::user()->hasRole(['controlleur','admin']))
                             <li class="nav-item">
-                                <a href="./index3.html" class="nav-link">
+                                <a href="{{route('restaurations.controle')}}" class="nav-link">
                                     <i class=" fas fa-user-circle    nav-icon"></i>
                                     <p>Contrôle</p>
                                 </a>
                             </li>
+                            @endif
                         </ul>
                     </li>
 
-
+                    @if(\Illuminate\Support\Facades\Auth::user()->hasRole(['chef_equipe','admin']))
                     <li class="nav-item menu-open mb-3">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-user-tag fa-fade"></i>
@@ -266,30 +274,31 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./index2.html" class="nav-link">
+                                <a href="{{route('volontaires.reporting')}}" class="nav-link">
                                     <i class="fas fa-file-alt nav-icon"></i>
                                     <p>Suivi & Reporting</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./index3.html" class="nav-link">
+                                <a href="{{route('volontaires.controle')}}" class="nav-link">
                                     <i class=" fas fa-user-circle    nav-icon"></i>
                                     <p>Contrôle</p>
                                 </a>
                             </li>
                         </ul>
                     </li>
+                    @endif
 
-
+                    @if(\Illuminate\Support\Facades\Auth::user()->hasRole('admin'))
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{route('utilisateurs.index')}}" class="nav-link">
                             <i class="nav-icon fas fa-id-badge fa-fade"></i>
                             <p>
                                 Gestion des Utilisateurs
                             </p>
                         </a>
                     </li>
-
+                    @endif
                 </ul>
             </nav>
             <!-- /.sidebar-menu -->

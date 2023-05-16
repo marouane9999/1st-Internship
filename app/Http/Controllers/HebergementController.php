@@ -16,7 +16,7 @@ class HebergementController extends Controller
 
     public function index()
     {
-        $heberg = Hebergement::all();
+        $heberg = Hebergement::paginate(7);
         $site_heberg = config('custom_arrays.site_heberg');
         return view('hebergements.index')->with([
             'hebergement'=>$heberg,
@@ -109,5 +109,32 @@ class HebergementController extends Controller
         $countries = config('custom_arrays.countries');
         return view('hebergements.show',['heberg'=>$hebergement,'site_heberg'=>$site_heberg,'countries'=>$countries]);
     }
+
+        public function search(Request $request){
+            $site_heberg = config('custom_arrays.site_heberg');
+            if ($request->site_hbg){
+            $heberg = Hebergement::where('site_heberg',$request->site_hbg)->paginate(5);
+            return view('hebergements.index')->with([
+                'hebergement'=>$heberg,
+                'site_heberg'=>$site_heberg
+            ]);
+            }
+            if ($request->type_cham){
+                if($request->type_cham==3){
+                $request->type_cham = 0;
+                $heberg = Hebergement::where('type_cham',$request->type_cham)->paginate(5);
+                    return view('hebergements.index')->with([
+                        'hebergement'=>$heberg,
+                        'site_heberg'=>$site_heberg
+                    ]);
+                }
+            $heberg = Hebergement::where('type_cham',$request->type_cham)->paginate(5);
+            return view('hebergements.index')->with([
+                'hebergement'=>$heberg,
+                'site_heberg'=>$site_heberg
+            ]);
+            }
+    }
+
 
 }

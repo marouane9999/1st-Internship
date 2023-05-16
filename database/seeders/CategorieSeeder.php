@@ -15,18 +15,21 @@ class CategorieSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('categories')->insert([
-            'des_cat' => 'Volontaire',
-            'desc_cat' => "Responsable sur l'organisation des activites Sporitfs",
-        ],
-        [
-            'des_cat' => 'delegation Sportif',
-            'desc_cat' => "Controlleur des activites sportifs",
-        ],
+
+        $categories=[
             [
-                'des_cat' => 'officiel technique',
+                'des_cat' => 'Volontaire',
+                'desc_cat' => "Responsable sur l'organisation des activites Sporitfs",
+            ],
+            [
+                'des_cat' => 'Delegation Sportif',
+                'desc_cat' => "Controlleur des activites sportifs",
+            ],
+            [
+                'des_cat' => 'Officiel Technique',
                 'desc_cat' => "Responsable sur les problemes technique",
             ]
-        );
+        ];
+        DB::table('categories')->insert($categories);
     }
 }

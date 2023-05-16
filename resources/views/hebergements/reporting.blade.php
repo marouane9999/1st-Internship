@@ -9,6 +9,7 @@
                     <i class="fas fa-building-user fa-lg fa-beat-fade mr-1" style="color: #160a0d" ></i> <span
                         class="text-dark font-weight-bold">Les Affectations Héberegemt d'Aujourd'hui</span>
                     <span class="text-dark font-italic font-weight-bold">({{date('d M Y')}})</span>
+                    <span class="float-right"><a href="{{route('hebergements.download','th')}}"><i class="fa fa-download fa-lg text-dark" aria-hidden="true"></i></a></span>
                 </div>
                 <div class="table-responsive">
                     <table class="table table-hover  shadow   bg-white rounded ">
@@ -49,6 +50,7 @@
                 <div class="alert alert-danger bg-gradient-lime mb-0 p-1" role="alert">
                     <i class="fas fa-building-circle-exclamation fa-lg fa-beat-fade" style="color: #160a0d"></i> <span
                         class="text-dark font-weight-bold">Les 5 Derniers Hébergement Ajoutés</span>
+                    <span class="float-right"><a href="{{route('hebergements.download','lh')}}"><i class="fa fa-download fa-lg text-dark" aria-hidden="true"></i></a></span>
                 </div>
                 <div class="table-responsive">
                     <table class="table table-hover  shadow   bg-white rounded">
@@ -83,6 +85,7 @@
             <div class="col-6 mt-3">
                 <div class="alert alert-success bg-gradient-teal mb-0 p-1" role="alert">
                     <i class="fas fa-building-circle-check fa-lg fa-beat-fade" style="color: #160a0d" ></i> <span class="text-dark font-weight-bold">Les Check In d'Aujourd'hui</span>
+                    <span class="float-right"><a href="{{route('hebergements.download','tih')}}"><i class="fa fa-download fa-lg text-dark" aria-hidden="true"></i></a></span>
                 </div>
                 <table class="table table-hover  shadow   bg-white rounded">
                     <thead>
@@ -119,6 +122,7 @@
             <div class="col-6 mt-3">
                 <div class="alert alert-danger mb-0 p-1" role="alert">
                     <i class="fas fa-building-circle-xmark fa-lg fa-beat-fade "></i> <span class="text-dark font-weight-bold">Les Check Out d'Aujourd'hui</span>
+                    <span class="float-right"><a href="{{route('hebergements.download','toh')}}"><i class="fa fa-download fa-lg text-dark" aria-hidden="true"></i></a></span>
                 </div>
                 <table class="table table-hover  shadow   bg-white rounded">
                     <thead>

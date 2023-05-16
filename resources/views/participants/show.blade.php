@@ -105,12 +105,7 @@
                             </div>
                         </div>
                     @else
-                        <div class="col-6">
-                        <div class="text-muted text-center font-weight-bolder m-auto p-3  ">
-                            <i class='fas fa-exclamation-triangle fa-flip '></i> <span>Ce Participant n'est affecté à  aucun Hébergement</span>
-                        </div>
 
-                        </div>
                     @endif
                 @endforeach
             </div>
@@ -146,9 +141,7 @@
                             </div>
                         </div>
                     @else
-                        <div class="text-muted text-center font-weight-bolder m-auto p-3  ">
-                            <i class='fas fa-exclamation-triangle fa-flip '></i> <span>Ce Participant n'est affecté à  aucune Restauration</span>
-                        </div>
+
                     @endif
                 @endforeach
             </div>

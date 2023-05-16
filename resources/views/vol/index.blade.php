@@ -11,10 +11,28 @@
             </div>
         </div>
     @else
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-3 ">
+                    <form method="get" action="{{route('vols.search')}}">
+                        @csrf
+                        <label>Par Type vol</label>
+                        <select class="form-select form-select mb-1" name="type_vol" aria-label=".form-select-lg example">
+                            <option selected> Chercher Par Type Vol</option>
+                            <option value="0">Arrivée</option>
+                            <option value="1">Départ</option>
+                        </select>
 
+                        <input type="submit" class="btn btn-danger float-right rounded-pill" value="Chercher">
+                    </form>
+                </div>
+            </div>
+        </div>
         <div class="mt-5 m-auto w-75 ">
+            @if(\Illuminate\Support\Facades\Auth::user()->hasRole(['membre','admin']))
             <a class="btn btn-success me-md-2 rounded-pill bg-gradient-success float-right mb-2 create-vol"
                href="{{route('vols.create')}}"><i class="fa fa-plus"></i>&nbsp;&nbsp;Ajouter un Vol</a>
+            @endif
             <table
                 class="table table-borderless table-bordered table-hover w-100 mt-2 shadow-lg mb-5 bg-white rounded  ">
                 <thead class="thead-dark">
@@ -24,7 +42,7 @@
                     <th scope="col">Type</th>
                     <th scope="col">Date</th>
                     <th scope="col">Aéroport</th>
-                    <th scope="col">Action</th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -35,7 +53,7 @@
                         <td>{{$vol->type_vol==1?'Départ':'Arrivée'}}</td>
                         <td>{{$vol->date_vol}}</td>
                         <td>{{$vol->terminal}}</td>
-
+                        @if(\Illuminate\Support\Facades\Auth::user()->hasRole(['membre','admin']))
                         <td>
                             <a class="btn btn-outline-primary rounded-6 mr-2" data-toggle="tooltip" data-placement="top"
                                title="Consulter" href="{{route('vols.show',$vol->id)}}"><i
@@ -48,12 +66,17 @@
                                     class="fas fa-trash"></i></a>
 
                         </td>
+                        @endif
                     </tr>
 
                 @endforeach
 
                 </tbody>
             </table>
+
+                <div class="d-flex justify-content-center">
+                    {{ $vols->withQueryString()->links() }}
+                </div>
         </div>
 
 

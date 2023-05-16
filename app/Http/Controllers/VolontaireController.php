@@ -16,9 +16,13 @@ class VolontaireController extends Controller
 
     public function index()
     {
-        $volontaires = Volontaire::all();
+        $volontaires = Volontaire::paginate(7);
+        $site_heberg = config('custom_arrays.site_heberg');
+        $roles = config('custom_arrays.roles');
         return view('volontaires.index')->with([
             'volontaires' => $volontaires,
+            'site_aff' => $site_heberg,
+            'roles' => $roles,
         ]);
     }
 
@@ -117,5 +121,30 @@ class VolontaireController extends Controller
         $volontaire->get();
         return view('volontaires.show',['volontaire'=>$volontaire,'site_aff'=>$site_heberg,'countries'=>$countries]);
     }
+
+    public function search(Request $request){
+        $site_heberg = config('custom_arrays.site_heberg');
+        $roles = config('custom_arrays.roles');
+        if ($request->has('role')){
+            $volontaires = Volontaire::where('role','=',$request->role)->paginate(7);
+            return view('volontaires.index')->with([
+                'volontaires' => $volontaires,
+                'site_aff' => $site_heberg,
+                'roles' => $roles,
+            ]);
+        }
+        if ($request->has('site_aff')){
+
+        $volontaires = Volontaire::where('site_aff','=',$request->site_aff)->paginate(7);
+            return view('volontaires.index')->with([
+                'volontaires' => $volontaires,
+                'site_aff' => $site_heberg,
+                'roles' => $roles,
+            ]);
+        }
+
+        }
+
+
 
 }

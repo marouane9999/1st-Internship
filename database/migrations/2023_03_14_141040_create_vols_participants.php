@@ -11,10 +11,12 @@ return new class extends Migration
      *
      * @return void
      */
+
     public function up()
     {
         Schema::create('vols_participants', function (Blueprint $table) {
             $table->id();
+            $table->boolean('statut')->default(0);
             $table->unsignedBigInteger('participant_id');
             $table->unsignedBigInteger('vol_id');
             $table->foreign('participant_id')->references('id')->on('participants')->onDelete('cascade');

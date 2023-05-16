@@ -16,7 +16,7 @@ class VolController extends Controller
     public function index()
 
     {
-        $vols = Vol::all();
+        $vols = Vol::paginate(7);
 
         return view('vol.index')->with([
             'vols' => $vols,
@@ -115,6 +115,15 @@ class VolController extends Controller
             ]);
         }
     }
+
+    public function search(Request $request){
+        $vols = Vol::where('type_vol',$request->type_vol)->paginate(7);
+
+        return view('vol.index')->with([
+            'vols' => $vols,
+        ]);
+    }
+
 }
 
 

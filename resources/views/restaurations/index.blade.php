@@ -1,11 +1,52 @@
 @extends('layout')
 @section('header title','Restauration')
 @section('content')
+
+
+
         <div class="mt-5 m-auto w-75">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-4 ml-6 ">
+                        <form method="get" action="{{route('restaurations.search','site_restau')}}">
+                            @csrf
+                            <label>Site Restauration</label>
+                            <select class="form-select form-select mb-1" name="site_restau" aria-label=".form-select-lg example">
+                                <option selected>Chercher par Site Restauration</option>
+                                @foreach($site_restau as $rst)
+                                    <option value="{{$rst}}">{{{ucfirst($rst)}}}</option>
+                                @endforeach
+                            </select>
+
+                            <input type="submit" class="btn btn-danger float-right rounded-pill" value="Chercher">
+                        </form>
+                    </div>
+
+                    <div class="col-4 ">
+                        <form method="get" action="{{route('restaurations.search','repas')}}">
+                            @csrf
+                            <label>Repas</label>
+                            <select class="form-select form-select mb-1" name="repas" aria-label=".form-select-lg example">
+                                <option selected>Chercher par Repas</option>
+                                @foreach($repas as $rp)
+                                    <option value={{$rp->id}}>{{$rp->desc_rep}}</option>
+                                @endforeach
+                            </select>
+                            <input type="submit" class="btn btn-danger float-right rounded-pill" value="Chercher">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        @if(\Illuminate\Support\Facades\Auth::user()->hasRole(['membre','admin']))
             <a href="{{route('restaurations.create')}}"
                class="btn btn-success me-md-2 rounded-pill bg-gradient-success float-right mb-2 create-restaurations"><i
                     class="fa fa-plus mr-2"></i>Ajouter Restauration</a>
-            <table
+            @endif
+
+
+
+                <table
                 class="table table-borderless table-bordered table-hover w-100 mt-5 shadow-lg p-3 mb-5 bg-white rounded">
                 <thead class="thead-dark">
                 <tr class="text-left">
@@ -36,8 +77,9 @@
                         <td>{{$restau->site_restau}}</td>
                         <td>{{$restau->ville}}</td>
                         <td>{{$restau->prestataire}}</td>
-                        <td>{{$restau->repas->des_rep}}</td>
-                        <td>{{$restau->participant->nom_par}}  {{$restau->participant->prenom_par}}</td>
+                        <td>{{$restau->repas->desc_rep}}</td>
+                        <td>{{$restau->participant->nom_par}}  {{$restau->participant->prenom_par}}
+                        @if(\Illuminate\Support\Facades\Auth::user()->hasRole(['membre','admin']))
                         <td>
                             <a class="btn btn-outline-primary rounded-6 mr-2" data-toggle="tooltip" data-placement="top"
                                title="Consulter" href="{{route('restaurations.show',$restau->id)}}"><i
@@ -50,12 +92,17 @@
                                href="{{route('restaurations.delete',$restau->id)}}"><i class="fas fa-trash"></i></a>
 
                         </td>
+                        @endif
                     </tr>
                 @endforeach
 
 
                 </tbody>
             </table>
+
+                <div class="d-flex justify-content-center">
+                    {{ $restaurations->withQueryString()->links() }}
+                </div>
         </div>
 
 

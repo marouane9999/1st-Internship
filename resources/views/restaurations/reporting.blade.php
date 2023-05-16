@@ -1,5 +1,5 @@
 @extends('layout')
-@section('header title','Hébergements / Suivi & Reporting ')
+@section('header title','Restaurations / Suivi & Reporting ')
 @section('content')
     <div class="container">
         <div class="row">
@@ -8,6 +8,7 @@
                     <i class="fas fa-utensils fa-lg fa-beat-fade mr-1" style="color: #160a0d" ></i> <span
                         class="text-dark font-weight-bold">Les Affectations Restauration d'Aujourd'hui</span>
                     <span class="text-dark font-italic font-weight-bold">({{date('d M Y')}})</span>
+                    <span class="float-right"><a href="{{route('restaurations.download','tr')}}"><i class="fa fa-download fa-lg text-dark" aria-hidden="true"></i></a></span>
                 </div>
                 <div class="table-responsive">
                     <table class="table table-hover  shadow   bg-white rounded ">
@@ -47,6 +48,8 @@
                 <div class="alert alert-danger bg-gradient-lime mb-0 p-1" role="alert">
                     <i class="fas fa-utensils fa-lg fa-beat-fade" style="color: #160a0d"></i> <span
                         class="text-dark font-weight-bold">Les 5 Derniers Restaurations Ajoutés</span>
+                    <span class="float-right"><a href="{{route('restaurations.download','lr')}}"><i class="fa fa-download fa-lg text-dark" aria-hidden="true"></i></a></span>
+
                 </div>
                 <div class="table-responsive">
                     <table class="table table-hover  shadow   bg-white rounded">
@@ -79,6 +82,7 @@
             <div class="col-6 mt-3">
                 <div class="alert alert-success mb-0 p-1" role="alert">
                     <i class="fas fa-utensils fa-lg fa-beat-fade "></i> <span class="text-dark font-weight-bold">Le Nombre de repas  Servis par Site de Restauration</span>
+                    <span class="float-right"><a href="{{route('restaurations.download','totr')}}"><i class="fa fa-download fa-lg text-dark" aria-hidden="true"></i></a></span>
                 </div>
                 <table class="table table-hover  shadow   bg-white rounded">
                     <thead class="">
@@ -112,6 +116,8 @@
             <div class="col-6 mt-3">
                 <div class="alert alert-warning mb-0 p-1" role="alert">
                     <i class="fas fa-utensils fa-lg fa-beat-fade "></i> <span class="text-dark font-weight-bold">Le Nombre de Repas Servis Aujourd'hui <span class="text-dark font-italic font-weight-bold">({{date('d M Y')}})</span> </span>
+                    <span class="float-right"><a href="{{route('restaurations.download','todr')}}"><i class="fa fa-download fa-lg text-dark" aria-hidden="true"></i></a></span>
+
                 </div>
                 <table class="table table-hover  shadow   bg-white rounded">
                     <thead class="">

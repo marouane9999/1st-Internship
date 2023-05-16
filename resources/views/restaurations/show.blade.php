@@ -6,7 +6,7 @@
 
         <div class="d-flex justify-content-center m-auto w-75">
             <h1 class="display-3 text-black">Restauration<span
-                    class="display-2 text-blue font-weight-bolder">&nbsp; #{{$restau->id}}</span></h1>
+                    class="display-2 text-blue font-weight-bolder">&nbsp; {{$restau->numero_rest}}</span></h1>
         </div>
         {{--        Restauration--}}
         <div class="alert alert-default-success shadow-sm mt-3 " role="alert">

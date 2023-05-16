@@ -21,6 +21,7 @@ return new class extends Migration
             $table->date('debut_contrat');
             $table->string('site_aff');
             $table->string('role');
+            $table->boolean('statut')->default(0);
             $table->unsignedBigInteger('participant_id');
             $table->foreign('participant_id')->references('id')->on('participants')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();

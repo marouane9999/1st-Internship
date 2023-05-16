@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('site_restau');
             $table->string('ville');
             $table->string('prestataire');
+            $table->boolean('statut')->default(0);
             $table->unsignedBigInteger('rep_id');
             $table->unsignedBigInteger('participant_id')->unique();
             $table->foreign('rep_id')->references('id')->on('repas');

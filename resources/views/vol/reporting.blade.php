@@ -12,10 +12,11 @@
                     <i class="fas fa-plane-circle-exclamation fa-beat-fade "></i> <span
                         class="text-dark font-weight-bold">Les Vols Ajouté  Aujourd'hui</span>
                     <span class="text-dark font-italic font-weight-bold">({{date('d M Y')}})</span>
+                    <span class="float-right"><a href="{{route('vols.download','tv')}}"><i class="fa fa-download fa-lg text-dark" aria-hidden="true"></i></a></span>
                 </div>
                 <div class="table-responsive">
-                    <table class="table table-hover  shadow   bg-white rounded ">
-                        <thead class="table-borderless bg-gradient-lime">
+                    <table class="table table-hover  shadow  bg-white rounded ">
+                        <thead class="table-borderless bg-light">
                         <tr class="text-center">
                             <th class="">Numero Vol</th>
                             <th class="">Type Vol</th>
@@ -53,12 +54,13 @@
                 <div class="alert alert-danger mb-0 p-1" role="alert">
                     <i class="fas fa-plane-circle-check fa-beat-fade"></i> <span
                         class="text-dark font-weight-bold">Les 5 Derniers Vols ajoutés</span>
+                        <span class="float-right"><a href="{{route('vols.download','lv')}}"><i class="fa fa-download fa-lg text-dark" aria-hidden="true"></i></a></span>
                 </div>
                 <div class="table-responsive">
                     <table class="table table-hover  shadow   bg-white rounded">
 
 
-                        <thead class="table-borderless bg-gradient-danger">
+                        <thead class="table-borderless bg-light">
                         <tr>
                             <th class="col-md-2">Numero Vol</th>
                             <th class="col-md-2">Type Vol</th>
@@ -88,9 +90,10 @@
             <div class="col-6 mt-3">
                 <div class="alert alert-success mb-0 p-1" role="alert">
                     <i class="fas fa-plane-departure fa-beat-fade "></i> <span class="text-dark font-weight-bold">Les Vols Depart Aujourd'hui</span>
+                    <span class="float-right"><a href="{{route('vols.download','tdv')}}"><i class="fa fa-download fa-lg text-dark" aria-hidden="true"></i></a></span>
                 </div>
                 <table class="table table-hover  shadow   bg-white rounded">
-                    <thead class="bg-gradient-success">
+                    <thead class="bg-light">
                     <tr class="text-center text-dark">
                         <th class="">Numero Vol</th>
                         <th class="">Terminal</th>
@@ -131,9 +134,10 @@
             <div class="col-6 mt-3">
                 <div class="alert alert-primary mb-0 p-1" role="alert">
                     <i class="fas fa-plane-arrival fa-beat-fade  "></i> <span class="text-dark font-weight-bold">Les Vols Arrivee Aujourd'hui </span>
+                    <span class="float-right"><a href="{{route('vols.download','tav')}}"><i class="fa fa-download fa-lg text-dark" aria-hidden="true"></i></a></span>
                 </div>
                 <table class="table table-hover  shadow   bg-white rounded">
-                    <thead class="bg-gradient-primary">
+                    <thead class="bg-light">
                     <tr class="text-center">
                         <th class="col-md-3">Numero Vol</th>
                         <th class="">Terminal</th>

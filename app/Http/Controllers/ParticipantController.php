@@ -29,11 +29,15 @@ class ParticipantController extends Controller
      */
     public function index()
     {
-        $ptc = Participant::all();
+        $ptc = Participant::paginate(7);
+        $cat=Categorie::all();
         $countries = config('custom_arrays.countries');
+        $discipline = config('custom_arrays.discipline');
         return view('participants.index')->with([
             'participants' => $ptc,
+            'categories'=>$cat,
             'countries' => $countries,
+            'disciplines'=>$discipline
         ]);
     }
 
@@ -207,6 +211,40 @@ class ParticipantController extends Controller
         return response()->json([
             'success' => false,
             'msg' => 'Impossible de retrouver ce Participant.'], 200);
+    }
+    public function search(Request $request){
+        $cat=Categorie::all();
+        $countries = config('custom_arrays.countries');
+        $discipline = config('custom_arrays.discipline');
+
+        if ($request->has('cat')){
+            $ptc=Participant::where('cat_id',$request->cat)->paginate(7);
+            return view('participants.index')->with([
+                'participants' => $ptc,
+                'categories'=>$cat,
+                'countries' => $countries,
+                'disciplines'=>$discipline
+            ]);
+        }
+        if ($request->has('dsc')){
+            $ptc=Participant::where('discipline',$request->dsc)->paginate(7);
+            return view('participants.index')->with([
+                'participants' => $ptc,
+                'categories'=>$cat,
+                'countries' => $countries,
+                'disciplines'=>$discipline
+            ]);
+        }
+        if ($request->has('sexe')){
+            return dd($request->sexe);
+            $ptc=Participant::where('genre',$request->sexe)->paginate(7);
+            return view('participants.index')->with([
+                'participants' => $ptc,
+                'categories'=>$cat,
+                'countries' => $countries,
+                'disciplines'=>$discipline
+            ]);
+        }
     }
 
 }

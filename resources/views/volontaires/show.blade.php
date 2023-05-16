@@ -5,8 +5,8 @@
     <div class="container shadow-sm p-3 mb-5  rounded w-75 mt-5">
 
         <div class="d-flex justify-content-center m-auto w-75">
-            <h1 class="display-3 text-black">Volontaire<span
-                    class="display-2 text-blue font-weight-bolder">&nbsp; #{{$volontaire->id}}</span></h1>
+            <h1 class="display-3 text-black fw-bolder">Volontaire<span
+                    class="display-2 text-blue font-weight-bolder">&nbsp; #{{$volontaire->ref_cojar}}</span></h1>
         </div>
         {{--Volontaire--}}
         <div class="alert alert-default-success shadow-sm mt-3 " role="alert">
